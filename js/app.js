@@ -178,3 +178,83 @@ document.addEventListener('DOMContentLoaded', function () {
     dateEl.textContent = day + ' de ' + months[now.getMonth()];
   }
 });
+
+// ── 7. REVEAL ANIMATION ──────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  // Adiciona classe reveal em todos os elementos de seção
+  document.querySelectorAll(
+    '#dor .dor-item, #mecanismo .etapa-card, #depoimentos .depoimento-card, ' +
+    '#modulos .modulo-item, #modulos .bonus-item, #garantia .garantia-inner > *'
+  ).forEach(function(el) {
+    el.classList.add('reveal');
+  });
+
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      obs.observe(el);
+    });
+  } else {
+    // Fallback: mostra tudo sem animação
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+});
+
+// ── 8. SCROLL PROGRESS ───────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  const bar = document.createElement('div');
+  bar.id = 'scroll-progress';
+  bar.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:var(--dourado);z-index:9999;width:0%;transition:width .1s;pointer-events:none;';
+  document.body.appendChild(bar);
+
+  window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = maxScroll > 0 ? (scrolled / maxScroll) * 100 : 0;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+});
+
+// ── 9. TIME-BASED POPUP (60s) ────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  let popupShown = sessionStorage.getItem('rm_popup_shown');
+  if (!popupShown) {
+    setTimeout(function() {
+      const overlay = document.getElementById('exit-popup');
+      const alreadyShown = sessionStorage.getItem('rm_popup_shown');
+      if (overlay && !alreadyShown) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        sessionStorage.setItem('rm_popup_shown', '1');
+      }
+    }, 60000);
+  }
+});
+
+// ── 10. SCROLL DEPTH TRACKING ────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  const tracked = { 25: false, 50: false, 75: false, 90: false };
+  window.addEventListener('scroll', function() {
+    const pct = Math.round(
+      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    );
+    Object.keys(tracked).forEach(function(depth) {
+      if (!tracked[depth] && pct >= parseInt(depth)) {
+        tracked[depth] = true;
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'ScrollDepth', { depth: depth + '%', page: 'RM_landing' });
+        }
+      }
+    });
+  }, { passive: true });
+});
