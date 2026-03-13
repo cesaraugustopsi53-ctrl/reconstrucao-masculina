@@ -12,6 +12,8 @@
   <meta property="og:description" content="Método clínico desenvolvido em 400+ casos reais. Aprenda o que funciona para reconstruir a confiança e salvar seu casamento." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image" content="https://cesaraugustopsi53-ctrl.github.io/reconstrucao-masculina/img/hero-cesar.jpg" />
+  <meta property="og:url" content="https://cesaraugustopsi53-ctrl.github.io/reconstrucao-masculina/" />
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,6 +23,118 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Estilos para novos elementos (não alterar styles.css) -->
+  <style>
+    /* Aviso privacidade hero */
+    .hero-privacidade {
+      font-size: .78rem;
+      color: rgba(255,255,255,.6);
+      margin-top: 8px;
+      letter-spacing: .01em;
+    }
+
+    /* Seção Para Quem */
+    #para-quem {
+      padding: 80px 0;
+    }
+    #para-quem .section-header {
+      margin-bottom: 48px;
+    }
+    .para-quem-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .para-quem-inner { grid-template-columns: 1fr; }
+    }
+    .para-quem-col {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 2px 16px rgba(27,58,45,.08);
+    }
+    .para-quem-col--nao {
+      background: #fff8f8;
+    }
+    .para-quem-lista {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .para-quem-lista li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .95rem;
+      color: #374151;
+      line-height: 1.5;
+    }
+    .pq-check {
+      color: #1B3A2D;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .pq-x {
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Cards placeholder de vídeo */
+    .depoimento-card--video-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      background: rgba(255,255,255,.04);
+      border: 1.5px dashed rgba(201,168,76,.35);
+    }
+    .video-placeholder-inner {
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .video-placeholder-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(201,168,76,.12);
+      margin: 0 auto 16px;
+      color: #C9A84C;
+    }
+    .video-placeholder-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #C9A84C;
+      margin: 0 0 6px;
+    }
+    .video-placeholder-sub {
+      font-size: .8rem;
+      color: rgba(255,255,255,.4);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Faixa prova social — separadores em desktop */
+    @media (min-width: 768px) {
+      .prova-social-grid .ps-sep {
+        display: block !important;
+      }
+    }
+  </style>
 
   <!-- Velocidade: DNS prefetch + preload hero (LCP) -->
   <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -94,10 +208,11 @@
              class="cta-btn cta-btn--lg"
              target="_blank"
              rel="noopener">
-            QUERO COMEÇAR AGORA &rarr;
+            QUERO O MÉTODO AGORA &rarr;
           </a>
         </div>
         <p class="hero-cta-sub">R$297 à vista ou 12x de R$30,72 &bull; 7 dias de garantia &bull; Acesso por 1 ano</p>
+        <p class="hero-privacidade">🔒 Sua privacidade é protegida — a compra aparece apenas como 'KIWIFY' no extrato</p>
 
         <!-- Microprovas -->
         <div class="microprovas">
@@ -181,6 +296,53 @@
         o problema não é falta de amor, nem falta de intenção.<br />
         É falta de um método que funcione para essa situação específica.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     3B. PARA QUEM É ESTE CURSO
+════════════════════════════════════════════════════════ -->
+<section id="para-quem" style="background:#F5F0E8;">
+  <div class="container">
+    <div class="section-header center">
+      <p class="section-label" style="color:#1B3A2D;">Este curso foi feito para você</p>
+      <h2 style="color:#1B3A2D;">Você está no lugar certo<br />se reconhecer isso aqui</h2>
+    </div>
+
+    <div class="para-quem-inner">
+      <div class="para-quem-col">
+        <h3 style="color:#1B3A2D; font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:20px; border-bottom:2px solid #C9A84C; padding-bottom:10px;">Este curso É para você se:</h3>
+        <ul class="para-quem-lista">
+          <li><span class="pq-check">✓</span> Você está dormindo no sofá ou num quarto separado</li>
+          <li><span class="pq-check">✓</span> Você pediu desculpa e ela disse "tô tentando" — mas os olhos dizem outra coisa</li>
+          <li><span class="pq-check">✓</span> Você tem medo de falar errado e piorar tudo</li>
+          <li><span class="pq-check">✓</span> Você tentou terapia, mas o terapeuta não entende esse tipo de situação específica</li>
+          <li><span class="pq-check">✓</span> Você quer salvar o casamento mas não sabe se ainda tem chance</li>
+          <li><span class="pq-check">✓</span> Você sente vergonha demais para falar com família ou amigos sobre o que aconteceu</li>
+          <li><span class="pq-check">✓</span> Você quer resultados em semanas — não anos de terapia sem direção</li>
+        </ul>
+      </div>
+
+      <div class="para-quem-col para-quem-col--nao">
+        <h3 style="color:#7f1d1d; font-family:'Playfair Display',serif; font-size:1.15rem; margin-bottom:20px; border-bottom:2px solid #dc2626; padding-bottom:10px;">NÃO é para você se:</h3>
+        <ul class="para-quem-lista para-quem-lista--nao">
+          <li><span class="pq-x">✗</span> Você não quer mudar de verdade — só quer que ela perdoe e esqueça como se nada tivesse acontecido</li>
+          <li><span class="pq-x">✗</span> Você acredita que o problema é dela, não seu, e está procurando argumentos para ganhar uma discussão</li>
+          <li><span class="pq-x">✗</span> O casamento já terminou legalmente e você busca outro tipo de suporte</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="para-quem-cta" style="text-align:center; margin-top:40px;">
+      <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
+         class="cta-btn cta-btn--lg"
+         target="_blank"
+         rel="noopener"
+         style="background:#1B3A2D;">
+        QUERO ESSE MÉTODO &rarr;
+      </a>
+      <p style="margin-top:12px; font-size:.85rem; color:#6b7280;">R$297 à vista ou 12x de R$30,72 &bull; 7 dias de garantia</p>
     </div>
   </div>
 </section>
@@ -291,6 +453,33 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
+     5B. FAIXA DE PROVA SOCIAL
+════════════════════════════════════════════════════════ -->
+<section id="prova-social-faixa" style="background:#1B3A2D; padding:48px 0;">
+  <div class="container">
+    <div class="prova-social-grid" style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px; text-align:center;">
+      <div class="ps-item">
+        <span class="ps-num" style="display:block; font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:800; color:#C9A84C; line-height:1;">400+</span>
+        <span class="ps-label" style="display:block; font-size:.8rem; color:rgba(255,255,255,.65); text-transform:uppercase; letter-spacing:.12em; margin-top:6px;">Homens Atendidos</span>
+      </div>
+      <div class="ps-sep" style="width:1px; background:rgba(255,255,255,.15); align-self:stretch; display:none;" aria-hidden="true"></div>
+      <div class="ps-item">
+        <span class="ps-num" style="display:block; font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:800; color:#C9A84C; line-height:1;">60.000</span>
+        <span class="ps-label" style="display:block; font-size:.8rem; color:rgba(255,255,255,.65); text-transform:uppercase; letter-spacing:.12em; margin-top:6px;">Seguidores no Instagram</span>
+      </div>
+      <div class="ps-item">
+        <span class="ps-num" style="display:block; font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:800; color:#C9A84C; line-height:1;">5.000.000</span>
+        <span class="ps-label" style="display:block; font-size:.8rem; color:rgba(255,255,255,.65); text-transform:uppercase; letter-spacing:.12em; margin-top:6px;">Acessos por Mês</span>
+      </div>
+      <div class="ps-item">
+        <span class="ps-num" style="display:block; font-family:'Playfair Display',serif; font-size:2.8rem; font-weight:800; color:#C9A84C; line-height:1;">7 dias</span>
+        <span class="ps-label" style="display:block; font-size:.8rem; color:rgba(255,255,255,.65); text-transform:uppercase; letter-spacing:.12em; margin-top:6px;">Garantia Incondicional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
      6. DEPOIMENTOS EM TEXTO
 ════════════════════════════════════════════════════════ -->
 <section id="depoimentos" data-pixel-section="Depoimentos">
@@ -333,67 +522,47 @@
         </div>
       </div>
 
-      <!-- DEPOIMENTO EXEMPLO 3 — substituir por real -->
-      <div class="depoimento-card">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Estava no pior momento da minha vida. Minha esposa tinha descoberto há 4 dias e eu não sabia o que fazer. As primeiras aulas me deram um roteiro concreto. Parei de agir no impulso e comecei a agir com método."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">M</div>
-          <div>
-            <p class="autor-nome">Marcos T.</p>
-            <p class="autor-detalhe">Curitiba, PR &bull; Aluno do curso</p>
-            <p class="placeholder-note">⚠️ Exemplo — substituir por depoimento real</p>
+      <!-- VÍDEO PLACEHOLDER 1 -->
+      <div class="depoimento-card depoimento-card--video-placeholder">
+        <div class="video-placeholder-inner">
+          <div class="video-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           </div>
+          <p class="video-placeholder-titulo">Em breve</p>
+          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
         </div>
       </div>
 
-      <!-- DEPOIMENTO EXEMPLO 4 — substituir por real -->
-      <div class="depoimento-card">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Minha esposa me deu uma chance. Eu não queria desperdiçar. O curso me ajudou a entender que reconstruir confiança não é sobre palavras — é sobre comportamento consistente. Hoje, 6 meses depois, ela mesma diz que viu a mudança."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">A</div>
-          <div>
-            <p class="autor-nome">André L.</p>
-            <p class="autor-detalhe">Porto Alegre, RS &bull; Aluno do curso</p>
-            <p class="placeholder-note">⚠️ Exemplo — substituir por depoimento real</p>
+      <!-- VÍDEO PLACEHOLDER 2 -->
+      <div class="depoimento-card depoimento-card--video-placeholder">
+        <div class="video-placeholder-inner">
+          <div class="video-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           </div>
+          <p class="video-placeholder-titulo">Em breve</p>
+          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
         </div>
       </div>
 
-      <!-- DEPOIMENTO EXEMPLO 5 — substituir por real -->
-      <div class="depoimento-card">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Tentei esconder o que tinha feito por semanas. Quando ela descobriu, entrei em colapso total. Encontrei o César no Instagram e comprei sem pensar muito. Melhor decisão que tomei naquele período. O módulo de estabilização de crise me salvou."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">F</div>
-          <div>
-            <p class="autor-nome">Felipe R.</p>
-            <p class="autor-detalhe">Brasília, DF &bull; Aluno do curso</p>
-            <p class="placeholder-note">⚠️ Exemplo — substituir por depoimento real</p>
+      <!-- VÍDEO PLACEHOLDER 3 -->
+      <div class="depoimento-card depoimento-card--video-placeholder">
+        <div class="video-placeholder-inner">
+          <div class="video-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           </div>
+          <p class="video-placeholder-titulo">Em breve</p>
+          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
         </div>
       </div>
 
-      <!-- DEPOIMENTO EXEMPLO 6 — substituir por real -->
-      <div class="depoimento-card">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Fiz terapia presencial por 8 meses — R$280 por sessão — e não tinha chegado perto do que o César entrega em 1 hora de aula. Ele fala com a linguagem do homem, sem romantismo, sem enrolação. Direto no problema."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">G</div>
-          <div>
-            <p class="autor-nome">Gustavo M.</p>
-            <p class="autor-detalhe">Recife, PE &bull; Aluno do curso</p>
-            <p class="placeholder-note">⚠️ Exemplo — substituir por depoimento real</p>
+      <!-- VÍDEO PLACEHOLDER 4 -->
+      <div class="depoimento-card depoimento-card--video-placeholder">
+        <div class="video-placeholder-inner">
+          <div class="video-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
           </div>
+          <p class="video-placeholder-titulo">Em breve</p>
+          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
         </div>
       </div>
 
@@ -779,6 +948,30 @@
         </div>
       </div>
 
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Isso vai aparecer no extrato do cartão ou minha esposa pode descobrir que comprei?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Não. A cobrança aparece como <strong>"KIWIFY"</strong> no extrato — sem mencionar o nome do curso. O acesso ao conteúdo é via login e senha no seu e-mail. Você pode usar um e-mail pessoal que ela não acessa. Total privacidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Já faz semanas/meses desde a descoberta. Já não é tarde demais?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Não existe "tarde demais" enquanto o casamento ainda existe formalmente. O método funciona tanto para quem está na fase aguda (primeiros dias) quanto para quem está há meses tentando reconstruir sem direção. O processo de reconstrução de confiança segue etapas previsíveis — e você pode iniciar qualquer etapa agora. Muitos alunos compraram meses após a descoberta e obtiveram resultados consistentes.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -790,15 +983,14 @@
   <div class="container text-center">
 
     <h2>
-      Você pode continuar<br />
-      sem saber o que fazer.<br />
-      Ou pode <em>começar hoje.</em>
+      Cada dia sem método é um dia<br />
+      que ela vai se convencendo<br />
+      de que <em>não vai funcionar.</em>
     </h2>
 
     <p class="subtitulo">
-      Você veio até aqui porque o casamento importa.<br>
-      A janela ainda está aberta.<br>
-      <strong style='color:var(--dourado)'>Não desperdice ela improvisando.</strong>
+      Você não pode controlar a decisão dela.<br>
+      Mas pode controlar quem você se torna — <strong style='color:var(--dourado)'>a partir de hoje.</strong>
     </p>
 
     <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
@@ -828,7 +1020,7 @@
     <p style="margin-top:12px;">
       Os depoimentos apresentados são de alunos reais (identificados como "Real") e de exemplos ilustrativos a serem substituídos por depoimentos verificados.<br />
       Os resultados individuais podem variar. Este produto não substitui acompanhamento terapêutico profissional individualizado.<br />
-      Ao comprar, você concorda com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.
+      Ao comprar, você concorda com os <a href="termos.html">Termos de Uso</a> e a <a href="privacidade.html">Política de Privacidade</a>.
     </p>
     <p style="margin-top:12px;">&copy; <script>document.write(new Date().getFullYear())</script> César Augusto. Todos os direitos reservados.</p>
   </div>
