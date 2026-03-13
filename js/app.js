@@ -258,3 +258,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, { passive: true });
 });
+
+// ── 11. PIXEL — ViewContent por seção (scroll tracking avançado) ──
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof fbq !== 'function') return;
+
+  var sectionMap = {
+    'mecanismo': 'Mecanismo_RECA',
+    'modulos':   'Modulos_Conteudo',
+    'oferta':    'Oferta_Preco',
+    'depoimentos': 'Depoimentos',
+    'garantia':  'Garantia',
+    'preco-ancora': 'Ancoragem_Preco'
+  };
+
+  var fired = {};
+
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          if (!fired[id] && sectionMap[id]) {
+            fired[id] = true;
+            fbq('trackCustom', 'SectionView', {
+              section: sectionMap[id],
+              page: 'RM_landing',
+              content_name: 'Reconstrução Masculina',
+              value: 297.00,
+              currency: 'BRL'
+            });
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    Object.keys(sectionMap).forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+  }
+});
+
+// ── 12. PIXEL — InitiateCheckout no sticky CTA ───────────────
+document.addEventListener('DOMContentLoaded', function() {
+  var stickyBtn = document.getElementById('sticky-cta-link');
+  if (stickyBtn) {
+    stickyBtn.addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'Reconstrução Masculina — Sticky CTA',
+          value: 297.00,
+          currency: 'BRL'
+        });
+      }
+    });
+  }
+});

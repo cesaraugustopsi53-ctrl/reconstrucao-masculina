@@ -22,6 +22,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- Velocidade: DNS prefetch + preload hero (LCP) -->
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="https://connect.facebook.net" />
+  <link rel="dns-prefetch" href="https://pay.kiwify.com.br" />
+  <link rel="preload" as="image" href="img/hero-cesar.jpg" fetchpriority="high" />
+
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,6 +37,12 @@
     document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '702407242839062');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'Reconstrução Masculina',
+      content_category: 'Curso Online',
+      value: 297.00,
+      currency: 'BRL'
+    });
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
@@ -43,7 +55,7 @@
      1. BARRA DE URGÊNCIA
 ════════════════════════════════════════════════════════ -->
 <div id="urgency-bar">
-  <strong>⚠️ Cada hora sem direção é uma hora que o casamento perde</strong> — Bônus: Protocolo de Crise (3 áudios exclusivos) incluído até <span id="bonus-deadline">hoje</span> &nbsp;|&nbsp; Expira em: <span id="countdown">23:59:59</span>
+  <strong>⏱ Cada hora sem um método é uma hora que ela vai se convencendo.</strong> Protocolo de Crise (3 áudios — o que fazer agora) incluso <strong>grátis</strong> só até <span id="bonus-deadline">hoje à meia-noite</span> &nbsp;|&nbsp; Fecha em: <span id="countdown">23:59:59</span>
 </div>
 
 <!-- ════════════════════════════════════════════════════════
@@ -55,25 +67,34 @@
 
       <!-- Copy -->
       <div class="hero-copy">
-        <span class="pretitle">Para homens que traíram e querem reconstruir de verdade</span>
+        <span class="pretitle">Sua esposa ainda não saiu. A janela ainda está aberta. Mas ela fecha rápido.</span>
 
         <h1>
-          Sua esposa descobriu a traição.<br />
-          E agora você não sabe<br />
-          <em>o que fazer.</em>
+          Em 2 horas você tem<br />
+          um roteiro concreto<br />
+          para as <em>próximas semanas.</em>
         </h1>
 
         <p class="subtitulo">
-          Pedir desculpa não reconstrói confiança. Prometer mudança não sustenta nada.<br />
-          Este método mostra o que funciona de verdade — passo a passo.
+          Método clínico desenvolvido com 400+ homens que estavam exatamente onde você está agora.<br />
+          Resultados no casamento entre 2 e 6 semanas de aplicação — sem terapia cara, sem anos de espera.
         </p>
+
+        <!-- Social proof inline — visível antes do CTA no mobile -->
+        <div class="hero-social-proof">
+          <span class="hsp-item">★★★★★</span>
+          <span class="hsp-sep">|</span>
+          <span class="hsp-item"><strong>400+</strong> homens atendidos</span>
+          <span class="hsp-sep">|</span>
+          <span class="hsp-item">"3 aulas &gt; 3 anos de terapia" — Pedro S.</span>
+        </div>
 
         <div class="hero-cta-wrap">
           <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
              class="cta-btn cta-btn--lg"
              target="_blank"
              rel="noopener">
-            QUERO RECONSTRUIR MEU CASAMENTO &rarr;
+            QUERO COMEÇAR AGORA &rarr;
           </a>
         </div>
         <p class="hero-cta-sub">R$297 à vista ou 12x de R$30,72 &bull; 7 dias de garantia &bull; Acesso por 1 ano</p>
@@ -93,8 +114,8 @@
             <span class="label">Acesso Completo</span>
           </div>
           <div class="microprov-item">
-            <span class="num">100%</span>
-            <span class="label">Método Clínico</span>
+            <span class="num">2h</span>
+            <span class="label">Para ter clareza</span>
           </div>
         </div>
       </div>
@@ -103,6 +124,9 @@
       <div class="hero-foto">
         <img src="img/hero-cesar.jpg"
              alt="César Augusto — Terapeuta Masculino e Psicanalista"
+             loading="eager"
+             fetchpriority="high"
+             decoding="async"
              onerror="this.parentElement.innerHTML='<div class=\'hero-foto-placeholder\'><span class=\'icon\'>📸</span><span>Substituir por<br/>foto de César</span></div>'" />
       </div>
 
@@ -164,7 +188,7 @@
 <!-- ════════════════════════════════════════════════════════
      4. MECANISMO — PROTOCOLO RECA
 ════════════════════════════════════════════════════════ -->
-<section id="mecanismo">
+<section id="mecanismo" data-pixel-section="Mecanismo_RECA">
   <div class="container">
     <div class="section-header center">
       <p class="section-label">Por que força de vontade não funciona</p>
@@ -269,7 +293,7 @@
 <!-- ════════════════════════════════════════════════════════
      6. DEPOIMENTOS EM TEXTO
 ════════════════════════════════════════════════════════ -->
-<section id="depoimentos">
+<section id="depoimentos" data-pixel-section="Depoimentos">
   <div class="container container--wide">
     <div class="section-header center">
       <p class="section-label">O que dizem os alunos</p>
@@ -380,7 +404,7 @@
 <!-- ════════════════════════════════════════════════════════
      7. MÓDULOS — O QUE VOCÊ APRENDE
 ════════════════════════════════════════════════════════ -->
-<section id="modulos">
+<section id="modulos" data-pixel-section="Modulos_Conteudo">
   <div class="container">
     <div class="section-header center">
       <p class="section-label">Conteúdo do Curso</p>
@@ -416,12 +440,30 @@
 
     </div>
 
-    <!-- Bônus -->
-    <div class="bonus-item">
-      <span class="bonus-tag">Bônus Exclusivo</span>
-      <div class="bonus-content">
-        <h3>Protocolo de Crise — 3 áudios para as primeiras 72 horas após a descoberta</h3>
-        <p>O que fazer (e o que não fazer) nas primeiras horas depois que ela descobriu. Esses 3 áudios foram gravados especificamente para o momento de crise aguda — quando cada ação pode definir o rumo do casamento. Incluído gratuitamente até <span id="bonus-deadline-2">amanhã</span>.</p>
+    <!-- Bônus — Urgência máxima -->
+    <div class="bonus-urgencia-bloco">
+      <div class="bonus-urgencia-header">
+        <span class="bonus-fogo">🔥</span>
+        <span class="bonus-urgencia-label">BÔNUS DISPONÍVEL APENAS HOJE</span>
+        <span class="bonus-fogo">🔥</span>
+      </div>
+      <div class="bonus-item bonus-item--destaque">
+        <span class="bonus-tag">Bônus Exclusivo — Valor R$97</span>
+        <div class="bonus-content">
+          <h3>Protocolo de Crise — 3 áudios para as primeiras 72 horas após a descoberta</h3>
+          <p>
+            Este bônus foi criado para uma situação específica: <strong>você acabou de ser descoberto e não sabe o que fazer agora.</strong>
+          </p>
+          <ul class="bonus-bullets">
+            <li><span class="check">✓</span> <strong>Áudio 1 — As primeiras 4 horas:</strong> o que falar, o que não falar, e por que a maioria dos homens piora tudo nas primeiras horas sem querer</li>
+            <li><span class="check">✓</span> <strong>Áudio 2 — O erro fatal do "modo desespero":</strong> como parar de agir por impulso e começar a agir com método — ainda que você esteja em colapso interno</li>
+            <li><span class="check">✓</span> <strong>Áudio 3 — O que ela precisa ver nas próximas 48h:</strong> o comportamento concreto que abre (ou fecha) a janela de reconciliação</li>
+          </ul>
+          <p class="bonus-alerta">
+            <strong>Este bônus não estará disponível depois de amanhã.</strong> Ele foi incluído temporariamente para quem está em crise agora e precisa de direção imediata. Se você está nesse momento, isso resolve o "e agora?" nas próximas horas.
+          </p>
+          <p class="bonus-valor-nota">Valor separado: R$97 &bull; Incluído gratuitamente ao comprar hoje.</p>
+        </div>
       </div>
     </div>
 
@@ -447,22 +489,25 @@
         <tr>
           <th>Opção</th>
           <th>Custo</th>
-          <th>Foco no seu caso?</th>
+          <th>Foco na traição?</th>
           <th>Acesso imediato?</th>
           <th>Método testado?</th>
+          <th>Privacidade total?</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1 sessão de terapia presencial</td>
-          <td class="preco-col">R$200–400</td>
+          <td class="preco-col">R$200–400<br/><small>(por sessão)</small></td>
+          <td class="x-col">✗</td>
           <td class="x-col">✗</td>
           <td class="x-col">✗</td>
           <td class="x-col">✗</td>
         </tr>
         <tr>
-          <td>10 sessões de terapia</td>
+          <td>10 sessões de terapia (2 meses)</td>
           <td class="preco-col">R$2.000–4.000</td>
+          <td class="x-col">✗</td>
           <td class="x-col">✗</td>
           <td class="x-col">✗</td>
           <td class="x-col">✗</td>
@@ -473,16 +518,34 @@
           <td class="x-col">✗</td>
           <td class="x-col">✗</td>
           <td class="check-col">✓</td>
+          <td class="x-col">✗</td>
+        </tr>
+        <tr>
+          <td>Divórcio (custos diretos + advogado)</td>
+          <td class="preco-col" style="color:#dc2626;font-weight:700;">R$15.000–50.000</td>
+          <td class="x-col">—</td>
+          <td class="x-col">—</td>
+          <td class="x-col">—</td>
+          <td class="x-col">—</td>
         </tr>
         <tr class="destaque">
-          <td><strong>Reconstrução Masculina</strong> — 1 ano de acesso</td>
-          <td class="preco-col"><strong>R$297</strong></td>
+          <td>
+            <strong>Reconstrução Masculina</strong><br/>
+            <small>Protocolo RECA + Bônus Protocolo de Crise &bull; 1 ano de acesso</small>
+          </td>
+          <td class="preco-col"><strong style="font-size:1.3em">R$297</strong><br/><small>ou 12x R$30,72</small></td>
+          <td class="check-col">✓</td>
           <td class="check-col">✓</td>
           <td class="check-col">✓</td>
           <td class="check-col">✓</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="ancora-contexto">
+      <p class="ancora-destaque-numero">R$297 = menos que <strong>2 sessões</strong> de terapia comum que não foca na sua situação.</p>
+      <p class="ancora-destaque-numero">R$30,72/mês = menos que <strong>R$1 por dia</strong> enquanto o casamento ainda tem solução.</p>
+    </div>
 
     <blockquote class="citacao-ancora">
       "O que 3 anos de terapia não fez, o curso fez em 3 aulas."
@@ -495,33 +558,88 @@
 <!-- ════════════════════════════════════════════════════════
      9. OFERTA / PREÇO
 ════════════════════════════════════════════════════════ -->
-<section id="oferta">
+<section id="oferta" data-pixel-section="Oferta_Preco">
   <div class="container">
     <div class="section-header center" style="margin-bottom:40px;">
       <h2 style="color:#fff;">Comece hoje.<br />O método está esperando por você.</h2>
     </div>
 
     <div class="oferta-box">
-      <span class="oferta-tag">Acesso Imediato &bull; 7 Dias de Garantia</span>
+      <span class="oferta-tag">Acesso Imediato &bull; 7 Dias de Garantia Total</span>
 
       <h2>Reconstrução Masculina</h2>
-      <p class="subtitulo">Protocolo RECA — Método clínico para reconstruir confiança e salvar seu casamento</p>
+      <p class="subtitulo">Protocolo RECA — Método clínico desenvolvido com 400+ casos reais para reconstruir confiança e salvar seu casamento</p>
 
-      <ul class="incluso-lista">
-        <li><span class="check">✓</span> <span><strong>Módulo 1:</strong> Por que você traiu — a raiz emocional</span></li>
-        <li><span class="check">✓</span> <span><strong>Módulo 2:</strong> Protocolo de reconstrução da confiança</span></li>
-        <li><span class="check">✓</span> <span><strong>Módulo 3:</strong> Transformação real — o homem que ela precisa</span></li>
-        <li><span class="check">✓</span> <span><strong>Bônus:</strong> Protocolo de Crise — 3 áudios exclusivos (72h)</span></li>
-        <li><span class="check">✓</span> Acesso por 1 ano em celular, tablet e PC</li>
-        <li><span class="check">✓</span> Certificado de conclusão</li>
-        <li><span class="check">✓</span> Suporte por e-mail</li>
-        <li><span class="check">✓</span> 7 dias de garantia incondicional</li>
+      <!-- Value Stack com valor percebido -->
+      <p class="value-stack-titulo">Tudo que está incluído:</p>
+      <ul class="incluso-lista value-stack">
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>Módulo 1 — Por que você traiu: a raiz emocional</strong>
+            <span class="vs-desc">O entendimento que interrompe o ciclo e impede a recaída — sem isso, qualquer mudança é fachada</span>
+            <span class="vs-valor">Valor: R$147</span>
+          </span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>Módulo 2 — Protocolo de reconstrução da confiança</strong>
+            <span class="vs-desc">O conjunto exato de comportamentos que ela precisa ver — não ouvir — para começar a acreditar em você novamente</span>
+            <span class="vs-valor">Valor: R$197</span>
+          </span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>Módulo 3 — Transformação real: o homem que ela precisa</strong>
+            <span class="vs-desc">A diferença entre mudar por medo e mudar de verdade — só a segunda convence ela, só a segunda dura</span>
+            <span class="vs-valor">Valor: R$147</span>
+          </span>
+        </li>
+        <li class="vs-bonus-linha">
+          <span class="check check--bonus">🔥</span>
+          <span class="vs-item">
+            <strong>BÔNUS — Protocolo de Crise: 3 áudios para as primeiras 72h</strong>
+            <span class="vs-desc">O que fazer AGORA: as primeiras 4 horas, o erro fatal do modo desespero, e o comportamento concreto que abre a janela de reconciliação</span>
+            <span class="vs-valor vs-valor--bonus">Valor: R$97 &bull; <em>GRÁTIS ao comprar hoje</em></span>
+          </span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>1 ano de acesso completo</strong>
+            <span class="vs-desc">Celular, tablet e PC — assista quantas vezes precisar, no seu ritmo, com total privacidade</span>
+          </span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>Suporte direto por e-mail</strong>
+            <span class="vs-desc">Dúvidas respondidas — você não está sozinho nesse processo</span>
+          </span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span class="vs-item">
+            <strong>Garantia incondicional de 7 dias</strong>
+            <span class="vs-desc">Acesse tudo, aplique o método — se não fizer sentido, devolução total sem perguntas</span>
+          </span>
+        </li>
       </ul>
+
+      <!-- Soma de valor -->
+      <div class="valor-total-box">
+        <p class="valor-total-label">Valor total do que você recebe:</p>
+        <p class="valor-total-soma"><span class="valor-riscado">R$588</span></p>
+        <p class="valor-total-hoje">Seu investimento hoje: <strong>R$297</strong></p>
+      </div>
 
       <div class="preco-box">
         <p class="preco-de">De R$497</p>
         <div class="preco-por"><span>R$</span>297</div>
-        <p class="preco-parcelado">ou 12x de R$30,72 sem juros</p>
+        <p class="preco-parcelado">ou 12x de R$30,72 sem juros no cartão</p>
+        <p class="preco-pix">Pix: R$297 (acesso imediato após confirmação)</p>
       </div>
 
       <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
@@ -532,7 +650,7 @@
       </a>
 
       <p class="oferta-garantia-note">
-        🔒 Pagamento 100% seguro &bull; Kiwify &bull; Parcelamento disponível
+        🔒 Pagamento 100% seguro &bull; Kiwify &bull; Parcelamento em 12x disponível
       </p>
     </div>
   </div>
@@ -551,16 +669,25 @@
       </div>
 
       <div class="garantia-copy">
-        <h2>O risco é 100% meu</h2>
+        <h2>O risco é 100% meu.<br/>O zero é seu.</h2>
         <p>
-          Você tem <strong>7 dias completos</strong> para acessar o curso, assistir às aulas, aplicar o método — e se por qualquer motivo não fizer sentido para a sua situação, eu devolvo cada centavo. <strong>Sem perguntas. Sem burocracia.</strong>
+          Você tem <strong>7 dias completos</strong> para acessar todo o curso, ouvir o Protocolo de Crise, assistir cada aula e aplicar o método na prática.
         </p>
         <p>
-          Você não tem nada a perder. O risco é inteiramente meu. Isso é o quanto eu confio que este método vai fazer sentido para você.
+          Se por qualquer motivo — qualquer um — você sentir que não fez sentido para a sua situação, envie um e-mail e eu devolvo cada centavo. <strong>Sem perguntas. Sem formulário. Sem prazo de processamento.</strong>
+        </p>
+        <div class="garantia-lista">
+          <div class="garantia-item"><span class="g-check">✓</span> Acessou o curso e não gostou? Reembolso total.</div>
+          <div class="garantia-item"><span class="g-check">✓</span> Achou que não é para você? Reembolso total.</div>
+          <div class="garantia-item"><span class="g-check">✓</span> Mudou de ideia por qualquer razão? Reembolso total.</div>
+          <div class="garantia-item"><span class="g-check">✓</span> Não precisa explicar nada. Um e-mail é suficiente.</div>
+        </div>
+        <p>
+          Isso é possível porque <strong>confio no método</strong>. Em 400+ casos acompanhados, o feedback consistente é: clareza e direção já nas primeiras aulas. Se você se dedicar ao conteúdo, vai entender por que funciona.
         </p>
         <p class="destaque-garantia">
-          "Se não fizer sentido, devolvo cada centavo. Sem perguntas."<br/>
-          — César Augusto
+          "O risco é zero para você.<br/>O risco é inteiramente meu."<br/>
+          <strong>— César Augusto, terapeuta masculino</strong>
         </p>
       </div>
 
@@ -713,13 +840,14 @@
 <div id="sticky-cta">
   <div class="sticky-text">
     <strong>Reconstrução Masculina</strong>
-    R$297 ou 12x de R$30,72 &bull; 7 dias de garantia
+    <span class="sticky-price">12x de R$30,72 &bull; 7 dias garantia</span>
   </div>
   <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
-     class="cta-btn"
+     class="cta-btn sticky-cta-btn"
      target="_blank"
-     rel="noopener">
-    QUERO &rarr;
+     rel="noopener"
+     id="sticky-cta-link">
+    COMPRAR &rarr;
   </a>
 </div>
 
