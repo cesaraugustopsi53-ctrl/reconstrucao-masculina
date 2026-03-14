@@ -1514,6 +1514,13 @@ footer a:hover { color: var(--dourado); }
   .hero-copy .subtitulo { font-size: .97rem; }
   .hero-copy .pretitle  { font-size: .68rem; }
 
+  /* Seções: ainda mais compactas */
+  #dor, #mecanismo, #autoridade,
+  #depoimentos, #modulos, #preco-ancora,
+  #oferta, #garantia, #faq { padding: 48px 0; }
+  #hero       { padding: 52px 0 44px; }
+  #cta-final  { padding: 56px 0; }
+
   /* Módulo número: pill mais compacto */
   .modulo-numero { font-size: .72rem; padding: 4px 10px; }
 
@@ -1541,6 +1548,21 @@ footer a:hover { color: var(--dourado); }
   /* Valor total box */
   .valor-total-box { padding: 14px 16px; }
   .valor-total-hoje strong { font-size: 1.1rem; }
+
+  /* Sticky CTA: empilha verticalmente em telas pequenas */
+  #sticky-cta {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 16px;
+    align-items: stretch;
+  }
+  #sticky-cta .sticky-text { font-size: .78rem; }
+  #sticky-cta .cta-btn { width: 100%; text-align: center; padding: 12px 16px; font-size: .88rem; }
+
+  /* Exit popup: padding menor no mobile */
+  .popup-box { padding: 28px 20px; border-radius: 12px; }
+  .popup-box h3 { font-size: 1.2rem; }
+  .popup-emoji  { font-size: 2rem; margin-bottom: 12px; }
 }
 
 /* ── Depoimentos: nota "em breve" ───────────────────────── */
