@@ -350,8 +350,8 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 767px) {
   #vsl { padding-bottom: 48px; }
   .vsl-label { padding-top: 24px; }
-  .yt-play-btn { width: 60px; height: 60px; }
-  .yt-play-btn svg { width: 22px; height: 22px; }
+  .yt-play-btn { width: clamp(44px, 14vw, 60px); height: clamp(44px, 14vw, 60px); }
+  .yt-play-btn svg { width: clamp(18px, 5vw, 22px); height: clamp(18px, 5vw, 22px); }
 }
 
 /* ── SEÇÃO DE DOR ─────────────────────────────────────────── */
@@ -791,13 +791,18 @@ p:last-child { margin-bottom: 0; }
 #preco-ancora h2 { color: var(--verde); margin-bottom: 12px; }
 #preco-ancora .intro { color: #4b5563; margin-bottom: 40px; }
 
+.tabela-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  margin-bottom: 36px;
+}
 .tabela-ancora {
   width: 100%;
   border-collapse: collapse;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--sombra);
-  margin-bottom: 36px;
 }
 .tabela-ancora th {
   background: var(--verde);
@@ -927,7 +932,7 @@ p:last-child { margin-bottom: 0; }
 }
 .preco-por {
   font-family: var(--fonte-titulo);
-  font-size: 2.8rem;
+  font-size: clamp(1.8rem, 7vw, 2.8rem);
   font-weight: 700;
   color: var(--verde);
   line-height: 1;
@@ -1229,6 +1234,20 @@ footer a:hover { color: var(--dourado); }
   .sticky-price { display: none; }
   #sticky-cta .sticky-text strong { font-size: .82rem; }
   .sticky-cta-btn { padding: 10px 14px; font-size: .78rem; }
+
+  /* Hero foto menor em 360px */
+  .hero-foto { width: 160px; }
+
+  /* Oferta box: padding mínimo */
+  .oferta-box { padding: 20px 12px; }
+
+  /* Popup: evitar overflow lateral */
+  .popup-box { padding: 20px 14px; max-width: 92vw; }
+  .popup-box h3 { font-size: 1.1rem; }
+
+  /* Microprovas: gap menor */
+  .microprovas { gap: 8px; }
+  .microprov-item { padding: 10px 8px; }
 }
 
 
@@ -1615,7 +1634,7 @@ footer a:hover { color: var(--dourado); }
   .oferta-box { padding: 32px 24px; }
 
   /* Preço principal: mais confortável no mobile */
-  .preco-por { font-size: 2.4rem; }
+  .preco-por { font-size: clamp(1.8rem, 6vw, 2.4rem); }
 
   /* Garantia: mais compacta */
   .garantia-inner { gap: 24px; }
@@ -1626,7 +1645,7 @@ footer a:hover { color: var(--dourado); }
   .badges-grid { grid-template-columns: 1fr 1fr; }
 
   /* FAQ */
-  .faq-question { font-size: .95rem; }
+  .faq-question { font-size: .95rem; min-height: 48px; display: flex; align-items: center; justify-content: space-between; }
   .faq-question:hover { padding-left: 6px; padding-right: 6px; }
 
   /* Value stack */
@@ -1695,7 +1714,7 @@ footer a:hover { color: var(--dourado); }
     align-items: stretch;
   }
   #sticky-cta .sticky-text { font-size: .78rem; }
-  #sticky-cta .cta-btn { width: 100%; text-align: center; padding: 12px 16px; font-size: .88rem; }
+  #sticky-cta .cta-btn { width: 100%; text-align: center; padding: 12px 16px; font-size: .88rem; min-height: 44px; display: flex; align-items: center; justify-content: center; }
 
   /* Exit popup: padding menor no mobile */
   .popup-box { padding: 28px 20px; border-radius: 12px; }
