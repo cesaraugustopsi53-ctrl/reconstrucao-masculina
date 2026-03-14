@@ -97,35 +97,6 @@ p:last-child { margin-bottom: 0; }
 .cta-btn--lg:hover { animation: none; }
 .cta-btn--full { width: 100%; display: block; }
 
-/* ── BARRA DE URGÊNCIA ────────────────────────────────────── */
-#urgency-bar {
-  background: linear-gradient(90deg, #b91c1c 0%, #dc2626 50%, #b91c1c 100%);
-  color: #fff;
-  text-align: center;
-  padding: 12px 20px;
-  font-size: .88rem;
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  line-height: 1.4;
-}
-#urgency-bar strong { font-size: 1rem; }
-#countdown {
-  font-family: 'Courier New', monospace;
-  font-size: 1.15rem;
-  font-weight: 900;
-  background: rgba(0,0,0,.25);
-  padding: 2px 8px;
-  border-radius: 4px;
-  letter-spacing: .1em;
-  animation: shimmer-count 2s ease-in-out infinite;
-}
-@keyframes shimmer-count {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .75; }
-}
-
 /* ── HERO ─────────────────────────────────────────────────── */
 #hero {
   background: var(--verde-gradient);
@@ -699,7 +670,8 @@ p:last-child { margin-bottom: 0; }
   padding: 24px;
   box-shadow: var(--sombra);
   display: flex;
-  gap: 18px;
+  flex-direction: column;
+  gap: 14px;
   align-items: flex-start;
   transition: transform .2s, box-shadow .2s;
 }
@@ -708,7 +680,7 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 12px 40px rgba(0,0,0,.14);
 }
 .modulo-numero {
-  flex-shrink: 0;
+  display: inline-block;
   background: var(--verde);
   color: var(--dourado);
   font-family: var(--fonte-titulo);
@@ -719,6 +691,8 @@ p:last-child { margin-bottom: 0; }
   padding: 6px 12px;
   border-radius: 6px;
   white-space: nowrap;
+  align-self: flex-start;
+  margin-bottom: 4px;
 }
 .modulo-content h3 { color: var(--verde); font-size: 1rem; margin-bottom: 6px; }
 .modulo-content p { color: #4b5563; font-size: .88rem; margin: 0; }
@@ -1601,16 +1575,6 @@ footer a:hover { color: var(--dourado); }
    Otimizações para smartphone (375-480px)
    ═══════════════════════════════════════════════════════════ */
 
-/* Urgency bar: versão curta visível apenas no mobile */
-.ub-short { display: none; }
-
-@media (max-width: 600px) {
-  .ub-full  { display: none; }
-  .ub-short { display: inline; }
-  #urgency-bar { font-size: .82rem; padding: 10px 14px; line-height: 1.6; }
-  #countdown { font-size: 1rem; }
-}
-
 /* ── Seções: padding compacto no mobile ─────────────────── */
 @media (max-width: 767px) {
   #dor, #mecanismo, #autoridade,
@@ -1803,16 +1767,6 @@ footer a:hover { color: var(--dourado); }
   to   { transform: rotate(360deg); }
 }
 
-@keyframes countdown-blink {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: .85; transform: scale(1.04); }
-}
-
-@keyframes urgency-gradient {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 @keyframes reveal-up {
   from { opacity: 0; transform: translateY(16px); }
@@ -2146,18 +2100,6 @@ footer a:hover { color: var(--dourado); }
   transition: color .2s, background .2s, padding .2s;
 }
 
-/* ── 9. URGENCY BAR — Mais urgência ─────────────────────── */
-#urgency-bar {
-  background: linear-gradient(90deg, #991b1b 0%, #dc2626 30%, #ef4444 50%, #dc2626 70%, #991b1b 100%);
-  background-size: 200% 100%;
-  animation: urgency-gradient 4s ease infinite;
-}
-
-#countdown {
-  animation: countdown-blink 1.8s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(0,0,0,.3);
-}
-
 /* ── 10. TIPOGRAFIA — Section labels decorativos ─────────── */
 .section-label {
   display: inline-flex;
@@ -2367,8 +2309,6 @@ footer a:hover::after {
     transition-duration: 0.01ms !important;
   }
   .cta-btn--lg { animation: none !important; }
-  #urgency-bar { animation: none !important; background: #dc2626; }
-  #countdown   { animation: none !important; }
   .oferta-box::after { animation: none !important; }
   #sticky-cta.visible .cta-btn { animation: none !important; }
 }
