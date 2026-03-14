@@ -300,7 +300,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// ── 12. PIXEL — InitiateCheckout no sticky CTA ───────────────
+// ── 12. YOUTUBE LITE PLAYER ──────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.yt-lite').forEach(function(el) {
+    function activate() {
+      if (el.classList.contains('yt-loaded')) return;
+      var id = el.dataset.videoid;
+      el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id +
+        '?autoplay=1&rel=0&modestbranding=1" ' +
+        'allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      el.classList.add('yt-loaded');
+
+      // Pixel: rastreia play do VSL
+      if (typeof fbq === 'function') {
+        fbq('trackCustom', 'VideoPlay', {
+          content_name: 'VSL_Reconstrucao_Masculina',
+          page: 'RM_landing'
+        });
+      }
+    }
+
+    el.addEventListener('click', activate);
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  });
+});
+
+// ── 13. PIXEL — InitiateCheckout no sticky CTA ───────────────
 document.addEventListener('DOMContentLoaded', function() {
   var stickyBtn = document.getElementById('sticky-cta-link');
   if (stickyBtn) {

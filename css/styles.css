@@ -258,6 +258,102 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-foto-placeholder .icon { font-size: 2.5rem; }
 
+/* ── VSL — YOUTUBE LITE ───────────────────────────────────── */
+#vsl {
+  background: #0d2318;
+  padding: 0 0 64px;
+}
+.vsl-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.vsl-label {
+  text-align: center;
+  color: rgba(255,255,255,.55);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: 28px 0 16px;
+}
+.vsl-caption {
+  text-align: center;
+  color: rgba(255,255,255,.45);
+  font-size: .85rem;
+  margin-top: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* YouTube Lite: thumbnail + play btn, carrega iframe só ao clicar */
+.yt-lite {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+  box-shadow: 0 24px 64px rgba(0,0,0,.55), 0 0 0 1px rgba(201,168,76,.2);
+}
+.yt-lite::after {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+}
+.yt-lite img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter .25s;
+}
+.yt-lite:hover img { filter: brightness(.8); }
+.yt-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #C9A84C 0%, #dbb95d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,.45), 0 0 0 10px rgba(201,168,76,.15);
+  transition: transform .2s, box-shadow .2s;
+}
+.yt-lite:hover .yt-play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,.55), 0 0 0 14px rgba(201,168,76,.12);
+}
+.yt-play-btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #1B3A2D;
+  margin-left: 4px;
+}
+/* Estado carregado: mostra iframe diretamente */
+.yt-lite.yt-loaded { aspect-ratio: 16/9; }
+.yt-lite.yt-loaded::after { display: none; }
+.yt-lite iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  #vsl { padding-bottom: 48px; }
+  .vsl-label { padding-top: 24px; }
+  .yt-play-btn { width: 60px; height: 60px; }
+  .yt-play-btn svg { width: 22px; height: 22px; }
+}
+
 /* ── SEÇÃO DE DOR ─────────────────────────────────────────── */
 #dor {
   background: #0f1f18;
