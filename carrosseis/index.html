@@ -3,32 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrosséis — @cesaraugustoo__</title>
+<title>Carrosséis — @cesaraugustoo__ / @thais_ayumi</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#080f0b;color:#fff;font-family:-apple-system,sans-serif;padding:24px 16px 60px}
   h1{font-size:20px;color:#C9A84C;margin-bottom:4px}
-  .sub{color:#445;font-size:13px;margin-bottom:32px}
-  .carrossel{margin-bottom:52px}
+  .sub{color:#556;font-size:13px;margin-bottom:32px}
+  .carrossel{margin-bottom:60px}
+
+  /* header */
   .carrossel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #192618}
   .carrossel-header h2{font-size:13px;font-weight:600;color:#7a9e82;letter-spacing:.05em;text-transform:uppercase}
-  .btn-todos{background:#C9A84C;color:#080f0b;font-weight:700;font-size:12px;padding:8px 16px;border-radius:5px;text-decoration:none;letter-spacing:.04em;white-space:nowrap;cursor:pointer;border:none}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .btn-todos{background:#C9A84C;color:#080f0b;font-weight:700;font-size:12px;padding:8px 16px;border-radius:5px;letter-spacing:.04em;white-space:nowrap;cursor:pointer;border:none}
+
+  /* grid de slides */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:20px}
   .card{position:relative;border-radius:5px;overflow:hidden;background:#111a13}
   .card img{width:100%;display:block}
   .num{position:absolute;top:7px;left:7px;background:rgba(0,0,0,.7);color:#C9A84C;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;letter-spacing:.06em}
   .btn-dl{display:block;background:#0f1c12;color:#C9A84C;text-align:center;font-weight:600;font-size:12px;padding:9px;text-decoration:none;letter-spacing:.04em;border-top:1px solid #1e3222}
+
+  /* bloco legenda */
+  .legenda-box{background:#0d1a0f;border:1px solid #1e3222;border-radius:8px;padding:16px}
+  .legenda-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C;margin-bottom:10px}
+  .legenda-text{width:100%;background:#080f0b;color:#ccc;border:1px solid #1e3222;border-radius:5px;padding:12px;font-size:13px;line-height:1.6;resize:vertical;min-height:160px;font-family:-apple-system,sans-serif}
+  .btn-copy{margin-top:10px;width:100%;background:#1e3222;color:#C9A84C;border:none;border-radius:5px;padding:10px;font-size:13px;font-weight:700;letter-spacing:.06em;cursor:pointer}
+  .btn-copy:active{background:#2a4a30}
+  .copied{color:#6fcf97!important}
+
+  /* ayumi theme overrides */
+  .ayumi .carrossel-header{border-bottom-color:#2a0f18}
+  .ayumi .carrossel-header h2{color:#C9A84C}
+  .ayumi .card{background:#1a0810}
+  .ayumi .btn-dl{background:#140810;color:#C9A84C;border-top-color:#2a0f18}
+  .ayumi .legenda-box{background:#140810;border-color:#2a0f18}
+  .ayumi .legenda-text{background:#0e050a;border-color:#2a0f18}
+  .ayumi .btn-copy{background:#2a0f18}
+  .ayumi .btn-copy:active{background:#3a1a25}
 </style>
 </head>
 <body>
 
 <h1>@cesaraugustoo__ / @thais_ayumi</h1>
-<p class="sub">Carrosséis prontos para postar</p>
+<p class="sub">Slides + legenda prontos para postar</p>
 
-<!-- ── CARROSSEL: AYUMI — GRUPO VIP ── -->
-<div class="carrossel" id="ayumi-grupo-vip">
-  <div class="carrossel-header" style="border-bottom-color:#2a0f18">
-    <h2 style="color:#C9A84C">@thais_ayumi — Grupo VIP</h2>
+<!-- ══════════════════════════════════════════════════ -->
+<!-- AYUMI — GRUPO VIP                                  -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="carrossel ayumi" id="ayumi-grupo-vip">
+  <div class="carrossel-header">
+    <h2>@thais_ayumi — Grupo VIP</h2>
     <button class="btn-todos" onclick="baixarTodos('ayumi-grupo-vip', 10, 'thaisayumi')">Baixar todos</button>
   </div>
   <div class="grid">
@@ -43,12 +67,29 @@
     <div class="card"><span class="num">09</span><img src="ayumi-grupo-vip/slide-09.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-09.png" download>Baixar</a></div>
     <div class="card"><span class="num">10</span><img src="ayumi-grupo-vip/slide-10.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-10.png" download>Baixar</a></div>
   </div>
+  <div class="legenda-box">
+    <div class="legenda-label">Legenda do post</div>
+    <textarea class="legenda-text" id="leg-ayumi-grupo-vip" readonly>✨ Sua agenda pode ser cheia dos clientes certos. Não de qualquer cliente, mas daqueles que reconhecem o valor do seu trabalho e pagam por isso sem questionar.
+
+Se você sente que está pronta para dar esse próximo passo, o lugar que te espera é aqui.
+
+A lista de espera do Grupo VIP está aberta para psicólogas, médicas e terapeutas que querem construir um posicionamento digital que converte, com estratégia, elegância e consistência.
+
+Dentro do grupo, você vai ter acesso antecipado à mentoria, conteúdos exclusivos e uma comunidade de profissionais que pensam como você.
+
+O link está na bio. Entra para o Grupo VIP e garante seu lugar antes que feche. 🤍
+
+#psicologadigital #posicionamentodigital #marketingparaprofissionaisdesaude #psicologaempreendedora #terapeutadigital #medicaempreendedora #agendacheia #posicionamentoonline #mentoriaparaprofissionaisdesaude #psicologabrasil</textarea>
+    <button class="btn-copy" onclick="copiar('leg-ayumi-grupo-vip', this)">Copiar legenda</button>
+  </div>
 </div>
 
-<!-- ── CARROSSEL: EGO FRÁGIL v3 ── -->
+<!-- ══════════════════════════════════════════════════ -->
+<!-- CÉSAR — EGO FRÁGIL                                 -->
+<!-- ══════════════════════════════════════════════════ -->
 <div class="carrossel" id="ego-fragil">
   <div class="carrossel-header">
-    <h2>Ego Frágil</h2>
+    <h2>@cesaraugustoo__ — Ego Frágil</h2>
     <button class="btn-todos" onclick="baixarTodos('ego-fragil-v4', 11)">Baixar todos</button>
   </div>
   <div class="grid">
@@ -63,6 +104,23 @@
     <div class="card"><span class="num">09</span><img src="ego-fragil-v4/slide-09.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v4/slide-09.png" download>Baixar</a></div>
     <div class="card"><span class="num">10</span><img src="ego-fragil-v4/slide-10.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v4/slide-10.png" download>Baixar</a></div>
     <div class="card"><span class="num">11</span><img src="ego-fragil-v4/slide-11.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v4/slide-11.png" download>Baixar</a></div>
+  </div>
+  <div class="legenda-box">
+    <div class="legenda-label">Legenda do post</div>
+    <textarea class="legenda-text" id="leg-ego-fragil" readonly>Você tem ego. Mas ele é frágil. E quando ele racha, você explode, foge ou trai.
+
+Não foi desejo que te levou para fora do casamento. Foi vazio.
+
+O que Freud chamou de ferida narcísica, Kohut descreveu como o self que nunca foi espelhado. Um homem que não se sustenta por dentro busca do lado de fora o que deveria construir dentro. A traição foi sintoma, não causa.
+
+Winnicott dizia que o falso self se forma quando o ambiente não acolhe o verdadeiro. Muitos homens cresceram sendo o forte, o que não chora, o que resolve. E construíram uma armadura que parece ego, mas é medo. Medo de não ser suficiente. Medo de ser visto de verdade.
+
+Se você explode por nada, se não aceita crítica, se a traição veio do nada em uma fase que parecia boa, esse carrossel não é coincidência. Existe um trabalho a ser feito. E ele começa em você.
+
+O curso Reconstrução Masculina foi criado para homens que decidiram parar de fugir. Link na bio.
+
+#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #terapiaparagomens #relacionamento #casamento #autoconsciencia #desenvolvimentopessoal</textarea>
+    <button class="btn-copy" onclick="copiar('leg-ego-fragil', this)">Copiar legenda</button>
   </div>
 </div>
 
@@ -85,6 +143,16 @@ async function baixarTodos(pasta, total, prefixo) {
   }
   btn.textContent = 'Baixar todos';
   btn.disabled = false;
+}
+
+function copiar(id, btn) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.value).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Copiado!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  });
 }
 </script>
 
