@@ -22,8 +22,28 @@
 </head>
 <body>
 
-<h1>@cesaraugustoo__</h1>
+<h1>@cesaraugustoo__ / @thais_ayumi</h1>
 <p class="sub">Carrosséis prontos para postar</p>
+
+<!-- ── CARROSSEL: AYUMI — GRUPO VIP ── -->
+<div class="carrossel" id="ayumi-grupo-vip">
+  <div class="carrossel-header" style="border-bottom-color:#2a0f18">
+    <h2 style="color:#C9A84C">@thais_ayumi — Grupo VIP</h2>
+    <button class="btn-todos" onclick="baixarTodos('ayumi-grupo-vip', 10, 'thaisayumi')">Baixar todos</button>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="num">01</span><img src="ayumi-grupo-vip/slide-01.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-01.png" download>Baixar</a></div>
+    <div class="card"><span class="num">02</span><img src="ayumi-grupo-vip/slide-02.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-02.png" download>Baixar</a></div>
+    <div class="card"><span class="num">03</span><img src="ayumi-grupo-vip/slide-03.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-03.png" download>Baixar</a></div>
+    <div class="card"><span class="num">04</span><img src="ayumi-grupo-vip/slide-04.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-04.png" download>Baixar</a></div>
+    <div class="card"><span class="num">05</span><img src="ayumi-grupo-vip/slide-05.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-05.png" download>Baixar</a></div>
+    <div class="card"><span class="num">06</span><img src="ayumi-grupo-vip/slide-06.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-06.png" download>Baixar</a></div>
+    <div class="card"><span class="num">07</span><img src="ayumi-grupo-vip/slide-07.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-07.png" download>Baixar</a></div>
+    <div class="card"><span class="num">08</span><img src="ayumi-grupo-vip/slide-08.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-08.png" download>Baixar</a></div>
+    <div class="card"><span class="num">09</span><img src="ayumi-grupo-vip/slide-09.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-09.png" download>Baixar</a></div>
+    <div class="card"><span class="num">10</span><img src="ayumi-grupo-vip/slide-10.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip/slide-10.png" download>Baixar</a></div>
+  </div>
+</div>
 
 <!-- ── CARROSSEL: EGO FRÁGIL v3 ── -->
 <div class="carrossel" id="ego-fragil">
@@ -47,7 +67,8 @@
 </div>
 
 <script>
-async function baixarTodos(pasta, total) {
+async function baixarTodos(pasta, total, prefixo) {
+  prefixo = prefixo || 'cesaraugustoo';
   const btn = event.target;
   btn.textContent = 'Baixando...';
   btn.disabled = true;
@@ -56,7 +77,7 @@ async function baixarTodos(pasta, total) {
     const url = `${pasta}/slide-${num}.png`;
     const a = document.createElement('a');
     a.href = url;
-    a.download = `cesaraugustoo-slide-${num}.png`;
+    a.download = `${prefixo}-slide-${num}.png`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
