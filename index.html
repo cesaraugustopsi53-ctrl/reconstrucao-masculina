@@ -134,6 +134,16 @@
         display: block !important;
       }
     }
+
+    /* Mobile overrides para elementos com inline style */
+    @media (max-width: 767px) {
+      #para-quem      { padding: 56px 0 !important; }
+      #prova-social-faixa { padding: 36px 0 !important; }
+      .para-quem-inner { gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .ps-num { font-size: 2rem !important; }
+    }
   </style>
 
   <!-- Velocidade: DNS prefetch + preload hero (LCP) -->
@@ -169,7 +179,7 @@
      1. BARRA DE URGÊNCIA
 ════════════════════════════════════════════════════════ -->
 <div id="urgency-bar">
-  <strong>⏱ Cada hora sem um método é uma hora que ela vai se convencendo.</strong> Protocolo de Crise (3 áudios — o que fazer agora) incluso <strong>grátis</strong> só até <span id="bonus-deadline">hoje à meia-noite</span> &nbsp;|&nbsp; Fecha em: <span id="countdown">23:59:59</span>
+  <span class="ub-full"><strong>⏱ Cada hora sem um método é uma hora que ela vai se convencendo.</strong> Protocolo de Crise (3 áudios) incluso <strong>grátis</strong> só até <span id="bonus-deadline">hoje à meia-noite</span> &nbsp;|&nbsp; </span><span class="ub-short">🔥 Bônus grátis &bull; </span>Fecha em: <span id="countdown">23:59:59</span>
 </div>
 
 <!-- ════════════════════════════════════════════════════════
@@ -338,8 +348,7 @@
       <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid"
          class="cta-btn cta-btn--lg"
          target="_blank"
-         rel="noopener"
-         style="background:#1B3A2D;">
+         rel="noopener">
         QUERO ESSE MÉTODO &rarr;
       </a>
       <p style="margin-top:12px; font-size:.85rem; color:#6b7280;">R$297 à vista ou 12x de R$30,72 &bull; 7 dias de garantia</p>
@@ -522,49 +531,8 @@
         </div>
       </div>
 
-      <!-- VÍDEO PLACEHOLDER 1 -->
-      <div class="depoimento-card depoimento-card--video-placeholder">
-        <div class="video-placeholder-inner">
-          <div class="video-placeholder-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          </div>
-          <p class="video-placeholder-titulo">Em breve</p>
-          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
-        </div>
-      </div>
-
-      <!-- VÍDEO PLACEHOLDER 2 -->
-      <div class="depoimento-card depoimento-card--video-placeholder">
-        <div class="video-placeholder-inner">
-          <div class="video-placeholder-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          </div>
-          <p class="video-placeholder-titulo">Em breve</p>
-          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
-        </div>
-      </div>
-
-      <!-- VÍDEO PLACEHOLDER 3 -->
-      <div class="depoimento-card depoimento-card--video-placeholder">
-        <div class="video-placeholder-inner">
-          <div class="video-placeholder-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          </div>
-          <p class="video-placeholder-titulo">Em breve</p>
-          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
-        </div>
-      </div>
-
-      <!-- VÍDEO PLACEHOLDER 4 -->
-      <div class="depoimento-card depoimento-card--video-placeholder">
-        <div class="video-placeholder-inner">
-          <div class="video-placeholder-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.87v6.26a1 1 0 0 1-1.447.899L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          </div>
-          <p class="video-placeholder-titulo">Em breve</p>
-          <p class="video-placeholder-sub">Depoimento em vídeo<br/>de um aluno real</p>
-        </div>
-      </div>
+      <!-- Nota depoimentos em vídeo -->
+      <p class="depoimentos-coming-soon">📹 Depoimentos em vídeo de alunos chegando em breve</p>
 
     </div>
   </div>

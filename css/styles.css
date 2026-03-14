@@ -1097,9 +1097,10 @@ footer a:hover { color: var(--dourado); }
 @media (max-width: 767px) {
   .hero-inner { flex-direction: column-reverse; }
   .hero-foto {
-    width: 160px;
+    width: 200px;
     margin: 0 auto;
   }
+  .hero-foto img { border-width: 4px; }
   .hero-copy .pretitle { font-size: .72rem; }
   .hero-copy h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .hero-social-proof { font-size: .75rem; gap: 4px 8px; }
@@ -1435,4 +1436,122 @@ footer a:hover { color: var(--dourado); }
   }
   .prova-numero-item:last-child { border-bottom: none; }
   .prova-numeros-grid { flex-wrap: wrap; }
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE POLISH v2 — FOCO MOBILE-FIRST
+   Otimizações para smartphone (375-480px)
+   ═══════════════════════════════════════════════════════════ */
+
+/* Urgency bar: versão curta visível apenas no mobile */
+.ub-short { display: none; }
+
+@media (max-width: 600px) {
+  .ub-full  { display: none; }
+  .ub-short { display: inline; }
+  #urgency-bar { font-size: .82rem; padding: 10px 14px; line-height: 1.6; }
+  #countdown { font-size: 1rem; }
+}
+
+/* ── Seções: padding compacto no mobile ─────────────────── */
+@media (max-width: 767px) {
+  #dor, #mecanismo, #autoridade,
+  #depoimentos, #modulos, #preco-ancora,
+  #oferta, #garantia, #faq { padding: 56px 0; }
+
+  #hero      { padding: 60px 0 52px; }
+  #cta-final { padding: 64px 0; }
+
+  /* Section header: menos margem inferior */
+  .section-header { margin-bottom: 36px; }
+
+  /* Cards: padding compacto */
+  .modulo-item     { padding: 20px; gap: 14px; }
+  .etapa-card      { padding: 22px 20px; gap: 14px; }
+  .depoimento-card { padding: 22px; min-height: unset; }
+  .dor-item        { padding: 18px 18px 18px 22px; }
+  .dor-fechamento  { padding: 22px; }
+
+  /* Oferta box */
+  .oferta-box { padding: 32px 24px; }
+
+  /* Preço principal: mais confortável no mobile */
+  .preco-por { font-size: 2.4rem; }
+
+  /* Garantia: mais compacta */
+  .garantia-inner { gap: 24px; }
+  .garantia-selo  { width: 130px; height: 130px; }
+  .garantia-selo .num { font-size: 2rem; }
+
+  /* Badges: sempre 2 colunas */
+  .badges-grid { grid-template-columns: 1fr 1fr; }
+
+  /* FAQ */
+  .faq-question { font-size: .95rem; }
+  .faq-question:hover { padding-left: 6px; padding-right: 6px; }
+
+  /* Value stack */
+  .value-stack li { padding: 10px 0; }
+  .vs-desc { font-size: .8rem; }
+
+  /* Para-quem col */
+  .para-quem-col { padding: 22px 20px 18px; }
+
+  /* Reca badge */
+  .reca-badge { font-size: 1.2rem; padding: 8px 20px; }
+
+  /* Mecanismo footer */
+  .mecanismo-footer { padding: 22px; }
+
+  /* Incluso lista */
+  .incluso-lista li { font-size: .9rem; gap: 8px; }
+}
+
+/* ── Extra compacto: 480px ──────────────────────────────── */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-copy .subtitulo { font-size: .97rem; }
+  .hero-copy .pretitle  { font-size: .68rem; }
+
+  /* Módulo número: pill mais compacto */
+  .modulo-numero { font-size: .72rem; padding: 4px 10px; }
+
+  /* CTA btn: ajuste de padding */
+  .cta-btn--lg  { padding: 18px 20px; font-size: .95rem; }
+  .cta-btn--full{ font-size: 1rem; }
+
+  /* Oferta box */
+  .oferta-box    { padding: 28px 18px; }
+  .oferta-box h2 { font-size: 1.4rem; }
+
+  /* Depoimento card */
+  .depoimento-card { padding: 18px; }
+
+  /* Garantia lista */
+  .garantia-lista { padding: 14px 16px; }
+  .garantia-item  { font-size: .88rem; }
+
+  /* Tabela */
+  .tabela-ancora { font-size: .74rem; }
+
+  /* Bonus urgência */
+  .bonus-urgencia-header { font-size: .78rem; padding: 8px 16px; }
+
+  /* Valor total box */
+  .valor-total-box { padding: 14px 16px; }
+  .valor-total-hoje strong { font-size: 1.1rem; }
+}
+
+/* ── Depoimentos: nota "em breve" ───────────────────────── */
+.depoimentos-coming-soon {
+  text-align: center;
+  color: rgba(255,255,255,.38);
+  font-size: .82rem;
+  font-style: italic;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border: 1px dashed rgba(255,255,255,.15);
+  border-radius: 8px;
+  grid-column: 1 / -1;
 }
