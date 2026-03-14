@@ -1706,6 +1706,10 @@ footer a:hover { color: var(--dourado); }
   .valor-total-box { padding: 14px 16px; }
   .valor-total-hoje strong { font-size: 1.1rem; }
 
+  /* Bônus: empilha verticalmente em mobile */
+  .bonus-item { flex-direction: column; gap: 12px; }
+  .bonus-tag { white-space: normal; align-self: flex-start; }
+
   /* Sticky CTA: empilha verticalmente em telas pequenas */
   #sticky-cta {
     flex-direction: column;
