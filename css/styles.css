@@ -388,14 +388,14 @@ p:last-child { margin-bottom: 0; }
   padding: 72px 0;
 }
 #mecanismo .section-label {
-  color: var(--verde);
+  color: var(--dourado);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-#mecanismo h2 { color: var(--verde); margin-bottom: 12px; }
+#mecanismo h2 { color: #fff; margin-bottom: 12px; }
 #mecanismo .intro { color: rgba(232,232,232,0.72); margin-bottom: 48px; }
 
 .reca-badge {
@@ -453,7 +453,7 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.1rem;
 }
 .etapa-content h3 {
-  color: var(--verde);
+  color: var(--dourado);
   font-size: 1.1rem;
   margin-bottom: 6px;
 }
@@ -509,12 +509,12 @@ p:last-child { margin-bottom: 0; }
   font-size: .8rem;
   text-align: center;
 }
-.autoridade-copy h2 { color: var(--verde); margin-bottom: 20px; }
+.autoridade-copy h2 { color: #fff; margin-bottom: 20px; }
 .autoridade-copy p { color: #e8e8e8; }
 .autoridade-copy .destaque {
   font-family: var(--fonte-titulo);
   font-size: 1.05rem;
-  color: var(--verde);
+  color: var(--dourado);
   font-style: italic;
   border-left: 3px solid var(--dourado);
   padding-left: 16px;
@@ -536,7 +536,7 @@ p:last-child { margin-bottom: 0; }
   gap: 10px;
   font-size: .88rem;
   font-weight: 600;
-  color: var(--verde);
+  color: #e8e8e8;
 }
 .badge-item .badge-icon { font-size: 1.2rem; }
 
@@ -656,15 +656,15 @@ p:last-child { margin-bottom: 0; }
   padding: 72px 0;
 }
 #modulos .section-label {
-  color: var(--verde);
+  color: var(--dourado);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-#modulos h2 { color: var(--verde); margin-bottom: 12px; }
-#modulos .intro { color: #4b5563; margin-bottom: 48px; }
+#modulos h2 { color: #fff; margin-bottom: 12px; }
+#modulos .intro { color: rgba(232,232,232,0.72); margin-bottom: 48px; }
 
 .modulos-lista {
   display: grid;
@@ -702,7 +702,7 @@ p:last-child { margin-bottom: 0; }
   align-self: flex-start;
   margin-bottom: 4px;
 }
-.modulo-content h3 { color: var(--verde); font-size: 1rem; margin-bottom: 6px; }
+.modulo-content h3 { color: var(--dourado); font-size: 1rem; margin-bottom: 6px; }
 .modulo-content p { color: rgba(232,232,232,0.72); font-size: .88rem; margin: 0; }
 
 .bonus-item {
@@ -770,8 +770,8 @@ p:last-child { margin-bottom: 0; }
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-#preco-ancora h2 { color: var(--verde); margin-bottom: 12px; }
-#preco-ancora .intro { color: #4b5563; margin-bottom: 40px; }
+#preco-ancora h2 { color: #fff; margin-bottom: 12px; }
+#preco-ancora .intro { color: rgba(232,232,232,0.72); margin-bottom: 40px; }
 
 .tabela-wrapper {
   overflow-x: auto;
@@ -912,12 +912,12 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--fonte-titulo);
   font-size: clamp(1.8rem, 7vw, 2.8rem);
   font-weight: 700;
-  color: var(--verde);
+  color: var(--dourado);
   line-height: 1;
 }
 .preco-por span { font-size: 1.4rem; vertical-align: super; margin-right: 2px; }
 .preco-parcelado {
-  color: #4b5563;
+  color: rgba(232,232,232,0.6);
   font-size: .88rem;
   margin-top: 6px;
 }
@@ -963,13 +963,13 @@ p:last-child { margin-bottom: 0; }
 .garantia-selo .num { font-family: var(--fonte-titulo); font-size: 2.4rem; font-weight: 700; color: var(--dourado); line-height: 1; }
 .garantia-selo .label { color: rgba(255,255,255,.8); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
 
-.garantia-copy h2 { color: var(--verde); margin-bottom: 16px; }
+.garantia-copy h2 { color: #fff; margin-bottom: 16px; }
 .garantia-copy p { color: #e8e8e8; }
 .garantia-copy .destaque-garantia {
   font-family: var(--fonte-titulo);
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--verde);
+  color: var(--dourado);
   margin-top: 16px;
 }
 
@@ -979,14 +979,14 @@ p:last-child { margin-bottom: 0; }
   padding: 72px 0;
 }
 #faq .section-label {
-  color: var(--verde);
+  color: var(--dourado);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-#faq h2 { color: var(--verde); margin-bottom: 40px; }
+#faq h2 { color: #fff; margin-bottom: 40px; }
 
 .faq-lista { max-width: 680px; margin: 0 auto; }
 .faq-item {
@@ -1006,7 +1006,7 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--fonte-corpo);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--verde);
+  color: #e8e8e8;
   line-height: 1.4;
   transition: color .2s, background .2s;
   border-radius: 6px;
@@ -1022,7 +1022,7 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  color: var(--verde);
+  color: var(--dourado);
   font-weight: 700;
   transition: background .2s;
 }
@@ -1261,7 +1261,7 @@ footer a:hover { color: var(--dourado); }
 }
 .ancora-destaque-numero {
   font-size: 1rem;
-  color: var(--verde);
+  color: #e8e8e8;
   margin-bottom: 6px;
   font-weight: 500;
 }
@@ -1355,7 +1355,7 @@ footer a:hover { color: var(--dourado); }
   gap: 2px;
   flex: 1;
 }
-.vs-item strong { color: var(--verde); font-size: .95rem; }
+.vs-item strong { color: #fff; font-size: .95rem; }
 .vs-desc {
   font-size: .82rem;
   color: rgba(232,232,232,0.6);
@@ -1410,7 +1410,7 @@ footer a:hover { color: var(--dourado); }
 }
 .valor-total-hoje {
   font-size: 1rem;
-  color: var(--verde);
+  color: #e8e8e8;
   font-weight: 600;
   margin-bottom: 0;
 }
@@ -1470,15 +1470,15 @@ footer a:hover { color: var(--dourado); }
   padding: 72px 0;
 }
 #para-quem .section-label {
-  color: var(--verde);
+  color: var(--dourado);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-#para-quem h2 { color: var(--verde); margin-bottom: 12px; }
-#para-quem .intro { color: #4b5563; margin-bottom: 40px; }
+#para-quem h2 { color: #fff; margin-bottom: 12px; }
+#para-quem .intro { color: rgba(232,232,232,0.72); margin-bottom: 40px; }
 
 .para-quem-titulo {
   color: var(--verde);
@@ -2061,7 +2061,7 @@ footer a:hover { color: var(--dourado); }
 }
 .garantia-item:hover {
   transform: translateX(4px);
-  color: var(--verde);
+  color: var(--dourado);
 }
 .g-check {
   filter: drop-shadow(0 0 3px rgba(22,163,74,.35));
