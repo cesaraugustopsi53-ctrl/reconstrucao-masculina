@@ -18,7 +18,7 @@
   --branco:  #ffffff;
   --vermelho:#dc2626;
 
-  --fonte-titulo: 'Playfair Display', Georgia, serif;
+  --fonte-titulo: 'Plus Jakarta Sans', system-ui, sans-serif;
   --fonte-corpo:  'Inter', system-ui, sans-serif;
 
   --radius: 12px;
@@ -46,11 +46,11 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 
 /* ── TIPOGRAFIA ───────────────────────────────────────────── */
-h1, h2, h3, h4 { font-family: var(--fonte-titulo); line-height: 1.2; }
+h1, h2, h3, h4 { font-family: var(--fonte-titulo); line-height: 1.2; letter-spacing: -0.02em; }
 
-h1 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.15; }
-h2 { font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: -.01em; }
-h3 { font-size: clamp(1.2rem, 3vw, 1.7rem); }
+h1 { font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.15; letter-spacing: -0.025em; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.4rem); letter-spacing: -0.02em; }
+h3 { font-size: clamp(1.2rem, 3vw, 1.7rem); letter-spacing: -0.01em; }
 
 p { margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
@@ -238,8 +238,7 @@ p:last-child { margin-bottom: 0; }
 .hero-foto img {
   width: 100%;
   border-radius: var(--radius);
-  box-shadow: 0 20px 60px rgba(0,0,0,.4);
-  border: 5px solid var(--dourado);
+  box-shadow: 0 24px 64px rgba(0,0,0,.45), 0 0 0 1px rgba(201,168,76,.25);
 }
 .hero-foto-placeholder {
   width: 100%;
@@ -414,21 +413,18 @@ p:last-child { margin-bottom: 0; }
   gap: 40px;
   align-items: center;
 }
-.autoridade-foto { flex-shrink: 0; width: 220px; }
+.autoridade-foto { flex-shrink: 0; width: 260px; }
 .autoridade-foto img {
   width: 100%;
-  border-radius: 50%;
-  border: 6px solid var(--bege2);
-  outline: 3px solid rgba(201,168,76,.4);
-  outline-offset: 3px;
-  box-shadow: var(--sombra-lg);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.22), 0 0 0 1px rgba(201,168,76,.15);
 }
 .autoridade-foto-placeholder {
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 325px;
   background: var(--bege);
-  border-radius: 50%;
-  border: 4px dashed var(--dourado);
+  border-radius: 16px;
+  border: 2px dashed var(--dourado);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1093,14 +1089,13 @@ footer a:hover { color: var(--dourado); }
 }
 
 
-/* Hero mobile: foto ANTES do copy (autoridade imediata) */
+/* Hero mobile: texto ANTES da foto (hook emocional imediato) */
 @media (max-width: 767px) {
-  .hero-inner { flex-direction: column-reverse; }
+  .hero-inner { flex-direction: column; }
   .hero-foto {
     width: 200px;
-    margin: 0 auto;
+    margin: 28px auto 0;
   }
-  .hero-foto img { border-width: 4px; }
   .hero-copy .pretitle { font-size: .72rem; }
   .hero-copy h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
   .hero-social-proof { font-size: .75rem; gap: 4px 8px; }
@@ -1564,6 +1559,37 @@ footer a:hover { color: var(--dourado); }
   .popup-box h3 { font-size: 1.2rem; }
   .popup-emoji  { font-size: 2rem; margin-bottom: 12px; }
 }
+
+/* ── TIPOGRAFIA PLUS JAKARTA SANS — refinamentos ────────── */
+
+/* Números e displays grandes */
+.microprov-item .num,
+.preco-por,
+.garantia-selo .num,
+.prova-numero-item .num {
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+/* Badges e labels uppercase */
+.reca-badge    { letter-spacing: .04em; font-weight: 800; }
+.modulo-numero { letter-spacing: .02em; }
+.bonus-tag     { letter-spacing: .02em; }
+.oferta-tag    { letter-spacing: .06em; }
+
+/* Quote / destaque — mais clean sem serifa */
+.autoridade-copy .destaque {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-left-width: 4px;
+}
+
+/* Citação âncora moderna */
+.citacao-ancora { font-weight: 600; }
+
+/* FAQ: mais peso */
+.faq-question { font-weight: 700; }
 
 /* ── Depoimentos: nota "em breve" ───────────────────────── */
 .depoimentos-coming-soon {
