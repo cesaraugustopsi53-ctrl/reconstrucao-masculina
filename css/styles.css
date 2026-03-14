@@ -1769,3 +1769,606 @@ footer a:hover { color: var(--dourado); }
   border-radius: 8px;
   grid-column: 1 / -1;
 }
+
+
+/* ═══════════════════════════════════════════════════════════
+   UI/UX ELEVATION v3 — Design Premium
+   Todas as melhorias de impacto visual e interação
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SELEÇÃO DE TEXTO COM CORES DA MARCA ─────────────────── */
+::selection {
+  background: rgba(201,168,76,.25);
+  color: var(--verde);
+}
+
+/* ── KEYFRAMES NOVOS ─────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 6px 30px rgba(201,168,76,.5), 0 0 0 0 rgba(201,168,76,.4); }
+  50%       { box-shadow: 0 8px 40px rgba(201,168,76,.65), 0 0 0 12px rgba(201,168,76,0); }
+}
+
+@keyframes shine-sweep {
+  0%   { left: -80%; }
+  100% { left: 120%; }
+}
+
+@keyframes rotate-seal {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes countdown-blink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .85; transform: scale(1.04); }
+}
+
+@keyframes urgency-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sticky-pulse {
+  0%, 100% { box-shadow: 0 6px 30px rgba(201,168,76,.5); }
+  50%       { box-shadow: 0 8px 44px rgba(201,168,76,.75), 0 0 0 8px rgba(201,168,76,0); }
+}
+
+/* ── 1. BOTÕES CTA — Shimmer + Seta animada ──────────────── */
+.cta-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #C9A84C 0%, #dbb95d 40%, #e8cb7a 50%, #dbb95d 60%, #C9A84C 100%);
+  background-size: 250% 100%;
+  letter-spacing: .05em;
+  box-shadow: 0 6px 32px rgba(201,168,76,.55), 0 2px 8px rgba(0,0,0,.12);
+}
+
+.cta-btn .btn-arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.cta-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.cta-btn:hover {
+  background-position: right center;
+  box-shadow: 0 10px 42px rgba(201,168,76,.7), 0 2px 12px rgba(0,0,0,.15);
+}
+
+/* Efeito shimmer sweep no hover */
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.28) 50%, transparent 100%);
+  transform: skewX(-15deg);
+  transition: none;
+  pointer-events: none;
+}
+.cta-btn:hover::after {
+  animation: shine-sweep .55s ease forwards;
+}
+
+/* Pulse no botão grande hero e CTA final */
+.cta-btn--lg {
+  animation: pulse-gold 2.8s ease-in-out infinite;
+}
+.cta-btn--lg:hover {
+  animation: none;
+  transform: translateY(-3px);
+}
+
+/* ── 2. HERO — Mais dramático ────────────────────────────── */
+#hero::before {
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 30%, rgba(201,168,76,.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(27,58,45,.6) 0%, transparent 60%);
+}
+
+/* Linha decorativa dourada antes do h1 */
+.hero-copy h1 {
+  text-shadow: 0 2px 20px rgba(0,0,0,.3);
+  position: relative;
+}
+
+/* Glow e borda dourada na foto do hero */
+.hero-foto img {
+  box-shadow:
+    0 24px 64px rgba(0,0,0,.5),
+    0 0 0 2px rgba(201,168,76,.4),
+    0 0 32px rgba(201,168,76,.1);
+  transition: box-shadow .4s ease, transform .4s ease;
+}
+.hero-foto:hover img {
+  box-shadow:
+    0 32px 80px rgba(0,0,0,.55),
+    0 0 0 3px rgba(201,168,76,.6),
+    0 0 48px rgba(201,168,76,.18);
+  transform: translateY(-4px);
+}
+
+/* Microprovas: border-top dourada */
+.microprov-item {
+  border-top: 2px solid rgba(201,168,76,.35);
+  background: rgba(255,255,255,.09);
+  transition: background .25s, border-color .25s;
+}
+.microprov-item:hover {
+  background: rgba(255,255,255,.14);
+  border-top-color: var(--dourado);
+}
+
+/* ── 3. CARDS DE DOR — Mais expressivos ──────────────────── */
+.dor-item {
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s ease;
+  position: relative;
+}
+.dor-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.22);
+  border-left-color: #e8cb7a;
+}
+
+/* Check decorativo antes do strong */
+.dor-item strong::before {
+  content: '→ ';
+  color: var(--dourado);
+  font-weight: 900;
+  font-size: .9em;
+}
+
+/* ── 4. DEPOIMENTOS — Mais credibilidade ─────────────────── */
+
+/* Aspas decorativas */
+.depoimento-card {
+  position: relative;
+  transition: transform .25s cubic-bezier(.34,1.2,.64,1), box-shadow .25s ease;
+}
+.depoimento-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-family: var(--fonte-titulo);
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(201,168,76,.18);
+  pointer-events: none;
+  font-weight: 900;
+}
+.depoimento-card:hover {
+  transform: scale(1.025) translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.28), 0 0 0 1px rgba(201,168,76,.25);
+}
+
+/* Borda dourada no topo */
+.depoimento-card {
+  border-top: 2px solid rgba(201,168,76,.3);
+}
+.depoimento-card.real {
+  border-top-color: rgba(201,168,76,.6);
+}
+
+/* Avatar com gradiente */
+.autor-avatar {
+  background: linear-gradient(135deg, rgba(27,58,45,.9) 0%, rgba(13,35,24,.9) 100%);
+  border: 2px solid rgba(201,168,76,.3);
+}
+
+/* Estrelas douradas mais vibrantes */
+.estrelas {
+  color: #f0c040;
+  filter: drop-shadow(0 0 4px rgba(240,192,64,.4));
+  font-size: 1.05rem;
+}
+
+/* ── 5. MÓDULOS — Mais premium ───────────────────────────── */
+.modulo-item {
+  border-left: 4px solid var(--dourado);
+  border-left-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+.modulo-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--dourado) 0%, #b8943d 100%);
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity .25s;
+}
+.modulo-item:hover::before {
+  opacity: 1;
+}
+.modulo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.16);
+}
+
+/* Número do módulo: estilo grande decorativo */
+.modulo-numero {
+  font-size: .9rem;
+  background: linear-gradient(135deg, var(--verde) 0%, #0d2318 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+/* Chips hover individual */
+.modulo-topicos li {
+  transition: background .2s, color .2s, border-color .2s, transform .15s;
+  cursor: default;
+}
+.modulo-topicos li:hover {
+  background: var(--verde);
+  color: var(--dourado);
+  border-color: var(--verde);
+  transform: translateY(-1px);
+}
+.modulo-topicos--bonus li:hover {
+  background: rgba(201,168,76,.25);
+  color: var(--dourado);
+  border-color: rgba(201,168,76,.4);
+}
+
+/* ── 6. SEÇÃO OFERTA (pricing box) — Mais premium ────────── */
+
+/* Brilho animado no topo do box */
+.oferta-box {
+  position: relative;
+  overflow: hidden;
+}
+.oferta-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #C9A84C 30%, #fff3b0 50%, #C9A84C 70%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Checkmark dourado estiloso na value stack */
+.incluso-lista .check {
+  color: #C9A84C;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 3px rgba(201,168,76,.4));
+}
+
+/* Separadores elegantes */
+.incluso-lista li {
+  border-bottom: 1px solid rgba(201,168,76,.08);
+  transition: background .2s;
+}
+.incluso-lista li:hover {
+  background: rgba(201,168,76,.04);
+  border-radius: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* Preço com gradiente de texto */
+.preco-por {
+  background: linear-gradient(135deg, #1B3A2D 0%, #0d5c2e 50%, #1B3A2D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.1));
+}
+
+/* ── 7. GARANTIA — Mais confiança ────────────────────────── */
+.garantia-selo {
+  cursor: default;
+  transition: transform .4s cubic-bezier(.34,1.56,.64,1), box-shadow .4s ease;
+  position: relative;
+}
+.garantia-selo:hover {
+  transform: scale(1.06) rotate(3deg);
+  box-shadow: 0 0 0 16px rgba(201,168,76,.08), 0 20px 60px rgba(0,0,0,.3);
+}
+
+/* Background com padrão sutil de pontos */
+#garantia {
+  background-image:
+    radial-gradient(circle, rgba(201,168,76,.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-color: var(--bege);
+}
+
+/* Checklist de garantia com animação de entrada */
+.garantia-item {
+  transition: transform .2s ease, color .2s;
+}
+.garantia-item:hover {
+  transform: translateX(4px);
+  color: var(--verde);
+}
+.g-check {
+  filter: drop-shadow(0 0 3px rgba(22,163,74,.35));
+}
+
+/* ── 8. FAQ — Mais polido ────────────────────────────────── */
+
+/* Ícone + rotaciona para X quando aberto */
+.faq-icon {
+  transition: background .25s, color .25s, transform .3s cubic-bezier(.34,1.56,.64,1);
+  font-style: normal;
+}
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--verde);
+  color: var(--dourado);
+  box-shadow: 0 0 0 4px rgba(27,58,45,.1);
+}
+
+/* Item ativo com background sutil */
+.faq-item.open {
+  background: rgba(201,168,76,.03);
+  border-radius: 8px;
+  padding: 0 12px;
+  margin: 0 -12px;
+}
+
+/* Separador com gradiente */
+.faq-item {
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, transparent, rgba(201,168,76,.2), transparent);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Hover na pergunta */
+.faq-question {
+  border-radius: 8px;
+  transition: color .2s, background .2s, padding .2s;
+}
+
+/* ── 9. URGENCY BAR — Mais urgência ─────────────────────── */
+#urgency-bar {
+  background: linear-gradient(90deg, #991b1b 0%, #dc2626 30%, #ef4444 50%, #dc2626 70%, #991b1b 100%);
+  background-size: 200% 100%;
+  animation: urgency-gradient 4s ease infinite;
+}
+
+#countdown {
+  animation: countdown-blink 1.8s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+}
+
+/* ── 10. TIPOGRAFIA — Section labels decorativos ─────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before,
+.section-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  opacity: .4;
+  vertical-align: middle;
+}
+
+/* Footer links com underline animado */
+footer a {
+  position: relative;
+}
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--dourado);
+  transition: width .3s ease;
+}
+footer a:hover::after {
+  width: 100%;
+}
+
+/* Citação/blockquote mais expressivo */
+.citacao-ancora {
+  position: relative;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, var(--bege) 0%, #f0e8d5 100%);
+  border-left: 5px solid var(--dourado);
+  box-shadow: 0 4px 16px rgba(201,168,76,.1);
+}
+
+/* ── 11. ESPAÇAMENTO — Desktop mais generoso ─────────────── */
+@media (min-width: 768px) {
+  #dor, #mecanismo, #autoridade,
+  #depoimentos, #modulos, #preco-ancora,
+  #oferta, #garantia, #faq { padding: 96px 0; }
+
+  #hero { padding: 96px 0 88px; }
+  #cta-final { padding: 96px 0; }
+
+  .etapas-grid { gap: 24px; }
+  .depoimentos-grid { gap: 24px; }
+  .modulos-lista { gap: 20px; }
+  .dor-grid { gap: 20px; }
+}
+
+/* ── 12. SCROLL ANIMATIONS — Stagger melhorado ───────────── */
+.reveal {
+  will-change: transform, opacity;
+}
+
+/* Stagger estendido até 6 itens */
+.etapas-grid .etapa-card:nth-child(5),
+.depoimentos-grid .depoimento-card:nth-child(5),
+.modulos-lista .modulo-item:nth-child(5) { transition-delay: .32s; }
+
+.etapas-grid .etapa-card:nth-child(6),
+.depoimentos-grid .depoimento-card:nth-child(6),
+.modulos-lista .modulo-item:nth-child(6) { transition-delay: .40s; }
+
+/* Stagger para dor-grid e para-quem-grid */
+.dor-grid .dor-item:nth-child(1) { transition-delay: 0s; }
+.dor-grid .dor-item:nth-child(2) { transition-delay: .08s; }
+.dor-grid .dor-item:nth-child(3) { transition-delay: .16s; }
+.dor-grid .dor-item:nth-child(4) { transition-delay: .24s; }
+.dor-grid .dor-item:nth-child(5) { transition-delay: .32s; }
+.dor-grid .dor-item:nth-child(6) { transition-delay: .40s; }
+
+.para-quem-grid .para-quem-item:nth-child(1) { transition-delay: 0s; }
+.para-quem-grid .para-quem-item:nth-child(2) { transition-delay: .1s; }
+.para-quem-grid .para-quem-item:nth-child(3) { transition-delay: .2s; }
+.para-quem-grid .para-quem-item:nth-child(4) { transition-delay: .3s; }
+
+/* ── 13. EFEITOS PREMIUM GERAIS ──────────────────────────── */
+
+/* Sombras mais sofisticadas nos etapa-cards */
+.etapa-card {
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.06),
+    0 8px 32px rgba(0,0,0,.10);
+  transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+}
+.etapa-card:hover {
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.08),
+    0 16px 48px rgba(0,0,0,.15),
+    0 0 0 1px rgba(201,168,76,.15);
+}
+
+/* border-radius consistente */
+.badge-item    { border-radius: 10px; }
+.dor-fechamento { border-radius: 14px; }
+.mecanismo-footer { border-radius: 14px; }
+.popup-box     { border-radius: 20px; }
+.valor-total-box { border-radius: 12px; }
+.garantia-lista { border-radius: 12px; }
+
+/* Backdrop-filter em mais elementos */
+.dor-fechamento {
+  backdrop-filter: blur(4px);
+}
+.oferta-box::before {
+  backdrop-filter: blur(4px);
+}
+.microprov-item {
+  backdrop-filter: blur(6px);
+}
+
+/* Badge items com hover sutil */
+.badge-item {
+  transition: transform .2s, background .2s, box-shadow .2s;
+  border: 1px solid rgba(27,58,45,.08);
+}
+.badge-item:hover {
+  transform: translateY(-2px);
+  background: var(--bege2);
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+/* ── 14. STICKY CTA — Mais impactante ────────────────────── */
+#sticky-cta {
+  background: linear-gradient(135deg, rgba(27,58,45,.95) 0%, rgba(13,35,24,.95) 100%);
+  border-top: 2px solid;
+  border-image: linear-gradient(90deg, transparent, #C9A84C, transparent) 1;
+}
+#sticky-cta.visible .cta-btn {
+  animation: sticky-pulse 2.5s ease-in-out infinite;
+}
+#sticky-cta.visible .cta-btn:hover {
+  animation: none;
+}
+
+/* ── HOVER NA TABELA DE COMPARAÇÃO ───────────────────────── */
+.tabela-ancora tr:not(:first-child):hover td {
+  background: rgba(201,168,76,.04);
+  transition: background .2s;
+}
+.tabela-ancora tr.destaque:hover td {
+  background: rgba(27,58,45,.08);
+}
+
+/* ── PROVA NÚMEROS — Refinamento ─────────────────────────── */
+.prova-numero-item {
+  transition: transform .2s ease;
+}
+.prova-numero-item:hover {
+  transform: translateY(-3px);
+}
+.prova-numero-item .num {
+  background: linear-gradient(135deg, #C9A84C 0%, #e8cb7a 50%, #C9A84C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.1));
+}
+
+/* ── SEÇÃO PARA QUEM ─────────────────────────────────────── */
+.para-quem-item {
+  transition: transform .22s cubic-bezier(.34,1.56,.64,1), box-shadow .22s ease;
+}
+.para-quem-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.14);
+}
+
+/* ── MECANISMO ETAPA CARDS — border-left premium ─────────── */
+.etapa-card {
+  border-top: none;
+  border-left: 5px solid var(--dourado);
+}
+
+/* ── AUTORIDADE FOTO ─────────────────────────────────────── */
+.autoridade-foto img {
+  transition: box-shadow .35s ease, transform .35s ease;
+}
+.autoridade-foto img:hover {
+  box-shadow: 0 28px 80px rgba(0,0,0,.3), 0 0 0 2px rgba(201,168,76,.35);
+  transform: translateY(-4px);
+}
+
+/* ── POPUP EXIT INTENT ───────────────────────────────────── */
+.popup-box {
+  border-top: 6px solid;
+  border-image: linear-gradient(90deg, #C9A84C, #e8cb7a, #C9A84C) 1;
+}
+
+/* ── PREFERS REDUCED MOTION — Respeitar acessibilidade ────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .cta-btn--lg { animation: none !important; }
+  #urgency-bar { animation: none !important; background: #dc2626; }
+  #countdown   { animation: none !important; }
+  .oferta-box::after { animation: none !important; }
+  #sticky-cta.visible .cta-btn { animation: none !important; }
+}
