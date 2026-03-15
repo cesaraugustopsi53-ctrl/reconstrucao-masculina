@@ -548,7 +548,7 @@ p:last-child { margin-bottom: 0; }
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center top;
   border-radius: 16px;
 }
 .autoridade-foto-placeholder {
@@ -2564,9 +2564,9 @@ footer a:hover { color: var(--dourado); }
   -webkit-backdrop-filter: blur(4px);
 }
 
-/* Autoridade: upgrade cinematográfico da foto */
+/* Autoridade: sombra natural no fundo claro */
 .autoridade-foto {
-  box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,76,0.2);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 0 0 1px rgba(201,168,76,0.2);
 }
 .autoridade-foto img {
   filter: brightness(0.92) contrast(1.1) saturate(0.78);
@@ -2741,8 +2741,12 @@ section.cine-gold-line {
 /* ── Atmospheric bleed — travelling de câmera entre seções ── */
 /* Seções escuras: shadow forte para fundir com o escuro anterior */
 section.cine-gold-line,
-#dor, #depoimentos, #oferta, #garantia, #cta-final {
+#dor, #oferta, #garantia, #cta-final {
   box-shadow: 0 -40px 80px rgba(3,8,6,0.7) inset;
+}
+/* Depoimentos: mesmo verde que prova-social-faixa antes — shadow suave só */
+#depoimentos {
+  box-shadow: 0 -8px 24px rgba(3,8,6,0.2) inset;
 }
 /* Seções claras: shadow suave — só cria profundidade, não corta */
 #mecanismo, #autoridade, #modulos, #faq, #para-quem {
@@ -2750,16 +2754,7 @@ section.cine-gold-line,
 }
 
 /* ── Fade de saída — seções escuras para claras ─────────────── */
-/* Gradiente no ::after do fundo da seção → blende no bege/branco seguinte */
-#dor::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, transparent, #F5F0E8);
-  pointer-events: none;
-  z-index: 2;
-}
+/* #dor → #para-quem: ambas escuras, sem fade de cor necessário */
 #depoimentos::after {
   content: '';
   position: absolute;
