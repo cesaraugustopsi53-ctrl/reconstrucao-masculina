@@ -259,28 +259,17 @@ p:last-child { margin-bottom: 0; }
   .hero-foto {
     width: 42%;
     max-width: 440px;
-    align-self: stretch;
-    overflow: hidden;
+    align-self: flex-start;
   }
 }
 .hero-foto img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  display: block;
   border-radius: 0;
   box-shadow: none;
-  display: block;
 }
-.hero-foto::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to bottom, transparent 50%, #0d1710 100%),
-    linear-gradient(to right, #0d1710 0%, transparent 35%);
-  pointer-events: none;
-}
+/* hero-foto::after removido — gradiente cobria a foto do César */
 
 /* ── VSL — YOUTUBE LITE ───────────────────────────────────── */
 #vsl {
@@ -536,18 +525,15 @@ p:last-child { margin-bottom: 0; }
 .autoridade-foto {
   flex-shrink: 0;
   width: 300px;
-  height: 380px;
-  overflow: hidden;
+  position: relative;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,.22), 0 0 0 1px rgba(201,168,76,.15);
 }
 .autoridade-foto img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 10%;
-  border-radius: 16px;
+  height: auto;
   display: block;
+  border-radius: 16px;
 }
 .autoridade-foto-placeholder {
   width: 260px;
@@ -1302,7 +1288,7 @@ footer a:hover { color: var(--dourado); }
   .hero-cta-sub { font-size: .75rem; margin-top: 10px; }
   .microprovas { margin-top: 24px; gap: 14px; }
   .hero-foto { max-width: 100%; margin-top: 36px; }
-  .hero-foto img { max-height: 400px; object-fit: cover; object-position: top; }
+  .hero-foto img { width: 100%; height: auto; max-height: none; }
 
   /* Seções — espaçamento generoso */
   #dor        { padding: 88px 0; }
@@ -1339,8 +1325,8 @@ footer a:hover { color: var(--dourado); }
   /* DOR — intro mais espaçado */
   #dor .intro { margin-bottom: 32px; }
 
-  /* Autoridade foto — centralizada no mobile, proporção 3:4 */
-  .autoridade-foto { width: 240px; height: 300px; margin: 0 auto; }
+  /* Autoridade foto — centralizada no mobile, sem crop */
+  .autoridade-foto { width: 100%; max-width: 340px; margin: 0 auto; }
 
   /* VSL */
   #vsl { padding-bottom: 64px; }
