@@ -532,11 +532,21 @@ p:last-child { margin-bottom: 0; }
   gap: 40px;
   align-items: center;
 }
-.autoridade-foto { flex-shrink: 0; width: 260px; }
-.autoridade-foto img {
-  width: 100%;
+.autoridade-foto {
+  flex-shrink: 0;
+  width: 300px;
+  height: 380px;
+  overflow: hidden;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0,0,0,.22), 0 0 0 1px rgba(201,168,76,.15);
+}
+.autoridade-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  border-radius: 16px;
+  display: block;
 }
 .autoridade-foto-placeholder {
   width: 260px;
@@ -1326,8 +1336,8 @@ footer a:hover { color: var(--dourado); }
   /* DOR — intro mais espaçado */
   #dor .intro { margin-bottom: 32px; }
 
-  /* Autoridade foto — menor no mobile para não dominar */
-  .autoridade-foto { width: 200px; margin: 0 auto; }
+  /* Autoridade foto — centralizada no mobile, proporção 3:4 */
+  .autoridade-foto { width: 240px; height: 300px; margin: 0 auto; }
 
   /* VSL */
   #vsl { padding-bottom: 64px; }
