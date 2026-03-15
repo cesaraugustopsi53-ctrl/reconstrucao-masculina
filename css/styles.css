@@ -2481,3 +2481,113 @@ footer a:hover { color: var(--dourado); }
 /* Scroll reveal em dark */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
+
+/* ═══════════════════════════════════════════════
+   UPGRADE CINEMATOGRÁFICO — RECONSTRUÇÃO MASCULINA
+   Referências: Deakins / Lubezki / Conrad Hall
+═══════════════════════════════════════════════ */
+
+/* Hero: foto de César com tratamento cinemático */
+.hero-foto img {
+  filter: brightness(0.88) contrast(1.12) saturate(0.82);
+}
+
+/* Hero: background atmosférico sutil */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.15;
+  filter: brightness(0.5) saturate(0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+#hero > .container { position: relative; z-index: 1; }
+
+/* Seção DOR: imagem cinematográfica de fundo */
+#dor { position: relative; overflow: hidden; }
+.dor-bg-cinema {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/dor-noite.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: brightness(0.28) saturate(0.55) contrast(1.1);
+  z-index: 0;
+}
+.dor-bg-cinema::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 100% 80% at 50% 50%, transparent 30%, rgba(7,13,9,0.75) 100%),
+    linear-gradient(to bottom, rgba(7,13,9,0.6) 0%, rgba(7,13,9,0.3) 40%, rgba(7,13,9,0.7) 100%);
+}
+#dor > .container { position: relative; z-index: 2; }
+#dor .dor-item {
+  background: rgba(7,13,9,0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Autoridade: upgrade cinematográfico da foto */
+.autoridade-foto {
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,76,0.2);
+}
+.autoridade-foto img {
+  filter: brightness(0.92) contrast(1.1) saturate(0.78);
+}
+.autoridade-foto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(7,13,9,0.45) 0%, transparent 40%),
+    linear-gradient(to bottom, transparent 60%, rgba(7,13,9,0.75) 100%);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* CTA Final: imagem cinematográfica de fundo */
+#cta-final { position: relative; overflow: hidden; }
+.cta-final-bg-cinema {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/cta-final-bg.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  filter: brightness(0.22) saturate(0.5) contrast(1.15);
+  z-index: 0;
+}
+.cta-final-bg-cinema::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 50%, rgba(27,58,45,0.3) 0%, rgba(7,13,9,0.85) 100%),
+    linear-gradient(to bottom, rgba(7,13,9,0.5) 0%, transparent 30%, transparent 70%, rgba(7,13,9,0.7) 100%);
+}
+#cta-final > .container { position: relative; z-index: 2; }
+
+/* Garantia: upgrade sutil */
+#garantia {
+  background: linear-gradient(135deg, #0f2218 0%, #1B3A2D 50%, #0a1a10 100%);
+  position: relative;
+}
+#garantia::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 90% 60% at 50% 50%, transparent 40%, rgba(0,0,0,0.4) 100%);
+  pointer-events: none;
+}
+
+/* Mobile: desativa parallax */
+@media (max-width: 768px) {
+  .dor-bg-cinema { background-attachment: scroll; filter: brightness(0.22) saturate(0.5); }
+  .cta-final-bg-cinema { background-attachment: scroll; filter: brightness(0.18) saturate(0.45); }
+}
