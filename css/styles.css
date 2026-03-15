@@ -2607,21 +2607,22 @@ footer a:hover { color: var(--dourado); }
   .dor-bg-cinema,
   .cta-final-bg-cinema { display: none; }
 
-  /* Img real com dissolve bottom */
+  /* Remove min-height e flex que criam espaço vazio no mobile */
+  #dor { min-height: unset; background-color: #0a1208; }
+  #cta-final { min-height: unset; display: block; background-color: #070d09; }
+
+  /* Img real com dissolve bottom — Deakins: desaturado, alto contraste */
   .cine-img-mobile {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 340px;
     object-fit: cover;
     object-position: center 25%;
-    filter: brightness(0.80) saturate(0.65) contrast(1.12);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
-    margin-bottom: -40px;
+    filter: brightness(0.76) saturate(0.60) contrast(1.15);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+    margin-bottom: -50px;
   }
-
-  #dor { background-color: #0a1208; }
-  #cta-final { background-color: #070d09; }
 }
 
 /* ═══════════════════════════════════════════════
