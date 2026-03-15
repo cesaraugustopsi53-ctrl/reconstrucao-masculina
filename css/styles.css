@@ -560,25 +560,26 @@ p:last-child { margin-bottom: 0; }
 
 .badges-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
   margin-top: 28px;
-}
-@media (min-width: 480px) {
-  .badges-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .badge-item {
   background: var(--bege);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: 12px 8px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  font-size: .88rem;
+  justify-content: center;
+  gap: 6px;
+  font-size: .72rem;
   font-weight: 600;
   color: #e8e8e8;
+  text-align: center;
+  line-height: 1.3;
 }
-.badge-item .badge-icon { font-size: 1.2rem; }
+.badge-item .badge-icon { font-size: 1.4rem; }
 
 /* ── DEPOIMENTOS ──────────────────────────────────────────── */
 #depoimentos {
@@ -1608,56 +1609,73 @@ footer a:hover { color: var(--dourado); }
    Otimizações para smartphone (375-480px)
    ═══════════════════════════════════════════════════════════ */
 
-/* ── Seções: padding compacto no mobile ─────────────────── */
+/* ── MOBILE — Psicologia de Marketing ───────────────────── */
+/* Princípios: respiro = foco | hierarquia = conversão       */
+/* Espaço vazio não é vazio — é o que faz a mensagem chegar  */
 @media (max-width: 767px) {
+
+  /* Seções: padding generoso — cada seção respira sozinha */
   #dor, #mecanismo, #autoridade,
   #depoimentos, #modulos, #preco-ancora,
-  #oferta, #garantia, #faq { padding: 72px 0; }
+  #oferta, #garantia, #faq { padding: 80px 0; }
+  #cta-final { padding: 80px 0; }
 
-  #cta-final { padding: 72px 0; }
+  /* Containers: lateral mais generoso no mobile */
+  .container { padding: 0 24px; }
 
-  /* Section header */
-  .section-header { margin-bottom: 44px; }
+  /* Section header: headline precisa de ar acima e abaixo */
+  .section-header { margin-bottom: 48px; }
+  .section-label  { margin-bottom: 14px; font-size: .72rem; letter-spacing: .2em; }
+  .section-header h2 { line-height: 1.1; }
 
-  /* Cards: padding compacto */
-  .modulo-item     { padding: 20px; gap: 14px; }
-  .etapa-card      { padding: 22px 20px; gap: 14px; }
-  .depoimento-card { padding: 22px; min-height: unset; }
-  .dor-item        { padding: 18px 18px 18px 22px; }
-  .dor-fechamento  { padding: 22px; }
+  /* Cards: padding interno confortável, toque mínimo 48px */
+  .modulo-item     { padding: 24px; gap: 16px; }
+  .etapa-card      { padding: 28px 24px; gap: 16px; }
+  .depoimento-card { padding: 28px 24px; min-height: unset; }
+  .dor-item        { padding: 24px 20px 24px 24px; }
+  .dor-fechamento  { padding: 28px 24px; }
 
-  /* Oferta box */
-  .oferta-box { padding: 32px 24px; }
+  /* Espaço entre cards em listas */
+  .modulos-lista   { gap: 16px; }
+  .etapas-grid     { gap: 16px; }
+  .depoimentos-grid { gap: 16px; }
 
-  /* Preço principal: mais confortável no mobile */
-  .preco-por { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+  /* Oferta: mais respiro interno */
+  .oferta-box { padding: 36px 24px; }
 
-  /* Garantia: mais compacta */
-  .garantia-inner { gap: 24px; }
-  .garantia-selo  { width: 130px; height: 130px; }
-  .garantia-selo .num { font-size: 2rem; }
+  /* Preço */
+  .preco-por { font-size: clamp(2rem, 7vw, 2.8rem); }
 
-  .badges-grid { grid-template-columns: repeat(3, 1fr); }
+  /* Garantia */
+  .garantia-inner { gap: 28px; flex-direction: column; align-items: center; text-align: center; }
+  .garantia-selo  { width: 140px; height: 140px; }
+  .garantia-selo .num { font-size: 2.2rem; }
 
-  /* FAQ */
-  .faq-question { font-size: .95rem; min-height: 48px; display: flex; align-items: center; justify-content: space-between; }
-  .faq-question:hover { padding-left: 6px; padding-right: 6px; }
+  /* FAQ: mais fácil de tocar */
+  .faq-question { font-size: .95rem; min-height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
 
   /* Value stack */
-  .value-stack li { padding: 10px 0; }
-  .vs-desc { font-size: .8rem; }
+  .value-stack li { padding: 14px 0; }
+  .vs-desc { font-size: .82rem; }
 
   /* Para-quem col */
-  .para-quem-col { padding: 22px 20px 18px; }
+  .para-quem-col { padding: 28px 24px 22px; }
 
   /* Reca badge */
   .reca-badge { font-size: 1.2rem; padding: 8px 20px; }
 
   /* Mecanismo footer */
-  .mecanismo-footer { padding: 22px; }
+  .mecanismo-footer { padding: 28px 24px; }
 
   /* Incluso lista */
-  .incluso-lista li { font-size: .9rem; gap: 8px; }
+  .incluso-lista li { font-size: .9rem; gap: 10px; }
+
+  /* Microprovas hero: mais respiro */
+  .microprovas { gap: 20px; margin-top: 32px; }
+
+  /* CTA hero: ocupa 100% no mobile */
+  .hero-cta-wrap { margin-top: 32px; margin-bottom: 8px; }
+  .hero-cta-wrap .cta-btn { width: 100%; }
 }
 
 /* ── Extra compacto: 480px ──────────────────────────────── */
