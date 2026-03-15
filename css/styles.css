@@ -224,6 +224,22 @@ p:last-child { margin-bottom: 0; }
   margin-top: 0;
 }
 
+/* Legenda foto hero */
+.hero-foto-legenda {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  z-index: 10;
+  margin: 0;
+}
+
 /* Foto hero — cinematográfica */
 .hero-foto {
   flex-shrink: 0;
@@ -545,8 +561,11 @@ p:last-child { margin-bottom: 0; }
 .badges-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   margin-top: 28px;
+}
+@media (min-width: 480px) {
+  .badges-grid { grid-template-columns: repeat(3, 1fr); }
 }
 .badge-item {
   background: var(--bege);
@@ -1244,9 +1263,12 @@ footer a:hover { color: var(--dourado); }
 
 /* Hero mobile */
 @media (max-width: 767px) {
+  #hero { padding: 80px 0 0; }
   .hero-copy .pretitle { font-size: .72rem; }
   .hero-copy h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
   .hero-cta-wrap .cta-btn { width: 100%; min-width: unset; font-size: 1rem; padding: 18px 20px; }
+  .hero-foto { max-width: 100%; margin-top: 40px; }
+  .hero-foto img { max-height: 420px; object-fit: cover; object-position: top; }
 }
 
 /* ── MOBILE — TABELA RESPONSIVA ───────────────────────────── */
@@ -1590,13 +1612,12 @@ footer a:hover { color: var(--dourado); }
 @media (max-width: 767px) {
   #dor, #mecanismo, #autoridade,
   #depoimentos, #modulos, #preco-ancora,
-  #oferta, #garantia, #faq { padding: 56px 0; }
+  #oferta, #garantia, #faq { padding: 72px 0; }
 
-  #hero      { padding: 60px 0 52px; }
-  #cta-final { padding: 64px 0; }
+  #cta-final { padding: 72px 0; }
 
-  /* Section header: menos margem inferior */
-  .section-header { margin-bottom: 36px; }
+  /* Section header */
+  .section-header { margin-bottom: 44px; }
 
   /* Cards: padding compacto */
   .modulo-item     { padding: 20px; gap: 14px; }
@@ -1616,8 +1637,7 @@ footer a:hover { color: var(--dourado); }
   .garantia-selo  { width: 130px; height: 130px; }
   .garantia-selo .num { font-size: 2rem; }
 
-  /* Badges: sempre 2 colunas */
-  .badges-grid { grid-template-columns: 1fr 1fr; }
+  .badges-grid { grid-template-columns: repeat(3, 1fr); }
 
   /* FAQ */
   .faq-question { font-size: .95rem; min-height: 48px; display: flex; align-items: center; justify-content: space-between; }
