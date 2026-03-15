@@ -2643,8 +2643,8 @@ footer a:hover { color: var(--dourado); }
     object-fit: cover;
     object-position: center 25%;
     filter: brightness(0.76) saturate(0.60) contrast(1.15);
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 0%, black 55%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 55%, transparent 100%);
     margin-bottom: -50px;
   }
 }
