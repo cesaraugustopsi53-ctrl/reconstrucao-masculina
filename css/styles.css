@@ -2597,12 +2597,32 @@ footer a:hover { color: var(--dourado); }
   pointer-events: none;
 }
 
-/* Mobile: desativa parallax */
-@media (max-width: 768px) {
-  .dor-bg-cinema { background-attachment: scroll; filter: brightness(0.22) saturate(0.5); }
-  .cta-final-bg-cinema { background-attachment: scroll; filter: brightness(0.18) saturate(0.45); }
+/* Mobile: imagem cinematográfica com espaço real */
+.cine-img-mobile {
+  display: none;
+}
 
-  /* Cinematográfico mobile: background-position para portrait viewport */
-  .dor-bg-cinema { background-position: center 15%; }
-  .cta-final-bg-cinema { background-position: center 10%; }
+@media (max-width: 768px) {
+  /* Esconde CSS background — real <img> ocupa espaço visual */
+  .dor-bg-cinema,
+  .cta-final-bg-cinema {
+    display: none;
+  }
+
+  /* Imagem real com espaço e impacto cinematográfico */
+  .cine-img-mobile {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: brightness(0.78) saturate(0.72) contrast(1.12);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  /* Section com img real não precisa de position relativa para bg absoluto */
+  #dor { background-color: #0a1208; }
+  #cta-final { background-color: #070d09; }
 }
