@@ -537,14 +537,18 @@ p:last-child { margin-bottom: 0; }
 .autoridade-foto {
   flex-shrink: 0;
   width: 300px;
+  height: 380px;
   position: relative;
   border-radius: 16px;
+  overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,.22), 0 0 0 1px rgba(201,168,76,.15);
 }
 .autoridade-foto img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center 10%;
   border-radius: 16px;
 }
 .autoridade-foto-placeholder {
@@ -601,6 +605,8 @@ p:last-child { margin-bottom: 0; }
 #depoimentos {
   background: var(--verde);
   padding: 72px 0;
+  position: relative;
+  overflow: hidden;
 }
 #depoimentos .section-label {
   color: var(--dourado);
@@ -893,6 +899,8 @@ p:last-child { margin-bottom: 0; }
 #oferta {
   background: var(--verde);
   padding: 72px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .oferta-box {
@@ -1350,7 +1358,7 @@ footer a:hover { color: var(--dourado); }
   #dor .intro { margin-bottom: 32px; }
 
   /* Autoridade foto — centralizada no mobile, sem crop */
-  .autoridade-foto { width: 100%; max-width: 340px; margin: 0 auto; }
+  .autoridade-foto { width: 100%; max-width: 340px; height: 340px; margin: 0 auto; }
 
   /* VSL */
   #vsl { padding-bottom: 64px; }
@@ -2632,20 +2640,22 @@ footer a:hover { color: var(--dourado); }
   .cta-final-bg-cinema { display: none; }
 
   /* Remove min-height e flex que criam espaço vazio no mobile */
-  #dor { min-height: unset; background-color: #0a1208; }
-  #cta-final { min-height: unset; display: block; background-color: #070d09; }
+  #dor { min-height: unset; background-color: #0a1208; padding-top: 0; }
+  #cta-final { min-height: unset; display: block; background-color: #070d09; padding-top: 0; }
 
   /* Img real com dissolve bottom — Deakins: desaturado, alto contraste */
+  /* Sem fade-in no topo (imagem começa direto na borda da seção) */
+  /* Fade-out no fundo blende com o conteúdo abaixo */
   .cine-img-mobile {
     display: block;
     width: 100%;
-    height: 340px;
+    height: 320px;
     object-fit: cover;
     object-position: center 25%;
     filter: brightness(0.76) saturate(0.60) contrast(1.15);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 55%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 55%, transparent 100%);
-    margin-bottom: -50px;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+    margin-bottom: -80px;
   }
 }
 
@@ -2729,11 +2739,44 @@ section.cine-gold-line {
 }
 
 /* ── Atmospheric bleed — travelling de câmera entre seções ── */
-/* Escuridão entrando por cima em cada seção (Lubezki scroll atmosphere) */
+/* Seções escuras: shadow forte para fundir com o escuro anterior */
 section.cine-gold-line,
-#dor, #mecanismo, #autoridade, #depoimentos,
-#modulos, #garantia, #oferta, #faq, #cta-final {
-  box-shadow: 0 -40px 80px rgba(3,8,6,0.8) inset;
+#dor, #depoimentos, #oferta, #garantia, #cta-final {
+  box-shadow: 0 -40px 80px rgba(3,8,6,0.7) inset;
+}
+/* Seções claras: shadow suave — só cria profundidade, não corta */
+#mecanismo, #autoridade, #modulos, #faq, #para-quem {
+  box-shadow: 0 -20px 48px rgba(3,8,6,0.12) inset;
+}
+
+/* ── Fade de saída — seções escuras para claras ─────────────── */
+/* Gradiente no ::after do fundo da seção → blende no bege/branco seguinte */
+#dor::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #F5F0E8);
+  pointer-events: none;
+  z-index: 2;
+}
+#depoimentos::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #F5F0E8);
+  pointer-events: none;
+  z-index: 2;
+}
+#oferta::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, #060f0a);
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* ── Inter 300 Light nos parágrafos de corpo ── */
