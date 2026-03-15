@@ -44,6 +44,7 @@ html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--fonte-corpo);
+  font-weight: 300;
   color: var(--texto);
   background: var(--branco);
   line-height: 1.6;
@@ -123,6 +124,17 @@ p:last-child { margin-bottom: 0; }
   background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(201,168,76,.06) 0%, transparent 70%);
   pointer-events: none;
 }
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 80% 5%, rgba(180,220,200,.05) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 70% at 10% 100%, rgba(201,168,76,.08) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+#hero > .container { position: relative; z-index: 1; }
 .hero-inner {
   display: flex;
   flex-direction: column;
@@ -981,9 +993,21 @@ p:last-child { margin-bottom: 0; }
 
 /* ── GARANTIA ─────────────────────────────────────────────── */
 #garantia {
-  background: var(--bege);
+  background: linear-gradient(160deg, #030806 0%, #081210 35%, #0f1c14 60%, #060c08 100%);
+  position: relative;
   padding: 72px 0;
 }
+#garantia::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 10%, rgba(180,220,200,.05) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 30% 90%, rgba(201,168,76,.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+#garantia .container { position: relative; z-index: 1; }
 .garantia-inner {
   display: flex;
   flex-direction: column;
@@ -2631,27 +2655,24 @@ footer a:hover { color: var(--dourado); }
    Verde profundo + Deakins + Willis + Bebas Neue
 ═══════════════════════════════════════════════ */
 
-/* ── Grain cinematográfico 35mm — Deakins/Khondji ── */
+/* ── Grain cinematográfico 35mm — Canvas JS real (Deakins/Khondji) ── */
+/* background-image injetado via JS — initCinemaGrain() em app.js */
 .grain-overlay {
   position: fixed;
   inset: 0;
   z-index: 9998;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.025;
   mix-blend-mode: soft-light;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 200px 200px;
 }
 
-/* ── Deakins lighting — frio cima-direita + dourado suave baixo-esquerda ── */
-/* Exato do gerar-carrossel-v2.js .slide::after */
+/* ── Deakins lighting — elipses recalibradas para web (formato retangular horizontal) ── */
 .cine-storaro {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 50% 40% at 75% 5%, rgba(180,220,200,.07) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 55% at 15% 95%, rgba(201,168,76,.10) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 55% at 80% 5%, rgba(180,220,200,.07) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 70% at 10% 100%, rgba(201,168,76,.10) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -2705,4 +2726,20 @@ section.cine-gold-line {
 /* Mobile: ocultar vinheta (seção usa img real com mask) */
 @media (max-width: 768px) {
   .cine-vinheta { display: none; }
+}
+
+/* ── Atmospheric bleed — travelling de câmera entre seções ── */
+/* Escuridão entrando por cima em cada seção (Lubezki scroll atmosphere) */
+section.cine-gold-line,
+#dor, #mecanismo, #autoridade, #depoimentos,
+#modulos, #garantia, #oferta, #faq, #cta-final {
+  box-shadow: 0 -40px 80px rgba(3,8,6,0.8) inset;
+}
+
+/* ── Inter 300 Light nos parágrafos de corpo ── */
+.dor-item p, .modulo-content p, .faq-answer-inner,
+.autoridade-copy p, .garantia-copy p,
+.etapa-content p, .mecanismo-footer p,
+.depoimento-texto, .intro, .subtitulo, .hero-copy .subtitulo {
+  font-weight: 300;
 }
