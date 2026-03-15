@@ -1178,14 +1178,9 @@ footer a:hover { color: var(--dourado); }
   .etapas-grid { grid-template-columns: 1fr 1fr; }
   .depoimentos-grid { grid-template-columns: 1fr 1fr; }
   .modulos-lista { grid-template-columns: 1fr; }
-  .microprovas { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (min-width: 768px) {
-  .hero-inner { flex-direction: row; text-align: left; }
-  .hero-copy { text-align: left; }
-  .microprovas { grid-template-columns: repeat(4, 1fr); }
-  .hero-foto { width: 280px; }
 
   .autoridade-inner { flex-direction: row; text-align: left; }
   .autoridade-copy h2 { text-align: left; }
@@ -1244,22 +1239,13 @@ footer a:hover { color: var(--dourado); }
   .popup-box { padding: 20px 14px; max-width: 92vw; }
   .popup-box h3 { font-size: 1.1rem; }
 
-  /* Microprovas: gap menor */
-  .microprovas { gap: 8px; }
-  .microprov-item { padding: 10px 8px; }
 }
 
 
-/* Hero mobile: texto ANTES da foto (hook emocional imediato) */
+/* Hero mobile */
 @media (max-width: 767px) {
-  .hero-inner { flex-direction: column; }
-  .hero-foto {
-    width: 200px;
-    margin: 28px auto 0;
-  }
   .hero-copy .pretitle { font-size: .72rem; }
-  .hero-copy h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
-  .hero-social-proof { font-size: .75rem; gap: 4px 8px; }
+  .hero-copy h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); }
   .hero-cta-wrap .cta-btn { width: 100%; min-width: unset; font-size: 1rem; padding: 18px 20px; }
 }
 
@@ -1883,16 +1869,6 @@ footer a:hover { color: var(--dourado); }
   transform: translateY(-4px);
 }
 
-/* Microprovas: border-top dourada */
-.microprov-item {
-  border-top: 2px solid rgba(201,168,76,.35);
-  background: rgba(255,255,255,.09);
-  transition: background .25s, border-color .25s;
-}
-.microprov-item:hover {
-  background: rgba(255,255,255,.14);
-  border-top-color: var(--dourado);
-}
 
 /* ── 3. CARDS DE DOR — Mais expressivos ──────────────────── */
 .dor-item {
@@ -2241,9 +2217,6 @@ footer a:hover::after {
 }
 .oferta-box::before {
   backdrop-filter: blur(4px);
-}
-.microprov-item {
-  backdrop-filter: blur(6px);
 }
 
 /* Badge items com hover sutil */
