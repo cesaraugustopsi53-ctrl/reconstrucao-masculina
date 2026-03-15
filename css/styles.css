@@ -152,6 +152,7 @@ p:last-child { margin-bottom: 0; }
   border-radius: 20px;
   border: 1px solid rgba(201,168,76,.3);
   margin-bottom: 20px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 .hero-copy h1 {
@@ -625,6 +626,7 @@ p:last-child { margin-bottom: 0; }
   border-radius: var(--radius);
   padding: 28px;
   min-height: 200px;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   transition: transform .2s, filter .2s;
 }
@@ -1137,6 +1139,7 @@ footer a:hover { color: var(--dourado); }
   left: 0;
   right: 0;
   background: rgba(7,13,9,.95);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   border-top: 2px solid var(--dourado);
   padding: 14px 20px;
@@ -2489,7 +2492,7 @@ footer a:hover { color: var(--dourado); }
 
 /* Hero: foto de César com tratamento cinemático */
 .hero-foto img {
-  filter: brightness(0.88) contrast(1.12) saturate(0.82);
+  filter: brightness(0.88) contrast(1.12) saturate(0.95);
 }
 
 /* Hero: background atmosférico sutil */
@@ -2512,9 +2515,11 @@ footer a:hover { color: var(--dourado); }
 .dor-bg-cinema {
   position: absolute;
   inset: 0;
+  background-color: #0a1208;
   background-image: url('../img/dor-noite.jpg');
   background-size: cover;
   background-position: center 30%;
+  background-attachment: scroll;
   filter: brightness(0.28) saturate(0.55) contrast(1.1);
   z-index: 0;
 }
@@ -2525,6 +2530,8 @@ footer a:hover { color: var(--dourado); }
   background:
     radial-gradient(ellipse 100% 80% at 50% 50%, transparent 30%, rgba(7,13,9,0.75) 100%),
     linear-gradient(to bottom, rgba(7,13,9,0.6) 0%, rgba(7,13,9,0.3) 40%, rgba(7,13,9,0.7) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 #dor > .container { position: relative; z-index: 2; }
 #dor .dor-item {
@@ -2557,9 +2564,11 @@ footer a:hover { color: var(--dourado); }
 .cta-final-bg-cinema {
   position: absolute;
   inset: 0;
+  background-color: #070d09;
   background-image: url('../img/cta-final-bg.jpg');
   background-size: cover;
   background-position: center 20%;
+  background-attachment: scroll;
   filter: brightness(0.22) saturate(0.5) contrast(1.15);
   z-index: 0;
 }
@@ -2570,6 +2579,8 @@ footer a:hover { color: var(--dourado); }
   background:
     radial-gradient(ellipse 80% 70% at 50% 50%, rgba(27,58,45,0.3) 0%, rgba(7,13,9,0.85) 100%),
     linear-gradient(to bottom, rgba(7,13,9,0.5) 0%, transparent 30%, transparent 70%, rgba(7,13,9,0.7) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 #cta-final > .container { position: relative; z-index: 2; }
 
@@ -2590,4 +2601,8 @@ footer a:hover { color: var(--dourado); }
 @media (max-width: 768px) {
   .dor-bg-cinema { background-attachment: scroll; filter: brightness(0.22) saturate(0.5); }
   .cta-final-bg-cinema { background-attachment: scroll; filter: brightness(0.18) saturate(0.45); }
+
+  /* Cinematográfico mobile: background-position para portrait viewport */
+  .dor-bg-cinema { background-position: center 15%; }
+  .cta-final-bg-cinema { background-position: center 10%; }
 }
