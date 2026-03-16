@@ -92,6 +92,43 @@
       margin-top: 1px;
     }
 
+    /* Grid de prints reais */
+    .depoimentos-prints-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .dep-print-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.5);
+    }
+    .dep-print-wrap img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+    .dep-print-esposa {
+      border: 2px solid var(--dourado);
+    }
+    .dep-tag-esposa {
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      font-size: .75rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 8px 12px;
+      letter-spacing: .03em;
+    }
+    @media (max-width: 900px) {
+      .depoimentos-prints-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .depoimentos-prints-grid { grid-template-columns: 1fr; }
+    }
+
     /* Cards placeholder de vídeo */
     .depoimento-card--video-placeholder {
       display: flex;
@@ -493,7 +530,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════
-     6. DEPOIMENTOS EM TEXTO
+     6. DEPOIMENTOS — PRINTS REAIS
 ════════════════════════════════════════════════════════ -->
 <section id="depoimentos" class="cine-gold-line" data-pixel-section="Depoimentos">
   <div class="cine-storaro" aria-hidden="true"></div>
@@ -503,87 +540,29 @@
       <p class="section-label">Homens que estavam onde você está agora</p>
       <h2 style="color:#fff;">Lê o que eles dizem depois de aplicar o método</h2>
       <hr class="cine-divisor" style="margin:20px auto 16px;">
-      <p class="intro">Nomes preservados por privacidade. Depoimentos originais, sem edição.</p>
+      <p class="intro">Prints originais. Nomes preservados por privacidade.</p>
     </div>
 
-    <div class="depoimentos-grid">
-
-      <!-- DEPOIMENTO REAL 1 -->
-      <div class="depoimento-card real">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Passando pra dar o feedback — na segunda aula já comecei a perceber várias possíveis causas da minha situação. Muito top seu curso. Nunca tinha parado pra pensar nisso com tanta clareza."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">A</div>
-          <div>
-            <p class="autor-nome">Aluno <span class="real-badge">Real</span></p>
-            <p class="autor-detalhe">Aluno do curso</p>
-          </div>
-        </div>
+    <div class="depoimentos-prints-grid">
+      <div class="dep-print-wrap">
+        <img src="img/dep-1.jpeg" alt="Depoimento aluno — 3 aulas valeram mais que 3 anos de terapia" loading="lazy">
       </div>
-
-      <!-- DEPOIMENTO REAL 2 -->
-      <div class="depoimento-card real">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "3 aulas valeram mais que 3 anos de terapia. Não estou exagerando. Em 3 anos de sessões nunca ninguém tinha me explicado o que estava acontecendo de verdade dentro de mim."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">A</div>
-          <div>
-            <p class="autor-nome">Aluno <span class="real-badge">Real</span></p>
-            <p class="autor-detalhe">Aluno do curso</p>
-          </div>
-        </div>
+      <div class="dep-print-wrap">
+        <img src="img/dep-3.jpeg" alt="Depoimento aluno — trai minha esposa e estou tentando recuperar meu casamento" loading="lazy">
       </div>
-
-      <!-- DEPOIMENTO REAL 3 — WhatsApp -->
-      <div class="depoimento-card real">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Eu trai minha esposa e estou tentando recuperar meu casamento, e a melhor coisa foi comprar seu curso e aprender — além de qualquer coisa — melhorar como homem, e após isso recuperar meu casamento."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">A</div>
-          <div>
-            <p class="autor-nome">Aluno <span class="real-badge">Real</span></p>
-            <p class="autor-detalhe">Mensagem recebida via WhatsApp</p>
-          </div>
-        </div>
+      <div class="dep-print-wrap dep-print-esposa">
+        <div class="dep-tag-esposa">💌 Mensagem da esposa de um aluno</div>
+        <img src="img/dep-2.jpeg" alt="Depoimento esposa de aluno — nem 3 meses de terapia chegou onde chegou com o curso" loading="lazy">
       </div>
-
-      <!-- DEPOIMENTO REAL 4 — Esposa de aluno (prova social fortíssima) -->
-      <div class="depoimento-card real depoimento-card--esposa">
-        <div class="depoimento-esposa-tag">Enviado pela esposa de um aluno</div>
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Muito feliz por ele estar a conseguir essa mudança — nem em 3 meses de terapia não foi capaz de chegar onde chegou hoje com o seu curso. 🙏"
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar" style="background:rgba(201,168,76,.2); color:var(--dourado);">♡</div>
-          <div>
-            <p class="autor-nome">Esposa de aluno <span class="real-badge">Real</span></p>
-            <p class="autor-detalhe">A esposa enviou essa mensagem diretamente</p>
-          </div>
-        </div>
+      <div class="dep-print-wrap">
+        <img src="img/dep-4.jpeg" alt="Depoimento aluno — retorno muito positivo, tem muita sabedoria" loading="lazy">
       </div>
-
-      <!-- DEPOIMENTO REAL 5 — WhatsApp -->
-      <div class="depoimento-card real">
-        <div class="estrelas">★★★★★</div>
-        <p class="depoimento-texto">
-          "Terminando hoje seu curso, muito bom cara. Quantas reflexões podemos tirar de lá. Fico imaginando como deve ser top ter vc como terapeuta."
-        </p>
-        <div class="depoimento-autor">
-          <div class="autor-avatar">L</div>
-          <div>
-            <p class="autor-nome">Aluno <span class="real-badge">Real</span></p>
-            <p class="autor-detalhe">Mensagem recebida via WhatsApp</p>
-          </div>
-        </div>
+      <div class="dep-print-wrap">
+        <img src="img/dep-5.jpeg" alt="Depoimento aluno" loading="lazy">
       </div>
-
+      <div class="dep-print-wrap">
+        <img src="img/dep-6.jpeg" alt="Depoimento aluno" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
