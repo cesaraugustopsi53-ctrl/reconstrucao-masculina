@@ -119,19 +119,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ── 4. META PIXEL — EVENTO NO CTA ────────────────────────────
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.cta-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          content_name: 'Reconstrução Masculina',
-          value: 297.00,
-          currency: 'BRL'
-        });
-      }
+// app.js está no final do body — DOM já disponível, executar direto
+(function () {
+  function fireInitiateCheckout() {
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Reconstrução Masculina',
+        value: 297.00,
+        currency: 'BRL'
+      });
+    }
+  }
+
+  // Todos os CTAs por classe
+  document.querySelectorAll('.cta-btn, a[href*="kiwify"]').forEach(function (btn) {
+    btn.addEventListener('click', fireInitiateCheckout);
+  });
+
+  // Fallback: DOMContentLoaded caso algum botão dinâmico ainda não exista
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.cta-btn, a[href*="kiwify"]').forEach(function (btn) {
+      btn.removeEventListener('click', fireInitiateCheckout);
+      btn.addEventListener('click', fireInitiateCheckout);
     });
   });
-});
+})();
 
 // ── 5. STICKY CTA — esconde/mostra conforme scroll ───────────
 document.addEventListener('DOMContentLoaded', function () {
