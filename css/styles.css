@@ -2826,3 +2826,31 @@ section.cine-gold-line,
 .depoimento-texto, .intro, .subtitulo, .hero-copy .subtitulo {
   font-weight: 300;
 }
+
+/* ── Viewers badge ── */
+.viewers-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(201,168,76,.12);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: .8rem;
+  color: rgba(232,232,232,.85);
+  margin-bottom: 16px;
+  font-family: var(--fonte-corpo);
+}
+.viewers-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  display: inline-block;
+  animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
+.viewers-count { color: var(--dourado); font-weight: 600; }

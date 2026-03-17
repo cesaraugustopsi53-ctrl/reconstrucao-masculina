@@ -2,6 +2,19 @@
 // RECONSTRUÇÃO MASCULINA — app.js
 // ============================================================
 
+// ── 0. VIEWERS BADGE — contador flutuante ──
+(function initViewersBadge() {
+  var el = document.querySelector('.viewers-count');
+  if (!el) return;
+  var base = 38 + Math.floor(Math.random() * 18); // 38–55
+  el.textContent = base;
+  setInterval(function() {
+    var delta = Math.random() < 0.5 ? -1 : 1;
+    base = Math.max(28, Math.min(72, base + delta));
+    el.textContent = base;
+  }, 8000 + Math.random() * 7000);
+})();
+
 // ── 1. CINEMA GRAIN CANVAS — ruído analógico real (Deakins/Khondji) ──
 (function initCinemaGrain() {
   var overlay = document.querySelector('.grain-overlay');
