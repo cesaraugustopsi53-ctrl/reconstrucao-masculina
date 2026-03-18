@@ -165,7 +165,7 @@ p:last-child { margin-bottom: 0; }
 }
 @media (max-width: 767px) {
   .hero-copy--full { text-align: center; }
-  #hero > .container { padding-bottom: 56px; }
+  #hero > .container { padding-top: 0; padding-bottom: 40px; }
 }
 /* Mantém compatibilidade com hero-copy original */
 .hero-copy { flex: 1; text-align: center; }
@@ -2899,7 +2899,7 @@ section.cine-gold-line,
 @media (max-width: 767px) {
   .hero-bg-foto,
   .hero-overlay-foto { display: none; }
-  #hero { background: #070d09; min-height: auto; padding-top: 100px; padding-bottom: 48px; }
+  #hero { background: #070d09; min-height: auto; padding-top: 72px; padding-bottom: 40px; }
 }
 .viewers-dot {
   width: 8px;
