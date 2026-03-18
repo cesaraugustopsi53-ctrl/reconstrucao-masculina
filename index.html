@@ -1300,6 +1300,23 @@
 <!-- JS -->
 <script src="js/app.js"></script>
 
+<!-- InitiateCheckout — dispara em qualquer clique que vai pro Kiwify -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="kiwify.com.br"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (window.fbq) {
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'Reconstrução Masculina',
+          value: 297.00,
+          currency: 'BRL'
+        });
+      }
+    });
+  });
+});
+</script>
+
 <!-- yt-lite (lazy YouTube) -->
 <script>
 (function(){
