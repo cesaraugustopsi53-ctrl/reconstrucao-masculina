@@ -2856,9 +2856,9 @@ section.cine-gold-line,
   font-weight: 300;
 }
 
-/* ── Viewers badge ── */
+/* ── Viewers badge — só desktop ── */
 .viewers-badge {
-  display: inline-flex;
+  display: none; /* escondido no mobile */
   align-items: center;
   gap: 7px;
   background: rgba(201,168,76,.12);
@@ -2869,6 +2869,37 @@ section.cine-gold-line,
   color: rgba(232,232,232,.85);
   margin-bottom: 16px;
   font-family: var(--fonte-corpo);
+}
+@media (min-width: 768px) {
+  .viewers-badge { display: inline-flex; }
+}
+
+/* ── Foto casal mobile hero ── */
+.hero-foto-mobile {
+  display: block;
+  margin: 24px auto 20px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.hero-foto-mobile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  filter: brightness(.88) saturate(.9);
+}
+@media (min-width: 768px) {
+  .hero-foto-mobile { display: none; } /* só aparece no mobile */
+  .hero-bg-foto { display: block; }    /* full-bleed só no desktop */
+  .hero-overlay-foto { display: block; }
+}
+/* No mobile, remove o fundo escuro (a foto inline substitui) */
+@media (max-width: 767px) {
+  .hero-bg-foto,
+  .hero-overlay-foto { display: none; }
+  #hero { background: #070d09; min-height: auto; padding-top: 100px; padding-bottom: 48px; }
 }
 .viewers-dot {
   width: 8px;
