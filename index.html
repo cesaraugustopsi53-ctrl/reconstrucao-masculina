@@ -252,38 +252,33 @@
 
   /* ─── DEPOIMENTO HERO ─── */
   .secao-dep-hero {
-    background: #111;
-    padding: 44px 24px;
+    background: var(--bege);
+    padding: 48px 24px;
     text-align: center;
-    border-top: 1px solid rgba(201,168,76,0.2);
   }
 
   .secao-dep-hero blockquote {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(22px, 4.5vw, 30px);
-    color: var(--branco);
+    color: var(--verde);
     font-style: italic;
     line-height: 1.4;
     margin-bottom: 14px;
-    max-width: 500px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .secao-dep-hero blockquote::before {
-    content: '"';
-    color: var(--dourado);
-    font-size: 48px;
-    line-height: 0;
-    vertical-align: -16px;
-    margin-right: 4px;
+    background: var(--branco);
+    padding: 28px 32px;
+    border-radius: 2px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--dourado);
   }
 
   .secao-dep-hero cite {
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--dourado);
+    color: #aaa;
     font-style: normal;
   }
 
