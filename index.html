@@ -608,6 +608,26 @@
     display: block;
   }
 
+  .dep-intro {
+    font-size: 13px;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .dep-principal {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid-dep-menor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
   .grid-dep {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1297,22 +1317,35 @@
 <section class="secao-depoimentos">
   <div class="container fade-in">
     <h2>O que eles dizem hoje</h2>
+    <p class="dep-intro">Homens reais. Sem script. Sem edição.</p>
+
+    <!-- Destaque textual -->
     <div class="dep-destaque">
       <blockquote>"Em 3 aulas aprendi mais do que em 3 meses de terapia."</blockquote>
       <cite>Aluno do curso</cite>
     </div>
-    <div class="dep-print">
+
+    <!-- Principais — tamanho médio -->
+    <div class="dep-print dep-principal">
       <img src="img/dep-1.jpeg" alt="Depoimento">
     </div>
-    <div class="dep-print">
+    <div class="dep-print dep-principal">
       <img src="img/dep-2.jpeg" alt="Depoimento">
     </div>
-    <div class="grid-dep">
-      <div class="dep-print">
-        <img src="img/dep-3.jpeg" alt="Depoimento">
-      </div>
+    <div class="dep-print dep-principal">
+      <img src="img/dep-3.jpeg" alt="Depoimento">
+    </div>
+
+    <!-- Menores — grid lado a lado -->
+    <div class="grid-dep-menor">
       <div class="dep-print">
         <img src="img/dep-4.jpeg" alt="Depoimento">
+      </div>
+      <div class="dep-print">
+        <img src="img/dep-5.jpeg" alt="Depoimento">
+      </div>
+      <div class="dep-print">
+        <img src="img/dep-6.jpeg" alt="Depoimento">
       </div>
     </div>
   </div>
