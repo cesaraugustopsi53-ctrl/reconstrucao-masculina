@@ -834,6 +834,67 @@
   }
 
   /* ─── MÓDULOS ─── */
+  /* ─── PARA QUEM É ─── */
+  .secao-paraquem {
+    background: var(--verde);
+    padding: 80px 24px;
+  }
+
+  .secao-paraquem h2 {
+    font-size: clamp(26px, 5vw, 38px);
+    color: var(--branco);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .paraquem-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .paraquem-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: clamp(15px, 3vw, 17px);
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+
+  .paraquem-lista li:last-child {
+    border-bottom: none;
+  }
+
+  .paraquem-lista li::before {
+    content: '→';
+    color: var(--dourado);
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .paraquem-lista li strong {
+    color: var(--branco);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .paraquem-nao {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+
   .secao-modulos {
     background: var(--bege);
     padding: 80px 24px;
@@ -1469,6 +1530,37 @@
         <span class="badge-label">Acesso completo</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══ PARA QUEM É ═══ -->
+<section class="secao-paraquem">
+  <div class="container fade-in">
+    <span class="label" style="color:var(--dourado);">Este curso é para você</span>
+    <h2>Você se reconhece em algum desses?</h2>
+    <ul class="paraquem-lista">
+      <li>
+        <strong>Você traiu e quer parar de verdade.</strong>
+        Não só prometer. Parar. Entender o que te fez chegar lá e nunca mais voltar.
+      </li>
+      <li>
+        <strong>Você traiu e quer salvar o casamento antes que seja tarde.</strong>
+        Ela ainda está lá. Mas o tempo está se esgotando e você sabe disso.
+      </li>
+      <li>
+        <strong>Você já tentou mudar mas voltou ao mesmo padrão.</strong>
+        Prometeu. Melhorou por um tempo. Escorregou de novo. Isso tem causa — e tem solução.
+      </li>
+      <li>
+        <strong>Você tem medo de se tornar o pai que teve.</strong>
+        Cresceu vendo um homem que destruiu a família. Jurou que seria diferente. E agora está aqui.
+      </li>
+      <li>
+        <strong>Você quer ser o homem que sua esposa vai respeitar de novo.</strong>
+        Não por obrigação. Porque ela viu a mudança com os próprios olhos.
+      </li>
+    </ul>
+    <p class="paraquem-nao">Se você quer uma desculpa para continuar assim — este curso não é para você.</p>
   </div>
 </section>
 
