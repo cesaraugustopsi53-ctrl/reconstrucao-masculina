@@ -93,11 +93,7 @@
   /* ─── HERO ─── */
   .hero {
     background: var(--verde);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 24px 60px;
+    padding: 80px 24px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -118,33 +114,50 @@
     z-index: 1;
   }
 
-  .hero-foto-circulo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 3px solid var(--dourado);
+  .hero-foto-principal {
+    margin-top: 44px;
+    border-radius: 4px;
     overflow: hidden;
-    margin: 0 auto 28px;
-    box-shadow: 0 0 0 6px rgba(201,168,76,0.12);
   }
 
-  .hero-foto-circulo img {
+  .hero-foto-principal img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
+    display: block;
+    filter: grayscale(15%);
+  }
+
+  .hero-foto-caption {
+    padding: 16px 4px 0;
+    text-align: center;
+  }
+
+  .hero-foto-caption strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--branco);
+    font-weight: 500;
+  }
+
+  .hero-foto-caption span {
+    display: block;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
   }
 
   .hero-nome-curso {
     display: block;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(13px, 3vw, 16px);
+    font-size: clamp(36px, 9vw, 64px);
     font-weight: 400;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--dourado);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     font-style: italic;
+    line-height: 1;
   }
 
   .hero-tag {
@@ -1121,20 +1134,18 @@
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-foto-circulo">
-      <img src="img/casal-cesar.jpg" alt="César Augusto e esposa" fetchpriority="high">
-    </div>
     <span class="hero-nome-curso">A Reconstrução</span>
-    <span class="hero-tag">César Augusto · Psicanalista · Terapeuta Masculino</span>
     <h1>O homem que ela vai voltar a <em>respeitar.</em></h1>
     <p class="hero-sub">200+ homens que traíram usaram este método para se reconstruir. O casamento foi consequência.</p>
-    <div class="hero-credenciais">
-      <span>Psicanalista clínico</span>
-      <span>6 anos de especialização</span>
-      <span>Cristão · Casado</span>
-    </div>
     <a href="#oferta" class="btn-primary">QUERO ME RECONSTRUIR</a>
     <p class="hero-garantia">7 dias de garantia incondicional · Acesso imediato</p>
+    <div class="hero-foto-principal">
+      <img src="img/casal-cesar.jpg" alt="César Augusto e esposa" fetchpriority="high">
+    </div>
+    <div class="hero-foto-caption">
+      <strong>César Augusto</strong>
+      <span>Psicanalista · Terapeuta Masculino · Cristão · Casado</span>
+    </div>
   </div>
 </section>
 
