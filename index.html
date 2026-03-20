@@ -1154,9 +1154,8 @@
   <div class="hero-inner">
     <span class="hero-nome-curso">A Reconstrução</span>
     <h1>O homem que a traição quase destruiu.<br><em>O método que o tornou irreconhecível.</em></h1>
-    <p class="hero-sub">200+ homens estavam exatamente onde você está. Estão do outro lado. O casamento foi consequência.</p>
+    <p class="hero-sub">200+ homens estavam onde você está. Estão do outro lado.</p>
     <a href="#vsl" class="btn-primary">VER COMO FUNCIONA</a>
-    <p class="hero-garantia">6 anos · 300+ homens · Psicanalista clínico</p>
     <div class="hero-foto-principal">
       <img src="img/hero-cesar.jpg" alt="César Augusto" fetchpriority="high">
     </div>
@@ -1507,10 +1506,6 @@
   <a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos de Uso</a></p>
 </footer>
 
-<!-- ═══ BOTÃO FIXO ═══ -->
-<div class="btn-fixo" style="display:none">
-  <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-fixo" target="_blank">QUERO ME RECONSTRUIR →</a>
-</div>
 
 <script>
   // FAQ accordion
@@ -1531,13 +1526,6 @@
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // Botão fixo — some quando oferta visível
-  const oferta = document.getElementById('oferta');
-  const btnFixo = document.querySelector('.btn-fixo');
-  const scrollObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { btnFixo.style.display = e.isIntersecting ? 'none' : 'flex'; });
-  });
-  if (oferta) scrollObs.observe(oferta);
 
   // VSL embed
   document.querySelectorAll('.yt-lite').forEach(el => {
