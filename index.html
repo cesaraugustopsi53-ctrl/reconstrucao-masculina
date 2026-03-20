@@ -1221,6 +1221,176 @@
     text-align: center;
   }
 
+  /* ─── VOCÊ SE SENTE ASSIM ─── */
+  .secao-reconhecimento {
+    background: var(--verde);
+    padding: 80px 24px;
+  }
+
+  .secao-reconhecimento .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    font-weight: 500;
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  .reconhecimento-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .reconhecimento-item {
+    padding: 20px 24px;
+    background: rgba(255,255,255,0.04);
+    border-left: 2px solid rgba(201,168,76,0.25);
+  }
+
+  .reconhecimento-item.destaque {
+    border-left-color: var(--dourado);
+    background: rgba(201,168,76,0.06);
+  }
+
+  .reconhecimento-item p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+  }
+
+  .reconhecimento-item.destaque p {
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+  }
+
+  .reconhecimento-item em {
+    color: var(--dourado);
+    font-style: italic;
+  }
+
+  .reconhecimento-fechamento {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 3.5vw, 22px);
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+
+  /* ─── VERSÍCULOS ─── */
+  .versiculo {
+    border-left: 3px solid var(--dourado);
+    padding: 16px 20px;
+    margin-top: 32px;
+    background: rgba(201,168,76,0.06);
+  }
+
+  .versiculo p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 3vw, 20px);
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 8px !important;
+  }
+
+  .versiculo cite {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    font-style: normal;
+  }
+
+  .versiculo-modulo {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .versiculo-fechamento {
+    margin: 32px auto;
+    max-width: 400px;
+    background: rgba(201,168,76,0.08);
+  }
+
+  .versiculo-fechamento p {
+    color: rgba(255,255,255,0.9);
+  }
+
+  /* ─── SEÇÃO ESPOSAS ─── */
+  .secao-esposas {
+    background: var(--bege-escuro);
+    padding: 80px 24px;
+  }
+
+  .secao-esposas .label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  .secao-esposas h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    color: var(--verde);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .secao-esposas p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .secao-esposas em {
+    color: var(--verde);
+    font-style: italic;
+  }
+
+  .btn-esposas {
+    display: inline-block;
+    background: var(--verde);
+    color: var(--dourado);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 2px;
+    margin: 24px 0;
+    transition: background 0.2s;
+  }
+
+  .btn-esposas:hover {
+    background: var(--verde-claro);
+  }
+
+  .esposas-depoimentos {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .esposas-depoimentos blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 3vw, 20px);
+    color: var(--verde);
+    font-style: italic;
+    line-height: 1.5;
+    padding-left: 16px;
+    border-left: 2px solid var(--dourado);
+  }
+
   /* ─── ANIMAÇÕES ─── */
   .fade-in {
     opacity: 0;
@@ -1242,8 +1412,7 @@
     <span class="hero-tag">César Augusto · Terapeuta Masculino</span>
     <h1>Você se sente <em>covarde, fraco, sem caráter.</em></h1>
     <p class="hero-sub">
-      Você traiu. Ela descobriu. E agora você não se reconhece mais no espelho.<br><br>
-      <strong>Existe um caminho de volta. Mas ele começa com uma decisão.</strong>
+      Existe um caminho de volta. Mas ele começa com entender o que te trouxe até aqui — e mudar de verdade.
     </p>
     <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid" class="btn-primary">QUERO ME RECONSTRUIR</a>
     <p class="hero-garantia">7 dias de garantia incondicional · Acesso imediato</p>
@@ -1276,10 +1445,47 @@
 <section class="secao-dor">
   <div class="container fade-in">
     <p>Você não está aqui por curiosidade.</p>
-    <p>Você está aqui porque fez algo que <em>destruiu a confiança dela</em> — e talvez a sua própria.</p>
+    <p>Você está aqui porque fez algo que <em>quebrou tudo</em> — e sabe disso.</p>
     <div class="linha-dourada"></div>
-    <p>Já pediu desculpa. Já chorou. Já prometeu que ia mudar. Mas algo continua igual por dentro. E ela percebe.</p>
-    <p>A questão não é se você é um homem ruim. A questão é: <em>por que você fez isso — e como garantir que nunca vai repetir.</em></p>
+    <p>Talvez ela já tenha chorado na sua frente e você não soube o que fazer.<br>
+    Talvez você esteja pisando em ovos todos os dias, tentando agradar, tentando consertar, e nada parece certo.<br>
+    Talvez você já tenha explodido porque chegou no limite — e depois se sentiu ainda pior.</p>
+    <p>Você gostaria de tirar a dor dela e colocar em você.<br>
+    Já ouvi isso de muitos homens. Exatamente com essas palavras.</p>
+    <p><em>Isso não é fraqueza. É o sinal de que você ainda é o homem certo para reconstruir o que foi destruído.</em></p>
+    <p>O problema não é falta de amor. É falta de direção.</p>
+  </div>
+</section>
+
+<!-- ═══ VOCÊ SE SENTE ASSIM ═══ -->
+<section class="secao-reconhecimento">
+  <div class="container fade-in">
+    <span class="label">Você se sente assim?</span>
+    <div class="reconhecimento-lista">
+      <div class="reconhecimento-item">
+        <p>Você fica pisando em ovos. Qualquer coisa que faz ou fala pode explodir. Vive na tensão de não saber o que vai acontecer.</p>
+      </div>
+      <div class="reconhecimento-item">
+        <p>Você tenta agradar, faz coisas por ela, muda a rotina, mas nada tem resultado. Parece que nada do que você faz é suficiente.</p>
+      </div>
+      <div class="reconhecimento-item">
+        <p>Você se lembra de anos sendo um bom marido, provendo, cuidando, estando presente — e sente que ela só consegue ver o erro. Não a história. Só o erro.</p>
+      </div>
+      <div class="reconhecimento-item">
+        <p>Às vezes ela fala em divórcio, chama advogado, e no dia seguinte acorda dizendo que te ama. Você não sabe mais o que é real.</p>
+      </div>
+      <div class="reconhecimento-item">
+        <p>Você está exausto. Isso está afetando seu trabalho, seu sono, sua cabeça.</p>
+      </div>
+      <div class="reconhecimento-item destaque">
+        <p>E em algum momento você pensou: <em>talvez seja mais fácil ir embora.</em></p>
+      </div>
+    </div>
+    <p class="reconhecimento-fechamento">Se você se reconheceu em alguma dessas frases, você está no lugar certo.</p>
+    <div class="versiculo">
+      <p>"Porque não faço o bem que quero, mas o mal que não quero, esse pratico."</p>
+      <cite>Romanos 7:19</cite>
+    </div>
   </div>
 </section>
 
@@ -1315,6 +1521,20 @@
         <div>
           <strong>Seus filhos crescem numa família destruída</strong>
           <p>Essa é a dor mais profunda. E ela não some — te acompanha no próximo relacionamento, na próxima vez que alguém confiar em você.</p>
+        </div>
+      </li>
+      <li>
+        <span class="icone">→</span>
+        <div>
+          <strong>Você vai explodir em algum momento</strong>
+          <p>E jogar fora tudo que estava reconstruindo. O esgotamento acumula até que um momento de fraqueza desfaz semanas de esforço.</p>
+        </div>
+      </li>
+      <li>
+        <span class="icone">→</span>
+        <div>
+          <strong>O esgotamento vai te fazer desistir</strong>
+          <p>Antes de ela ter a chance de te ver diferente. Homens que desistem nesse ponto nunca sabem o quanto estavam perto.</p>
         </div>
       </li>
     </ul>
@@ -1442,6 +1662,10 @@
         <span class="modulo-num">02</span>
         <span class="modulo-titulo">Restauração do Casamento</span>
       </div>
+      <div class="versiculo versiculo-modulo">
+        <p>"Cria em mim, ó Deus, um coração puro, e renova em mim um espírito inabalável."</p>
+        <cite>Salmo 51:10 — Davi, após o adultério</cite>
+      </div>
       <p class="modulo-intro">Você não sabe como conduzir as conversas. O que falar. Como ajudar ela a se curar. Este módulo te ensina exatamente o que fazer — e o que nunca fazer.</p>
       <ul class="modulo-aulas">
         <li>Como ter a conversa mais difícil da sua vida e sair dela mais forte</li>
@@ -1449,6 +1673,9 @@
         <li>O que o silêncio dela realmente significa — e o que ele precisa de você</li>
         <li>Como reconquistar a confiança com ações concretas, não promessas</li>
         <li>Como reacender o desejo e a intimidade depois da traição</li>
+        <li>Como não explodir quando ela joga tudo na sua cara — e o que fazer com a raiva que você sente</li>
+        <li>O que fazer quando ela fala em divórcio um dia e diz que te ama no outro</li>
+        <li>Como lidar com o esgotamento de tentar e não ver resultado — sem desistir</li>
       </ul>
     </div>
 
@@ -1497,25 +1724,43 @@
       <div class="col-antes">
         <span class="col-label">Hoje</span>
         <ul>
-          <li>Perdido sem direção</li>
-          <li>Sem se reconhecer</li>
-          <li>Prometendo sem mudar</li>
-          <li>Repetindo os mesmos erros</li>
-          <li>Com medo de perder tudo</li>
-          <li>Sozinho com o problema</li>
+          <li>Pisando em ovos todos os dias</li>
+          <li>Tentando agradar e nada funciona</li>
+          <li>Explodindo quando chega no limite</li>
+          <li>Sentindo que ela só vê o erro, não a história</li>
+          <li>Exausto, confuso, pensando em desistir</li>
+          <li>Carregando culpa que paralisa</li>
         </ul>
       </div>
       <div class="col-depois">
         <span class="col-label">Depois</span>
         <ul>
-          <li>Com propósito claro</li>
-          <li>Se respeitando de novo</li>
-          <li>Mudando na raiz</li>
-          <li>Quebrando padrões</li>
-          <li>Sendo o pai presente</li>
-          <li>Sendo o homem que ela admira</li>
+          <li>Sabe o que falar e o que não falar</li>
+          <li>Age com constância mesmo sem ver resultado imediato</li>
+          <li>Entende a dor dela sem ser destruído por ela</li>
+          <li>Não se defende — transforma</li>
+          <li>Presente de verdade, não por obrigação</li>
+          <li>O homem que ela está começando a ver de novo</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ESPOSAS ═══ -->
+<section class="secao-esposas">
+  <div class="container fade-in">
+    <span class="label">Se você é a esposa lendo isso</span>
+    <h2>Muitas mulheres chegam até aqui antes do marido.</h2>
+    <p>Você descobriu a traição. Você está carregando uma dor que não pediu. E mesmo assim, em algum lugar dentro de você, existe a pergunta: <em>será que tem como reconstruir?</em></p>
+    <p>Essa pergunta não é fraqueza. É coragem.</p>
+    <p>César trabalha exclusivamente com o homem. Não porque a sua dor não importa — ela importa imensamente. Mas porque a reconstrução real começa nele. Quando o homem entende o padrão que o levou até ali e muda de dentro pra fora, o relacionamento responde.</p>
+    <p>Você não consegue forçar essa mudança. Mas pode apresentar o caminho.</p>
+    <p>Se você acredita que ele ainda pode ser o homem que você merece, manda esse link para ele.</p>
+    <a href="https://wa.me/31991550421" class="btn-esposas" target="_blank" rel="noopener">Falar pelo WhatsApp →</a>
+    <div class="esposas-depoimentos">
+      <blockquote>"Nem em 3 anos de terapia meu marido chegou onde chegou com seu curso."</blockquote>
+      <blockquote>"Graças a você estou conhecendo uma nova versão dele."</blockquote>
     </div>
   </div>
 </section>
@@ -1568,6 +1813,10 @@
     <h2>Ela não está esperando você <em>se preparar.</em></h2>
     <p>Cada dia sem ação é mais um dia que ela observa e decide. A decisão de entrar nessa jornada hoje é a primeira prova concreta de que você é um homem diferente.</p>
     <p class="urgencia-frase">Não existe momento perfeito para começar.<br>Existe o momento em que você decide que <strong>chega.</strong></p>
+    <div class="versiculo versiculo-fechamento">
+      <p>"Eu restaurarei os anos que o gafanhoto comeu."</p>
+      <cite>Joel 2:25</cite>
+    </div>
     <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid" class="btn-primary" style="max-width:400px; margin: 0 auto; display:block;">QUERO ME RECONSTRUIR →</a>
     <p style="margin-top:16px; font-size:13px; color:rgba(255,255,255,0.35);">R$297 à vista · 12x de R$30,72 · Garantia 7 dias</p>
   </div>
