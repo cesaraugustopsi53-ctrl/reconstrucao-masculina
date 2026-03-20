@@ -244,28 +244,38 @@
 
   /* ─── DEPOIMENTO HERO ─── */
   .secao-dep-hero {
-    background: var(--dourado);
-    padding: 36px 24px;
+    background: #111;
+    padding: 44px 24px;
     text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.2);
   }
 
   .secao-dep-hero blockquote {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(20px, 4vw, 26px);
-    color: var(--verde);
+    font-size: clamp(22px, 4.5vw, 30px);
+    color: var(--branco);
     font-style: italic;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .secao-dep-hero blockquote::before {
+    content: '"';
+    color: var(--dourado);
+    font-size: 48px;
+    line-height: 0;
+    vertical-align: -16px;
+    margin-right: 4px;
+  }
+
   .secao-dep-hero cite {
     font-size: 12px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: rgba(27,58,45,0.6);
+    color: var(--dourado);
     font-style: normal;
   }
 
@@ -1135,8 +1145,8 @@
 <section class="hero">
   <div class="hero-inner">
     <span class="hero-nome-curso">A Reconstrução</span>
-    <h1>O homem que ela vai voltar a <em>respeitar.</em></h1>
-    <p class="hero-sub">200+ homens que traíram usaram este método para se reconstruir. O casamento foi consequência.</p>
+    <h1>De traidor ao homem que ela <em>não consegue parar de olhar.</em></h1>
+    <p class="hero-sub">Homens que estavam onde você está hoje são referência de casamento para os amigos. Usando este método.</p>
     <a href="#oferta" class="btn-primary">QUERO ME RECONSTRUIR</a>
     <p class="hero-garantia">7 dias de garantia incondicional · Acesso imediato</p>
     <div class="hero-foto-principal">
@@ -1152,8 +1162,8 @@
 <!-- ═══ DEPOIMENTO DESTAQUE ═══ -->
 <section class="secao-dep-hero">
   <div class="container">
-    <blockquote>"Graças a você estou conhecendo uma nova versão dele."</blockquote>
-    <cite>Esposa de aluno</cite>
+    <blockquote>Graças a você estou conhecendo uma nova versão dele."</blockquote>
+    <cite>Esposa de aluno do curso</cite>
   </div>
 </section>
 
@@ -1175,7 +1185,7 @@
 <section class="secao-mecanismo">
   <div class="container fade-in">
     <span class="label">Por que este método funciona</span>
-    <h2>Isso não é motivação.<br>É trabalho <em>clínico na raiz.</em></h2>
+    <h2>Qualquer homem pode pedir desculpa.<br>Poucos se tornam <em>irreconhecíveis.</em></h2>
     <div class="mecanismo-linha"></div>
     <p class="mecanismo-texto">A maioria dos cursos ensina <strong>o que fazer</strong>. Eu trabalho <strong>por que você fez</strong> — e o padrão inconsciente que pode te fazer repetir.</p>
     <p class="mecanismo-texto">São coisas completamente diferentes. Comportamento sem raiz volta. Raiz tratada muda de verdade.</p>
