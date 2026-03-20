@@ -835,6 +835,123 @@
 
   /* ─── MÓDULOS ─── */
   /* ─── PARA QUEM É ─── */
+  /* ─── COMPARAÇÃO DOIS LADOS ─── */
+  .secao-comparacao {
+    background: var(--bege);
+    padding: 80px 24px;
+  }
+
+  .secao-comparacao h2 {
+    font-size: clamp(26px, 5vw, 38px);
+    color: var(--verde);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .secao-comparacao .comp-sub {
+    font-size: 15px;
+    color: #888;
+    text-align: center;
+    margin-bottom: 36px;
+    font-style: italic;
+  }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 560px;
+    margin: 0 auto 32px;
+  }
+
+  .comp-col {
+    border-radius: 4px;
+    padding: 24px 20px;
+  }
+
+  .comp-col-errado {
+    background: #f8f4f0;
+    border: 1px solid #e8e0d0;
+  }
+
+  .comp-col-certo {
+    background: var(--verde);
+  }
+
+  .comp-col-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .comp-col-errado .comp-col-label { color: #bbb; }
+  .comp-col-certo .comp-col-label { color: var(--dourado); }
+
+  .comp-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .comp-col ul li {
+    font-size: 13px;
+    line-height: 1.45;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .comp-col-errado ul li { color: #999; }
+  .comp-col-errado ul li::before { content: '✗'; color: #ccc; flex-shrink: 0; }
+
+  .comp-col-certo ul li { color: rgba(255,255,255,0.85); }
+  .comp-col-certo ul li::before { content: '✓'; color: var(--dourado); flex-shrink: 0; }
+
+  .comp-destaque {
+    background: var(--verde);
+    border-radius: 4px;
+    padding: 24px 28px;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .comp-destaque p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 3.5vw, 22px);
+    color: var(--branco);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ─── PROVA SOCIAL EARLY ─── */
+  .secao-prova-early {
+    background: var(--bege);
+    padding: 64px 24px;
+  }
+
+  .secao-prova-early h2 {
+    font-size: clamp(24px, 4.5vw, 34px);
+    color: var(--verde);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .secao-prova-early .prova-sub {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+
   .secao-paraquem {
     background: var(--verde);
     padding: 80px 24px;
@@ -1309,7 +1426,7 @@
 </head>
 <body>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <span class="hero-nome-curso">A Reconstrução Masculina</span>
@@ -1327,122 +1444,11 @@
   </div>
 </section>
 
-<!-- ═══ DEPOIMENTO DESTAQUE ═══ -->
-<section class="secao-dep-hero">
-  <div class="container">
-    <blockquote>"Graças a você estou conhecendo uma nova versão dele."</blockquote>
-    <cite>Esposa de aluno do curso</cite>
-  </div>
-</section>
-
-<!-- ═══ VSL ═══ -->
-<section class="secao-vsl" id="vsl">
-  <div class="container">
-    <p class="vsl-titulo">Ela está observando você.<br>Toda noite. Decidindo.</p>
-    <span class="vsl-label">Assiste este vídeo antes de qualquer outra coisa</span>
-    <div class="yt-lite"
-         data-videoid="pdxydVN07Tw"
-         role="button"
-         tabindex="0"
-         style="background-image: url('https://i.ytimg.com/vi/pdxydVN07Tw/hqdefault.jpg');">
-      <button class="lty-playbtn" aria-label="Assistir vídeo"></button>
-    </div>
-    <a href="#oferta" class="btn-primary" style="margin-top:24px;">QUERO ME RECONSTRUIR</a>
-    <p style="text-align:center; font-size:12px; color:#aaa; margin-top:10px;">7 dias de garantia · Acesso imediato</p>
-  </div>
-</section>
-
-<!-- ═══ MECANISMO ═══ -->
-<section class="secao-mecanismo">
+<!-- PROVA SOCIAL IMEDIATA -->
+<section class="secao-prova-early">
   <div class="container fade-in">
-    <span class="label">Por que os outros métodos não funcionam</span>
-    <h2>Você já prometeu que ia mudar.<br><em>Ela já ouviu isso antes.</em></h2>
-    <div class="mecanismo-linha"></div>
-    <p class="mecanismo-texto">O problema não é falta de amor. É que ninguém te ensinou a tratar <strong>o que te fez trair</strong>. Comportamento sem raiz volta. Sempre volta.</p>
-    <p class="mecanismo-texto">Eu sou psicanalista. Trabalho a raiz, não o sintoma. <strong>Quando a raiz muda, o comportamento muda sem esforço.</strong> É diferente de tudo que você já tentou.</p>
-    <div class="mecanismo-destaque">
-      <p>"A maioria dos cursos te ensina o que fazer. Eu te ensino por que você fez. São coisas completamente diferentes."</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TRANSFORMAÇÃO ═══ -->
-<section class="secao-transformacao">
-  <div class="container fade-in">
-    <span class="label" style="display:block; color:var(--dourado); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:12px; text-align:center;">Antes e depois</span>
-    <h2>Onde você está agora. Onde você vai chegar.</h2>
-    <p class="subtitulo">Sem motivação. Sem promessa vazia. É o que acontece quando a raiz muda.</p>
-    <div class="comparacao">
-      <div class="col-antes">
-        <span class="col-label">Hoje</span>
-        <ul>
-          <li>Pisando em ovos todos os dias</li>
-          <li>Tenta agradar e nada funciona</li>
-          <li>Explode quando chega no limite</li>
-          <li>Ela só vê o erro, não a história</li>
-          <li>Exausto, pensando em desistir</li>
-          <li>Carregando culpa que paralisa</li>
-        </ul>
-      </div>
-      <div class="col-depois">
-        <span class="col-label">Depois</span>
-        <ul>
-          <li>Ela para o que está fazendo quando você entra no quarto</li>
-          <li>Ela liga para a mãe e diz: ele mudou de verdade</li>
-          <li>Você ouve ela chorar e sabe exatamente o que fazer</li>
-          <li>Ela te olha no jantar diferente. Você percebe</li>
-          <li>Você dorme sem aquele peso no peito</li>
-          <li>Seus filhos veem um pai que eles vão imitar</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ DOR ═══ -->
-<section class="secao-dor">
-  <div class="container fade-in">
-    <p>Você está vivendo assim agora:</p>
-    <div class="dor-linha"></div>
-    <ul class="dor-bullets">
-      <li>Chega em casa e mede o humor dela antes de abrir a boca.</li>
-      <li>Comprou flores, mudou a rotina, prometeu de novo. Ela agradeceu com frieza.</li>
-      <li>Ela falou em divórcio na terça. Na quinta disse que te ama. Você não sabe mais onde está.</li>
-      <li>Está carregando isso no trabalho, na academia, às 3 da manhã sem conseguir dormir.</li>
-      <li>Você quer mudar. Mas não sabe como mudar de verdade.</li>
-    </ul>
-    <p><strong>Isso tem nome. Tem raiz. E tem solução.</strong></p>
-    <div class="versiculo">
-      <p>"Porque não faço o bem que quero, mas o mal que não quero, esse pratico."</p>
-      <cite>Romanos 7:19</cite>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ DEPOIMENTOS ═══ -->
-<section class="secao-depoimentos">
-  <div class="container fade-in">
-    <h2>O que homens reais falam sobre o curso</h2>
-    <p class="dep-intro">WhatsApp real. Sem script. Sem edição.</p>
-
-    <!-- Destaque textual -->
-    <div class="dep-destaque">
-      <blockquote>"Em 3 aulas aprendi mais do que em 3 meses de terapia."</blockquote>
-      <cite>Aluno do curso</cite>
-    </div>
-
-    <!-- Principais — tamanho médio -->
-    <div class="dep-print dep-principal">
-      <img src="img/dep-1.jpeg" alt="Depoimento">
-    </div>
-    <div class="dep-print dep-principal">
-      <img src="img/dep-2.jpeg" alt="Depoimento">
-    </div>
-    <div class="dep-print dep-principal">
-      <img src="img/dep-3.jpeg" alt="Depoimento">
-    </div>
-
-    <!-- Principais adicionais -->
+    <h2>O que homens reais dizem:</h2>
+    <p class="prova-sub">WhatsApp real. Sem script. Sem edição.</p>
     <div class="dep-print dep-principal">
       <img src="img/IMG_3127.JPEG" alt="Depoimento">
     </div>
@@ -1452,88 +1458,68 @@
     <div class="dep-print dep-principal">
       <img src="img/IMG_1839.JPEG" alt="Depoimento">
     </div>
-
-    <!-- Menores — grid lado a lado -->
-    <div class="grid-dep-menor">
-      <div class="dep-print">
-        <img src="img/dep-4.jpeg" alt="Depoimento">
-      </div>
-      <div class="dep-print">
-        <img src="img/dep-5.jpeg" alt="Depoimento">
-      </div>
-      <div class="dep-print">
-        <img src="img/dep-6.jpeg" alt="Depoimento">
-      </div>
-      <div class="dep-print">
-        <img src="img/IMG_3576.JPEG" alt="Depoimento">
-      </div>
-      <div class="dep-print">
-        <img src="img/IMG_3578.JPEG" alt="Depoimento">
-      </div>
-      <div class="dep-print">
-        <img src="img/IMG_2521.JPEG" alt="Depoimento">
-      </div>
+    <div class="grid-dep-menor" style="margin-top:12px;">
+      <div class="dep-print"><img src="img/dep-1.jpeg" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/IMG_3575.JPEG" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/IMG_3578.JPEG" alt="Depoimento"></div>
     </div>
+    <a href="#oferta" class="btn-primary" style="margin-top:32px;">QUERO SALVAR MEU CASAMENTO</a>
   </div>
 </section>
 
-<!-- ═══ INSPIRAÇÃO ═══ -->
-<section class="secao-inspiracao">
-  <div class="inspiracao-foto">
-    <img src="img/casamento.jpeg" alt="César Augusto e esposa">
-    <div class="inspiracao-overlay">
-      <p class="inspiracao-texto">É isso que é possível.</p>
-      <p class="inspiracao-sub">Um casamento de verdade. Ela ao seu lado porque quer. Seus filhos com um pai que podem imitar.</p>
+<!-- VSL -->
+<section class="secao-vsl" id="vsl">
+  <div class="container">
+    <p class="vsl-titulo">Ela está observando você.<br>Toda noite. Decidindo.</p>
+    <span class="vsl-label">Assiste este vídeo antes de continuar</span>
+    <div class="yt-lite"
+         data-videoid="pdxydVN07Tw"
+         role="button"
+         tabindex="0"
+         style="background-image: url('https://i.ytimg.com/vi/pdxydVN07Tw/hqdefault.jpg');">
+      <button class="lty-playbtn" aria-label="Assistir vídeo"></button>
     </div>
+    <a href="#oferta" class="btn-primary" style="margin-top:24px;">QUERO SALVAR MEU CASAMENTO</a>
+    <p style="text-align:center; font-size:12px; color:#aaa; margin-top:10px;">7 dias de garantia · Acesso imediato</p>
   </div>
 </section>
 
-<!-- ═══ ESPOSAS ═══ -->
-<section class="secao-esposas">
+<!-- COMPARAÇÃO DOIS LADOS -->
+<section class="secao-comparacao">
   <div class="container fade-in">
-    <span class="label" style="color:var(--dourado);">Se você é a esposa lendo isso</span>
-    <h2>Ele errou. Você está sofrendo. E não sabe se ainda vale tentar.</h2>
-    <p>Você não pediu essa dor. Ela é real e justa. Mas existe uma coisa que as esposas dos alunos dizem depois: <em>"ele voltou diferente."</em> Não perfeito. Diferente.</p>
-    <p>Você não consegue forçar a mudança nele. Mas pode apresentar o caminho. Homens que passaram por aqui voltaram para casa outros. As esposas perceberam antes deles.</p>
-    <p>Se quiser conversar, estou aqui.</p>
-    <a href="https://wa.me/31991550421" class="btn-esposas" target="_blank" rel="noopener">Falar pelo WhatsApp →</a>
-  </div>
-</section>
-
-<!-- ═══ AUTORIDADE ═══ -->
-<section class="secao-autoridade">
-  <div class="container fade-in">
-    <span class="label">Cresci em uma família destruída.</span>
-    <img src="img/casal-cesar.jpg" alt="César Augusto e esposa" class="autoridade-foto">
-    <h2>Vi o que um pai ausente faz com uma família. Jurei que seria diferente.</h2>
-    <p>Cresci numa família destruída. Jurei que teria um lar de verdade. Passei anos em terapia, formação clínica, psicanálise. Entendi uma coisa: <strong>homens que tratam a raiz salvam o casamento. Os que não tratam repetem o padrão.</strong></p>
-    <p>A maioria dos homens que traíram carregam uma história parecida: pai ausente, lar destruído, alguns até viram a traição dentro de casa e juraram nunca repetir. E ainda assim repetiram. Não por falta de amor. Por uma identidade quebrada que nunca foi tratada.</p>
-    <p>Sou <strong>César Augusto</strong>. Psicanalista, terapeuta masculino, cristão, casado. Centenas de homens passaram por este método. O objetivo é direto: <strong>você entender o que te fez trair, romper o padrão, e se tornar o homem que sua esposa vai respeitar de novo.</strong></p>
-    <div class="autoridade-quote">
-      <p>"Sede santos, porque eu sou santo."</p>
-      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:8px; display:block;">1 Pedro 1:16</cite>
-      <p style="margin-top:20px; font-size:15px; color:rgba(255,255,255,0.6); font-style:normal; font-family:'DM Sans', sans-serif; line-height:1.6;">O homem restaurado ama sua esposa como Cristo amou a Igreja: com sacrifício, cuidado e constância. O homem destruído, destruiu aquilo que deveria proteger.</p>
-      <p style="margin-top:16px; font-family:'Cormorant Garamond', serif; font-size:17px; color:rgba(255,255,255,0.55); font-style:italic;">"Maridos, amai vossas mulheres, como Cristo amou a Igreja."</p>
-      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:6px; display:block;">Efésios 5:25</cite>
+    <h2>Você já tentou mudar.<br>Por que desta vez é diferente?</h2>
+    <p class="comp-sub">Porque desta vez você vai tratar a raiz. Não só o comportamento.</p>
+    <div class="comp-grid">
+      <div class="comp-col comp-col-errado">
+        <span class="comp-col-label">O que você tentou</span>
+        <ul>
+          <li>Prometeu que ia mudar</li>
+          <li>Comprou flores e pediu desculpa</li>
+          <li>Tentou ser mais presente</li>
+          <li>Melhorou por algumas semanas</li>
+          <li>Voltou ao mesmo padrão</li>
+          <li>Ela perdeu a confiança de vez</li>
+        </ul>
+      </div>
+      <div class="comp-col comp-col-certo">
+        <span class="comp-col-label">O que este curso faz</span>
+        <ul>
+          <li>Trata por que você fez isso</li>
+          <li>Quebra o padrão pela raiz</li>
+          <li>Te ensina o que fazer com ela</li>
+          <li>Mudança que ela percebe e sente</li>
+          <li>Sem esforço forçado que não dura</li>
+          <li>Você se torna outro homem</li>
+        </ul>
+      </div>
     </div>
-    <div class="badges">
-      <div class="badge">
-        <span class="badge-valor">300+</span>
-        <span class="badge-label">Homens atendidos</span>
-      </div>
-      <div class="badge">
-        <span class="badge-valor">60k</span>
-        <span class="badge-label">Seguidores</span>
-      </div>
-      <div class="badge">
-        <span class="badge-valor">1 ano</span>
-        <span class="badge-label">Acesso completo</span>
-      </div>
+    <div class="comp-destaque">
+      <p>"A maioria dos cursos te ensina o que fazer. Eu te ensino por que você fez. São coisas completamente diferentes."</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ PARA QUEM É ═══ -->
+<!-- PARA QUEM É -->
 <section class="secao-paraquem">
   <div class="container fade-in">
     <span class="label" style="color:var(--dourado);">Este curso é para você</span>
@@ -1549,7 +1535,7 @@
       </li>
       <li>
         <strong>Você já tentou mudar mas voltou ao mesmo padrão.</strong>
-        Prometeu. Melhorou por um tempo. Escorregou de novo. Isso tem causa — e tem solução.
+        Prometeu. Melhorou por um tempo. Escorregou de novo. Isso tem causa e tem solução.
       </li>
       <li>
         <strong>Você tem medo de se tornar o pai que teve.</strong>
@@ -1564,7 +1550,7 @@
   </div>
 </section>
 
-<!-- ═══ MÓDULOS ═══ -->
+<!-- MÓDULOS -->
 <section class="secao-modulos">
   <div class="container fade-in">
     <span class="label" style="color:var(--dourado);">O que você aprende</span>
@@ -1613,38 +1599,77 @@
       </ul>
       <p style="margin-top:14px; font-size:13px; color:var(--dourado); font-weight:500;">Incluído no curso. Sem custo adicional.</p>
     </div>
+
+    <a href="#oferta" class="btn-primary" style="margin-top:40px; background:var(--verde); color:var(--dourado);">QUERO SALVAR MEU CASAMENTO</a>
   </div>
 </section>
 
-<!-- ═══ OBJEÇÕES ═══ -->
-<section class="secao-objecoes">
+<!-- MAIS DEPOIMENTOS -->
+<section class="secao-depoimentos">
   <div class="container fade-in">
-    <span class="label">Suas dúvidas</span>
-    <h2>Respostas diretas. Sem enrolação.</h2>
+    <h2>Mais resultados reais</h2>
+    <p class="dep-intro">WhatsApp real. Sem script. Sem edição.</p>
 
-    <div class="objecao">
-      <p class="objecao-pergunta">"Minha situação é grave demais."</p>
-      <p class="objecao-resposta">Os homens que achavam exatamente isso são os que mais mandam mensagem depois. <strong>A gravidade não é o problema. A disposição de mudar é.</strong></p>
+    <div class="dep-destaque">
+      <blockquote>"Em 3 aulas aprendi mais do que em 3 meses de terapia."</blockquote>
+      <cite>Aluno do curso</cite>
     </div>
 
-    <div class="objecao">
-      <p class="objecao-pergunta">"Ela já pediu o divórcio. Já é tarde."</p>
-      <p class="objecao-resposta">Ela disse isso porque ainda não viu mudança real. Palavras ela já ouviu. <strong>O que convence é ela olhar para você no jantar e pensar: quem é esse homem.</strong></p>
+    <div class="dep-print dep-principal">
+      <img src="img/dep-1.jpeg" alt="Depoimento">
+    </div>
+    <div class="dep-print dep-principal">
+      <img src="img/dep-2.jpeg" alt="Depoimento">
+    </div>
+    <div class="dep-print dep-principal">
+      <img src="img/dep-3.jpeg" alt="Depoimento">
     </div>
 
-    <div class="objecao">
-      <p class="objecao-pergunta">"Já tentei mudar antes e não consegui."</p>
-      <p class="objecao-resposta">Você tentou mudar o comportamento. Este método trabalha na raiz. <strong>Comportamento sem raiz volta. Raiz tratada muda de verdade.</strong></p>
-    </div>
-
-    <div class="objecao">
-      <p class="objecao-pergunta">"R$297 é muito pra mim agora."</p>
-      <p class="objecao-resposta">Um advogado cobra R$5.000 só para abrir o divórcio. <strong>Você investe R$30,72 por mês para ter a chance de evitar que chegue lá.</strong></p>
+    <div class="grid-dep-menor">
+      <div class="dep-print"><img src="img/dep-4.jpeg" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/dep-5.jpeg" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/dep-6.jpeg" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/IMG_3576.JPEG" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/IMG_2521.JPEG" alt="Depoimento"></div>
+      <div class="dep-print"><img src="img/IMG_3575.JPEG" alt="Depoimento"></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ OFERTA ═══ -->
+<!-- AUTORIDADE -->
+<section class="secao-autoridade">
+  <div class="container fade-in">
+    <span class="label">Cresci em uma família destruída.</span>
+    <img src="img/casal-cesar.jpg" alt="César Augusto e esposa" class="autoridade-foto">
+    <h2>Vi o que um pai ausente faz com uma família. Jurei que seria diferente.</h2>
+    <p>Cresci numa família destruída. Jurei que teria um lar de verdade. Passei anos em terapia, formação clínica, psicanálise. Entendi uma coisa: <strong>homens que tratam a raiz salvam o casamento. Os que não tratam repetem o padrão.</strong></p>
+    <p>A maioria dos homens que traíram carregam uma história parecida: pai ausente, lar destruído, alguns até viram a traição dentro de casa e juraram nunca repetir. E ainda assim repetiram. Não por falta de amor. Por uma identidade quebrada que nunca foi tratada.</p>
+    <p>Sou <strong>César Augusto</strong>. Psicanalista, terapeuta masculino, cristão, casado. Centenas de homens passaram por este método. O objetivo é direto: <strong>você entender o que te fez trair, romper o padrão, e se tornar o homem que sua esposa vai respeitar de novo.</strong></p>
+    <div class="autoridade-quote">
+      <p>"Sede santos, porque eu sou santo."</p>
+      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:8px; display:block;">1 Pedro 1:16</cite>
+      <p style="margin-top:20px; font-size:15px; color:rgba(255,255,255,0.6); font-style:normal; font-family:'DM Sans', sans-serif; line-height:1.6;">O homem restaurado ama sua esposa como Cristo amou a Igreja: com sacrifício, cuidado e constância.</p>
+      <p style="margin-top:16px; font-family:'Cormorant Garamond', serif; font-size:17px; color:rgba(255,255,255,0.55); font-style:italic;">"Maridos, amai vossas mulheres, como Cristo amou a Igreja."</p>
+      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:6px; display:block;">Efésios 5:25</cite>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <span class="badge-valor">300+</span>
+        <span class="badge-label">Homens atendidos</span>
+      </div>
+      <div class="badge">
+        <span class="badge-valor">60k</span>
+        <span class="badge-label">Seguidores</span>
+      </div>
+      <div class="badge">
+        <span class="badge-valor">1 ano</span>
+        <span class="badge-label">Acesso completo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
 <section class="secao-oferta" id="oferta">
   <div class="container fade-in">
     <span class="label" style="color:var(--dourado);">O que você leva hoje</span>
@@ -1663,38 +1688,25 @@
       <p class="ancora-preco">Um advogado de divórcio custa <strong>acima de R$5.000</strong>.<br>Você está investindo R$297 para evitar que chegue lá.</p>
       <span class="preco-valor">R$297</span>
       <span class="preco-parcelado">ou 12x de R$30,72 sem juros · Pix à vista</span>
-      <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-oferta-1" class="oferta-cta" target="_blank">QUERO ME RECONSTRUIR →</a>
+      <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-oferta-1" class="oferta-cta" target="_blank" rel="noopener">QUERO ME RECONSTRUIR →</a>
       <p style="text-align:center; font-size:12px; color:rgba(255,255,255,0.3); margin-top:10px;">Acesso imediato · Pagamento seguro via Kiwify</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ GARANTIA ═══ -->
+<!-- GARANTIA -->
 <section class="secao-garantia">
   <div class="container fade-in">
     <span class="garantia-num">7</span>
     <span class="garantia-label">Dias de garantia incondicional</span>
     <h2>Não gostou? Você não paga.</h2>
     <p>7 dias para acessar tudo. Se não fizer sentido, manda um email. 100% de volta, sem perguntas, sem burocracia.</p>
+    <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-garantia" class="btn-primary" style="max-width:380px; margin-top:28px;" target="_blank" rel="noopener">QUERO ME RECONSTRUIR →</a>
+    <p style="margin-top:14px; font-size:13px; color:rgba(27,58,45,0.4); text-align:center;">R$297 à vista · 12x de R$30,72 · Acesso imediato</p>
   </div>
 </section>
 
-<!-- ═══ FECHAMENTO ═══ -->
-<section class="secao-fechamento">
-  <div class="container fade-in">
-    <h2>Ela está observando você.<br><em>Toda noite. Decidindo.</em></h2>
-    <p>Cada dia sem mudança real é mais um argumento para o divórcio. Ela não está esperando você achar o momento certo.</p>
-    <div class="versiculo-fechamento">
-      <p>"Eu restaurarei os anos que o gafanhoto comeu."</p>
-      <cite>Joel 2:25</cite>
-    </div>
-    <p>Você ainda tem tempo. Mas não tem tempo infinito. Entra agora, acessa hoje, começa hoje.</p>
-    <a href="https://pay.kiwify.com.br/ThLcy3c?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-oferta-2" class="btn-primary" style="margin-top:28px;" target="_blank">QUERO ME RECONSTRUIR →</a>
-    <p style="margin-top:14px; font-size:13px; color:rgba(255,255,255,0.3);">R$297 à vista · 12x de R$30,72 · Garantia 7 dias</p>
-  </div>
-</section>
-
-<!-- ═══ FAQ ═══ -->
+<!-- FAQ -->
 <section class="secao-faq">
   <div class="container fade-in">
     <h2>Perguntas diretas. Respostas diretas.</h2>
@@ -1725,6 +1737,11 @@
     </div>
 
     <div class="faq-item">
+      <p class="faq-pergunta">Já tentei mudar antes e não consegui.</p>
+      <p class="faq-resposta">Você tentou mudar o comportamento. Este método trabalha na raiz. Comportamento sem raiz volta. Raiz tratada muda de verdade.</p>
+    </div>
+
+    <div class="faq-item">
       <p class="faq-pergunta">Posso parcelar?</p>
       <p class="faq-resposta">Sim. 12x de R$30,72 sem juros no cartão, ou R$297 no Pix. Acesso imediato pela Kiwify.</p>
     </div>
@@ -1736,7 +1753,19 @@
   </div>
 </section>
 
-<!-- ═══ RODAPÉ ═══ -->
+<!-- ESPOSAS -->
+<section class="secao-esposas">
+  <div class="container fade-in">
+    <span class="label" style="color:var(--dourado);">Se você é a esposa lendo isso</span>
+    <h2>Ele errou. Você está sofrendo. E não sabe se ainda vale tentar.</h2>
+    <p>Você não pediu essa dor. Ela é real e justa. Mas existe uma coisa que as esposas dos alunos dizem depois: <em>"ele voltou diferente."</em> Não perfeito. Diferente.</p>
+    <p>Você não consegue forçar a mudança nele. Mas pode apresentar o caminho. Homens que passaram por aqui voltaram para casa outros. As esposas perceberam antes deles.</p>
+    <p>Se quiser conversar, estou aqui.</p>
+    <a href="https://wa.me/31991550421" class="btn-esposas" target="_blank" rel="noopener">Falar pelo WhatsApp →</a>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
 <footer class="rodape">
   <p>© 2026 Reconstrução Masculina · César Augusto<br>
   Este curso não substitui acompanhamento terapêutico profissional quando necessário.<br>
@@ -1762,7 +1791,6 @@
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
 
   // VSL embed
   document.querySelectorAll('.yt-lite').forEach(el => {
@@ -1792,4 +1820,3 @@
 </script>
 
 </body>
-</html>
