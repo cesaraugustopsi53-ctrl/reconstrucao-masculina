@@ -118,6 +118,7 @@
     margin-top: 44px;
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
   }
 
   .hero-foto-principal img {
@@ -126,9 +127,22 @@
     filter: grayscale(15%);
   }
 
+  .hero-foto-principal::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(15,30,20,0.82) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
   .hero-foto-caption {
-    padding: 16px 4px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    padding: 20px 20px 22px;
     text-align: center;
+    z-index: 2;
   }
 
   .hero-foto-caption strong {
@@ -137,15 +151,17 @@
     font-size: 22px;
     color: var(--branco);
     font-weight: 500;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
 
   .hero-foto-caption span {
     display: block;
-    font-size: 12px;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-top: 4px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
   }
 
   .hero-nome-curso {
@@ -259,19 +275,14 @@
 
   .secao-dep-hero blockquote {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(19px, 4vw, 26px);
-    color: var(--verde);
+    font-size: clamp(22px, 4.5vw, 30px);
+    color: var(--dourado);
     font-style: italic;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    background: var(--branco);
-    padding: 22px 24px;
-    border-radius: 2px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    border-left: 3px solid var(--dourado);
   }
 
   .secao-dep-hero cite {
@@ -286,6 +297,17 @@
   .secao-vsl {
     background: var(--bege);
     padding: 64px 24px;
+  }
+
+  .vsl-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--verde);
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 10px;
   }
 
   .vsl-label {
@@ -647,34 +669,40 @@
   .inspiracao-foto img {
     width: 100%;
     display: block;
-    filter: brightness(0.55);
+    filter: brightness(0.65);
   }
 
   .inspiracao-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px 28px;
-    background: linear-gradient(transparent, rgba(10,20,15,0.85));
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
+    background:
+      linear-gradient(to bottom, rgba(10,20,15,0.72) 0%, transparent 32%),
+      linear-gradient(to top, rgba(10,20,15,0.72) 0%, transparent 32%);
   }
 
   .inspiracao-texto {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 7vw, 52px);
+    font-size: clamp(30px, 7vw, 50px);
     color: var(--branco);
     font-weight: 600;
+    font-style: italic;
     line-height: 1.1;
-    margin-bottom: 10px;
+    padding: 32px 24px 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
   }
 
   .inspiracao-sub {
-    font-size: 15px;
-    color: rgba(255,255,255,0.65);
+    font-size: 16px;
+    color: rgba(255,255,255,0.8);
     line-height: 1.6;
-    max-width: 380px;
+    max-width: 360px;
     margin: 0 auto;
+    padding: 0 24px 36px;
+    font-weight: 300;
   }
 
   /* ─── ESPOSAS ─── */
@@ -960,7 +988,7 @@
     font-size: 14px;
   }
 
-  .oferta-itens li strong { color: var(--branco); font-weight: 500; }
+  .oferta-itens li strong { color: var(--branco); font-weight: 500; white-space: nowrap; }
 
   .oferta-divider {
     height: 1px;
@@ -1216,10 +1244,10 @@
     <a href="#vsl" class="btn-primary">VER COMO FUNCIONA</a>
     <div class="hero-foto-principal">
       <img src="img/hero-cesar.jpg" alt="César Augusto" fetchpriority="high">
-    </div>
-    <div class="hero-foto-caption">
-      <strong>César Augusto</strong>
-      <span>Marido · Cristão · Psicanalista</span>
+      <div class="hero-foto-caption">
+        <strong>César Augusto</strong>
+        <span>Marido · Cristão · Psicanalista</span>
+      </div>
     </div>
   </div>
 </section>
@@ -1227,7 +1255,7 @@
 <!-- ═══ DEPOIMENTO DESTAQUE ═══ -->
 <section class="secao-dep-hero">
   <div class="container">
-    <blockquote>Graças a você estou conhecendo uma nova versão dele."</blockquote>
+    <blockquote>"Graças a você estou conhecendo uma nova versão dele."</blockquote>
     <cite>Esposa de aluno do curso</cite>
   </div>
 </section>
@@ -1235,7 +1263,8 @@
 <!-- ═══ VSL ═══ -->
 <section class="secao-vsl" id="vsl">
   <div class="container">
-    <span class="vsl-label">Assiste antes de continuar</span>
+    <p class="vsl-titulo">Ela está observando você.<br>Toda noite. Decidindo.</p>
+    <span class="vsl-label">Assiste este vídeo antes de qualquer outra coisa</span>
     <div class="yt-lite"
          data-videoid="pdxydVN07Tw"
          role="button"
@@ -1254,7 +1283,7 @@
     <span class="label">Por que este método funciona</span>
     <h2>Qualquer homem pode pedir desculpa.<br>Poucos se tornam <em>irreconhecíveis.</em></h2>
     <div class="mecanismo-linha"></div>
-    <p class="mecanismo-texto">A maioria dos cursos ensina <strong>o que fazer</strong>. Eu trabalho <strong>por que você fez</strong> — e o padrão inconsciente que pode te fazer repetir.</p>
+    <p class="mecanismo-texto">A maioria dos cursos ensina <strong>o que fazer</strong>. Eu trabalho <strong>por que você fez</strong>. E o padrão inconsciente que pode te fazer repetir.</p>
     <p class="mecanismo-texto">São coisas completamente diferentes. Comportamento sem raiz volta. Raiz tratada muda de verdade.</p>
     <div class="mecanismo-destaque">
       <p>"A maioria dos homens quer salvar o casamento. Poucos estão dispostos a salvar o próprio caráter. São esses últimos que eu atendo."</p>
@@ -1338,6 +1367,17 @@
       <img src="img/dep-3.jpeg" alt="Depoimento">
     </div>
 
+    <!-- Principais adicionais -->
+    <div class="dep-print dep-principal">
+      <img src="img/IMG_3127.JPEG" alt="Depoimento">
+    </div>
+    <div class="dep-print dep-principal">
+      <img src="img/IMG_3577.JPEG" alt="Depoimento">
+    </div>
+    <div class="dep-print dep-principal">
+      <img src="img/IMG_1839.JPEG" alt="Depoimento">
+    </div>
+
     <!-- Menores — grid lado a lado -->
     <div class="grid-dep-menor">
       <div class="dep-print">
@@ -1349,6 +1389,15 @@
       <div class="dep-print">
         <img src="img/dep-6.jpeg" alt="Depoimento">
       </div>
+      <div class="dep-print">
+        <img src="img/IMG_3576.JPEG" alt="Depoimento">
+      </div>
+      <div class="dep-print">
+        <img src="img/IMG_3578.JPEG" alt="Depoimento">
+      </div>
+      <div class="dep-print">
+        <img src="img/IMG_2521.JPEG" alt="Depoimento">
+      </div>
     </div>
   </div>
 </section>
@@ -1359,7 +1408,7 @@
     <img src="img/casamento.jpeg" alt="César Augusto e esposa">
     <div class="inspiracao-overlay">
       <p class="inspiracao-texto">É isso que é possível.</p>
-      <p class="inspiracao-sub">Um casamento onde ela te olha assim. É para isso que este método foi construído.</p>
+      <p class="inspiracao-sub">Um casamento leve e feliz.<br>Você amado e admirado pela sua esposa e filhos.</p>
     </div>
   </div>
 </section>
@@ -1369,7 +1418,7 @@
   <div class="container fade-in">
     <span class="label" style="color:var(--dourado);">Se você é a esposa lendo isso</span>
     <h2>Você não pediu essa dor. E não deveria carregar isso sozinha.</h2>
-    <p>Você descobriu a traição. Você está carregando uma dor que não pediu — e ainda assim existe uma noite em que você olha para ele dormindo e pensa: <em>será que ainda dá?</em></p>
+    <p>Você descobriu a traição. Você está carregando uma dor que não pediu. E ainda assim existe uma noite em que você olha para ele dormindo e pensa: <em>será que ainda dá?</em></p>
     <p>Essa pergunta não é fraqueza. É a parte mais corajosa de você.</p>
     <p>Você não consegue forçar a mudança nele. Mas pode apresentar o caminho. Homens que passaram por este método voltaram para casa diferentes. As esposas notaram antes de eles perceberem.</p>
     <a href="https://wa.me/31991550421" class="btn-esposas" target="_blank" rel="noopener">Falar pelo WhatsApp →</a>
@@ -1379,16 +1428,19 @@
 <!-- ═══ AUTORIDADE ═══ -->
 <section class="secao-autoridade">
   <div class="container fade-in">
-    <span class="label">Quem é César Augusto</span>
+    <span class="label">Cresci em uma família destruída.</span>
     <img src="img/casal-cesar.jpg" alt="César Augusto e esposa" class="autoridade-foto">
     <h2>Cresci vendo o que um homem quebrado faz com uma família.</h2>
-    <p>Eu jurei que seria diferente. Que teria uma família real. Um lar onde minha esposa me admirasse e meus filhos quisessem me imitar. Mas eu sabia que isso não aconteceria por acaso — precisaria me construir de dentro pra fora.</p>
+    <p>Eu jurei que seria diferente. Que teria uma família real. Um lar onde minha esposa me admirasse e meus filhos quisessem me imitar. Mas eu sabia que isso não aconteceria por acaso. Precisaria me construir de dentro pra fora.</p>
     <p>Passei anos em terapia, cursos, formação clínica. Me tornei psicanalista. E então entendi meu propósito: <strong>homens que se reconstroem salvam casamentos. E filhos crescem com pai.</strong></p>
-    <p>A maioria dos homens que traíram carregam uma história parecida — pai ausente, lar destruído, alguns até viram a traição dentro de casa e juraram nunca repetir. E ainda assim repetiram. Não por falta de amor. Por uma identidade quebrada que nunca foi tratada.</p>
-    <p>Sou <strong>César Augusto</strong>. Psicanalista, terapeuta masculino, cristão, casado. Em 6 anos de atendimento acompanhei mais de 300 homens nessa jornada. O propósito deste curso é direto: <strong>você se entender, romper o padrão, se reconstruir — e se tornar o homem que é amado e admirado.</strong></p>
+    <p>A maioria dos homens que traíram carregam uma história parecida: pai ausente, lar destruído, alguns até viram a traição dentro de casa e juraram nunca repetir. E ainda assim repetiram. Não por falta de amor. Por uma identidade quebrada que nunca foi tratada.</p>
+    <p>Sou <strong>César Augusto</strong>. Psicanalista, terapeuta masculino, cristão, casado. Acompanhei centenas de homens nessa jornada. O propósito deste curso é direto: <strong>você se entender, romper o padrão, se reconstruir. E se tornar o homem que é amado e admirado.</strong></p>
     <div class="autoridade-quote">
-      <p>"Porque o Senhor testemunhou entre ti e a mulher da tua mocidade."</p>
-      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:8px; display:block;">Malaquias 2:14</cite>
+      <p>"Sede santos, porque eu sou santo."</p>
+      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:8px; display:block;">1 Pedro 1:16</cite>
+      <p style="margin-top:20px; font-size:15px; color:rgba(255,255,255,0.6); font-style:normal; font-family:'DM Sans', sans-serif; line-height:1.6;">O homem restaurado ama sua esposa como Cristo amou a Igreja: com sacrifício, cuidado e constância. O homem destruído, destruiu aquilo que deveria proteger.</p>
+      <p style="margin-top:16px; font-family:'Cormorant Garamond', serif; font-size:17px; color:rgba(255,255,255,0.55); font-style:italic;">"Maridos, amai vossas mulheres, como Cristo amou a Igreja."</p>
+      <cite style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dourado); font-style:normal; margin-top:6px; display:block;">Efésios 5:25</cite>
     </div>
     <div class="badges">
       <div class="badge">
@@ -1452,7 +1504,7 @@
         <span class="modulo-num">03</span>
         <span class="modulo-titulo">Vença a Pornografia</span>
       </div>
-      <p class="modulo-desc">Para muitos homens a pornografia não foi uma distração. Foi o início de tudo. Essa porta precisa ser fechada. Não é bônus — é parte essencial da reconstrução.</p>
+      <p class="modulo-desc">Para muitos homens a pornografia não foi uma distração. Foi o início de tudo. Essa porta precisa ser fechada. Não é bônus. É parte essencial da reconstrução.</p>
       <ul class="modulo-aulas">
         <li>Como a pornografia moldou seu comportamento sem você perceber</li>
         <li>Como romper o ciclo de forma definitiva</li>
@@ -1499,9 +1551,9 @@
 
     <div class="oferta-box">
       <ul class="oferta-itens">
-        <li><strong>Módulo 01</strong> — Reconstrução do Homem</li>
-        <li><strong>Módulo 02</strong> — Restauração do Casamento</li>
-        <li><strong>Módulo 03</strong> — Vença a Pornografia</li>
+        <li><strong>Módulo 01:</strong> Reconstrução do Homem</li>
+        <li><strong>Módulo 02:</strong> Restauração do Casamento</li>
+        <li><strong>Módulo 03:</strong> Vença a Pornografia</li>
         <li>1 ano de acesso completo</li>
         <li>Acesso pelo celular, tablet e PC</li>
         <li>Garantia incondicional de 7 dias</li>
@@ -1548,7 +1600,7 @@
 
     <div class="faq-item aberto">
       <p class="faq-pergunta">Funciona para casos graves de traição?</p>
-      <p class="faq-resposta">Os homens em situações mais graves são os que mais retornam depois para agradecer. Quanto mais grave a situação, maior o comprometimento necessário — e maior a transformação possível.</p>
+      <p class="faq-resposta">Os homens em situações mais graves são os que mais retornam depois para agradecer. Quanto mais grave a situação, maior o comprometimento necessário. E maior a transformação possível.</p>
     </div>
 
     <div class="faq-item">
