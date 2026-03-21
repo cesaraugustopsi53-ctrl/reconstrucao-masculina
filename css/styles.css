@@ -382,18 +382,22 @@ h1, h2, h3, .logo, .stat-num, .btn-cta, .btn-nav, .section-title { font-family: 
 .onde-card-depois ul li::before { content: '✓'; color: var(--verde); font-weight: 700; flex-shrink: 0; }
 
 /* ── PARA QUEM É ─────────────────────────────────────────── */
-.para-quem-section { background: var(--bege-claro); padding: 64px 0; }
+.para-quem-section { background: var(--verde-escuro); padding: 64px 0; }
+.para-quem-section .section-title { color: #fff; }
 .para-quem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
 @media (max-width: 767px) { .para-quem-grid { grid-template-columns: 1fr; } }
-.pq-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
-.pq-card--nao { background: #fff8f8; }
+.pq-card { border-radius: var(--radius); padding: 28px 24px; }
+.pq-card--sim { background: var(--verde); border: 1px solid rgba(201,168,76,.3); }
+.pq-card--nao { background: rgba(15,10,10,.6); border: 1px solid rgba(220,38,38,.4); }
 .pq-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 18px; padding-bottom: 12px; }
-.pq-card--sim h3 { color: var(--verde); border-bottom: 2px solid var(--dourado); }
-.pq-card--nao h3 { color: #7f1d1d; border-bottom: 2px solid #dc2626; }
+.pq-card--sim h3 { color: var(--dourado); border-bottom: 1px solid rgba(201,168,76,.25); }
+.pq-card--nao h3 { color: #ef4444; border-bottom: 1px solid rgba(220,38,38,.25); }
 .pq-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-.pq-list li { display: flex; align-items: flex-start; gap: 8px; font-size: .93rem; color: var(--texto); line-height: 1.5; }
-.pq-sim { color: var(--verde); font-weight: 800; flex-shrink: 0; }
-.pq-nao { color: #dc2626; font-weight: 800; flex-shrink: 0; }
+.pq-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .93rem; line-height: 1.5; }
+.pq-card--sim .pq-list li { color: rgba(255,255,255,.88); }
+.pq-card--nao .pq-list li { color: rgba(255,255,255,.75); }
+.pq-sim { color: var(--dourado); font-weight: 800; flex-shrink: 0; font-size: 1.05rem; }
+.pq-nao { color: #ef4444; font-weight: 800; flex-shrink: 0; font-size: 1.05rem; }
 
 /* ── STICKY CTA BAR ──────────────────────────────────────── */
 #sticky-cta {
@@ -416,3 +420,6 @@ h1, h2, h3, .logo, .stat-num, .btn-cta, .btn-nav, .section-title { font-family: 
   #sticky-cta { max-width: 600px; left: 50%; transform: translateX(-50%) translateY(100%); border-radius: 12px 12px 0 0; }
   #sticky-cta.visible { transform: translateX(-50%) translateY(0); }
 }
+/* WhatsApp sobe quando sticky bar aparece */
+.whatsapp-float { transition: bottom .3s ease; }
+.sticky-visible .whatsapp-float { bottom: 90px; }

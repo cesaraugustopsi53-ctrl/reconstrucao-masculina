@@ -595,8 +595,13 @@
     // Sticky CTA
     const stickyCta = document.getElementById('sticky-cta');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) stickyCta.classList.add('visible');
-      else stickyCta.classList.remove('visible');
+      if (window.scrollY > 500) {
+        stickyCta.classList.add('visible');
+        document.body.classList.add('sticky-visible');
+      } else {
+        stickyCta.classList.remove('visible');
+        document.body.classList.remove('sticky-visible');
+      }
     });
 
     // Mobile menu
