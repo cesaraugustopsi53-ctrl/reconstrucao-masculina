@@ -356,8 +356,11 @@
       background: var(--verde); padding: 12px 20px;
       box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
     }
-    .sticky-cta-bar.visible { display: block; }
-    .sticky-cta-bar .btn-primary { max-width: 500px; margin: 0 auto; font-size: 0.97rem; padding: 15px; }
+    .sticky-cta-bar.visible { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .sticky-price-info { display: flex; flex-direction: column; line-height: 1.2; }
+    .sticky-price-main { font-size: 1.25rem; font-weight: 800; color: var(--dourado); }
+    .sticky-price-parcelas { font-size: 0.72rem; color: rgba(255,255,255,0.7); }
+    .sticky-cta-bar .btn-primary { white-space: nowrap; font-size: 0.9rem; padding: 13px 22px; flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -491,56 +494,6 @@
     <div class="dep-label-pill">💬 Quantas reflexões</div>
     <div class="dep-img-wrapper">
       <img src="img/IMG_3578.JPEG" alt="Depoimento — quantas reflexões">
-    </div>
-
-    <div class="dep-label-pill">⭐ Valeu cada centavo</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_1870.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">💬 Mudou minha visão</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3063.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">⭐ Aprendi muito</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3127.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">💬 Recomendo muito</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3128.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">⭐ Me ajudou demais</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3303.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">💬 Conteúdo incrível</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3575.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">⭐ Transformação real</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3576.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">💬 Superou expectativas</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3577.JPEG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">💬 Exatamente o que precisava</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3936.JPG" alt="Depoimento">
-    </div>
-
-    <div class="dep-label-pill">⭐ Muito além do esperado</div>
-    <div class="dep-img-wrapper">
-      <img src="img/IMG_3948.JPG" alt="Depoimento">
     </div>
 
     <div class="mini-cta-dep">
@@ -813,7 +766,11 @@
 
 <!-- STICKY CTA BAR -->
 <div class="sticky-cta-bar" id="stickyBar">
-  <a href="https://pay.kiwify.com.br/OE1Ah0O?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-sticky" class="btn-primary" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero começar minha transformação — R$297</a>
+  <div class="sticky-price-info">
+    <span class="sticky-price-main">R$ 297</span>
+    <span class="sticky-price-parcelas">ou 12x de R$ 30,72</span>
+  </div>
+  <a href="https://pay.kiwify.com.br/OE1Ah0O?utm_source=facebook&utm_medium=paid&utm_campaign=reconstrucao-masculina&utm_content=btn-sticky" class="btn-primary" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Quero começar agora</a>
 </div>
 
 <!-- WHATSAPP -->
