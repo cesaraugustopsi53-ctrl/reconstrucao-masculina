@@ -7,6 +7,19 @@
   <meta name="facebook-domain-verification" content="on02ffdxxyvvmn3a73xogfikma3r4k">
   <title>Reconstrução Masculina — César Augusto</title>
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Reconstrução Masculina — César Augusto">
+  <meta property="og:description" content="O método que mais de 200 homens usaram para se reconstruir após a traição. Transformação real, não promessas.">
+  <meta property="og:image" content="https://reconstrucao.cesaraugustopsi.com.br/img/hero-cesar.jpg">
+  <meta property="og:url" content="https://reconstrucao.cesaraugustopsi.com.br/">
+  <meta property="og:type" content="website">
+  <meta name="description" content="O método que mais de 200 homens usaram para se reconstruir após a traição e salvar o casamento. César Augusto — Terapeuta masculino e psicanalista.">
+
+  <!-- Fonts (preconnect first para priorizar carregamento) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -29,11 +42,6 @@
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
   </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -423,7 +431,7 @@
   <div class="container">
     <h2 class="section-title" style="text-align:center">Para quem é este curso?</h2>
     <div class="yt-wrapper">
-      <iframe src="https://www.youtube.com/embed/pdxydVN07Tw" title="Pra quem é o curso — César Augusto" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/pdxydVN07Tw" title="Pra quem é o curso — César Augusto" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
     </div>
   </div>
 </section>
@@ -537,7 +545,7 @@
 
     <div class="mini-cta-dep">
       <h3>Quer ser o próximo?</h3>
-      <a href="#oferta" class="btn-outline-gold">Ver oferta especial</a>
+      <a href="#oferta" class="btn-outline-gold" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">Ver oferta especial</a>
     </div>
   </div>
 </section>
@@ -667,7 +675,7 @@
       <p>Além dos 2 módulos principais, você recebe acesso ao módulo bônus <strong>"Vença a Pornografia"</strong> — estratégias práticas para romper o ciclo e reconstruir intimidade real.</p>
     </div>
     <div class="yt-wrapper" style="margin-bottom:28px">
-      <iframe src="https://www.youtube.com/embed/QL-c1oVlZ5E" title="Por dentro do curso — César Augusto" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/QL-c1oVlZ5E" title="Por dentro do curso — César Augusto" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
     </div>
     <div class="modulo-card">
       <h3>Módulo 01 — Reconstrução do Homem</h3>
@@ -799,7 +807,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 Reconstrução Masculina. Todos os direitos reservados.</p>
+  <p>© 2026 Reconstrução Masculina. Todos os direitos reservados.</p>
   <p>Este curso não substitui acompanhamento terapêutico profissional quando necessário.</p>
 </footer>
 
@@ -832,7 +840,7 @@
   update();
 })();
 
-// FAQ accordion
+// FAQ accordion — primeiro item aberto por padrão
 document.querySelectorAll('.faq-question').forEach(function(btn) {
   btn.addEventListener('click', function() {
     var item = btn.parentElement;
@@ -841,6 +849,8 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
     if (!isOpen) item.classList.add('open');
   });
 });
+var firstFaq = document.querySelector('.faq-item');
+if (firstFaq) firstFaq.classList.add('open');
 </script>
 
 </body>
