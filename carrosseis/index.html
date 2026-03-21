@@ -3,601 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrosséis — @cesaraugustoo__ / @thais_ayumi</title>
+<title>Carrosséis — @cesaraugustoo__</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:#080f0b;color:#fff;font-family:-apple-system,sans-serif;padding:24px 16px 60px}
   h1{font-size:20px;color:#C9A84C;margin-bottom:4px}
   .sub{color:#556;font-size:13px;margin-bottom:32px}
   .carrossel{margin-bottom:60px}
-
-  /* header */
   .carrossel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #192618}
   .carrossel-header h2{font-size:13px;font-weight:600;color:#7a9e82;letter-spacing:.05em;text-transform:uppercase}
   .btn-todos{background:#C9A84C;color:#080f0b;font-weight:700;font-size:12px;padding:8px 16px;border-radius:5px;letter-spacing:.04em;white-space:nowrap;cursor:pointer;border:none}
-
-  /* grid de slides */
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:20px}
   .card{position:relative;border-radius:5px;overflow:hidden;background:#111a13}
   .card img{width:100%;display:block}
   .num{position:absolute;top:7px;left:7px;background:rgba(0,0,0,.7);color:#C9A84C;font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;letter-spacing:.06em}
   .btn-dl{display:block;background:#0f1c12;color:#C9A84C;text-align:center;font-weight:600;font-size:12px;padding:9px;text-decoration:none;letter-spacing:.04em;border-top:1px solid #1e3222}
-
-  /* bloco legenda */
   .legenda-box{background:#0d1a0f;border:1px solid #1e3222;border-radius:8px;padding:16px}
   .legenda-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9A84C;margin-bottom:10px}
   .legenda-text{width:100%;background:#080f0b;color:#ccc;border:1px solid #1e3222;border-radius:5px;padding:12px;font-size:13px;line-height:1.6;resize:vertical;min-height:160px;font-family:-apple-system,sans-serif}
   .btn-copy{margin-top:10px;width:100%;background:#1e3222;color:#C9A84C;border:none;border-radius:5px;padding:10px;font-size:13px;font-weight:700;letter-spacing:.06em;cursor:pointer}
   .btn-copy:active{background:#2a4a30}
   .copied{color:#6fcf97!important}
-
-  /* ayumi theme overrides */
-  .ayumi .carrossel-header{border-bottom-color:#2a0f18}
-  .ayumi .carrossel-header h2{color:#C9A84C}
-  .ayumi .card{background:#1a0810}
-  .ayumi .btn-dl{background:#140810;color:#C9A84C;border-top-color:#2a0f18}
-  .ayumi .legenda-box{background:#140810;border-color:#2a0f18}
-  .ayumi .legenda-text{background:#0e050a;border-color:#2a0f18}
-  .ayumi .btn-copy{background:#2a0f18}
-  .ayumi .btn-copy:active{background:#3a1a25}
 </style>
 </head>
 <body>
 
-<h1>@cesaraugustoo__ / @thais_ayumi</h1>
+<h1>@cesaraugustoo__</h1>
 <p class="sub">Slides + legenda prontos para postar</p>
 
-<!-- ══════════════════════════════════════════════════ -->
-<!-- IMAGENS ESTÁTICAS ADS — Meta Ads 1080x1080 (NOVOS) -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="estaticas-ads-1x1">
+<div class="carrossel" id="morte-pedido-desculpa">
   <div class="carrossel-header">
-    <h2>🆕 Imagens Estáticas ADS — RM + VV (1:1)</h2>
+    <h2>🆕 A Morte do Pedido de Desculpa — 11 slides</h2>
+    <button class="btn-todos" onclick="baixarTodos('morte-pedido-desculpa', 11)">Baixar todos</button>
   </div>
   <div class="grid">
-    <div class="card">
-      <span class="num">RM·ADS</span>
-      <img src="estaticas-ads-1x1/rm-estatica-ads-v1.png" loading="lazy">
-      <a class="btn-dl" href="estaticas-ads-1x1/rm-estatica-ads-v1.png" download>Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">VV·ADS</span>
-      <img src="estaticas-ads-1x1/vv-estatica-ads-v1.png" loading="lazy">
-      <a class="btn-dl" href="estaticas-ads-1x1/vv-estatica-ads-v1.png" download>Baixar</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CARROSSEL RM VENDAS ADS — 10 slides 1080x1080      -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-vendas-ads-1x1">
-  <div class="carrossel-header">
-    <h2>🆕 RM Vendas ADS — "Você Traiu. Ela Descobriu." (10 slides · 1:1)</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-vendas-ads-1x1', 10)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-vendas-ads-1x1/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-vendas-ads-1x1/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-vendas-ads-1x1/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-vendas-ads-1x1/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-vendas-ads-1x1/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-vendas-ads-1x1/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-vendas-ads-1x1/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-vendas-ads-1x1/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-vendas-ads-1x1/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-vendas-ads-1x1/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-vendas-ads-1x1/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do anúncio</div>
-    <textarea class="legenda-text" id="leg-rm-vendas-ads" readonly>Você traiu. Ela descobriu. E agora você não sabe mais quem você é.
-
-Esse não é um post de julgamento. É um espelho.
-
-O problema não é o que você fez. É o que te levou a fazer. A traição foi sintoma, não causa. Enquanto você não entender a raiz, o risco continua. Mesmo jurando que não vai repetir.
-
-Já atendi centenas de homens exatamente onde você está. Nenhum era simplesmente mau. Nenhum ficou melhor por força de vontade. Ficaram porque entenderam a raiz.
-
-Curso Reconstrução Masculina. Mais de 200 alunos. 7 dias de garantia.</textarea>
-    <button class="btn-copy" onclick="copiar('leg-rm-vendas-ads', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CARROSSEL VV VENDAS ADS — 10 slides 1080x1080      -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="vv-vendas-ads-1x1">
-  <div class="carrossel-header">
-    <h2>🆕 VV Vendas ADS — "Você Tenta Parar" (10 slides · 1:1)</h2>
-    <button class="btn-todos" onclick="baixarTodos('vv-vendas-ads-1x1', 10)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="vv-vendas-ads-1x1/slide-01.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="vv-vendas-ads-1x1/slide-02.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="vv-vendas-ads-1x1/slide-03.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="vv-vendas-ads-1x1/slide-04.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="vv-vendas-ads-1x1/slide-05.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="vv-vendas-ads-1x1/slide-06.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="vv-vendas-ads-1x1/slide-07.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="vv-vendas-ads-1x1/slide-08.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="vv-vendas-ads-1x1/slide-09.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="vv-vendas-ads-1x1/slide-10.png" loading="lazy"><a class="btn-dl" href="vv-vendas-ads-1x1/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do anúncio</div>
-    <textarea class="legenda-text" id="leg-vv-vendas-ads" readonly>Você tenta parar há anos. E continua falhando.
-
-Não é fraqueza de caráter. É o sistema que foi hackeado.
-
-A pornografia ativa os mesmos circuitos de recompensa que cocaína. Seu cérebro exige doses cada vez maiores. Isso não é metáfora. É fisiologia.
-
-Força de vontade falha. Sempre. Você precisa de método, não de determinação.
-
-Curso Vença o Vício. Método estruturado. Sem julgamento. 7 dias de garantia.</textarea>
-    <button class="btn-copy" onclick="copiar('leg-vv-vendas-ads', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- IMAGENS ESTÁTICAS v2 — META ADS 1080x1080          -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="imagens-estaticas-v2">
-  <div class="carrossel-header">
-    <h2>⭐ Imagens Estáticas v2 — Meta Ads 1:1 (RM)</h2>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <span class="num">RM·v1</span>
-      <img src="imagens-estaticas-v2/rm-estatica-v1.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas-v2/rm-estatica-v1.png" download>Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">RM·v2</span>
-      <img src="imagens-estaticas-v2/rm-estatica-v2.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas-v2/rm-estatica-v2.png" download>Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">RM·v3</span>
-      <img src="imagens-estaticas-v2/rm-estatica-v3.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas-v2/rm-estatica-v3.png" download>Baixar</a>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CARROSSEL RM TRÁFEGO v1 — 10 slides 1080x1080     -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-trafego-v1">
-  <div class="carrossel-header">
-    <h2>⭐ RM Tráfego v1 — "Você Traiu. Ela Descobriu." (10 slides)</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-trafego-v1', 10)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-trafego-v1/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-trafego-v1/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-trafego-v1/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-trafego-v1/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-trafego-v1/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-trafego-v1/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-trafego-v1/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-trafego-v1/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-trafego-v1/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-trafego-v1/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v1/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do anúncio</div>
-    <textarea class="legenda-text" id="leg-rm-trafego-v1" readonly>Você traiu. Ela descobriu. E agora você não sabe mais quem você é.
-
-Esse não é um post de julgamento. É um espelho.
-
-O problema não é o que você fez. É o que te levou a fazer. A traição foi sintoma, não causa. E enquanto você não entender a raiz, o risco continua. Mesmo jurando que não vai repetir.
-
-Existe um caminho. Mas começa com a verdade.
-
-Curso Reconstrução Masculina. Mais de 200 alunos. 7 dias de garantia. Acesse no link do anúncio.
-
-#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #casamento #relacionamento #terapia #autoconsciencia</textarea>
-    <button class="btn-copy" onclick="copiar('leg-rm-trafego-v1', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CARROSSEL RM TRÁFEGO v2 — 10 slides 1080x1080     -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-trafego-v2">
-  <div class="carrossel-header">
-    <h2>⭐ RM Tráfego v2 — "O Ciclo da Traição" (10 slides)</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-trafego-v2', 10)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-trafego-v2/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-trafego-v2/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-trafego-v2/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-trafego-v2/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-trafego-v2/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-trafego-v2/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-trafego-v2/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-trafego-v2/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-trafego-v2/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-trafego-v2/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-trafego-v2/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do anúncio</div>
-    <textarea class="legenda-text" id="leg-rm-trafego-v2" readonly>Você traiu. Foi descoberto. Prometeu que muda.
-
-Mas sem entender o porquê, você vai repetir. Mesmo jurando que não.
-
-A traição não foi fraqueza de caráter. Foi sintoma. E enquanto a raiz não for tratada, o risco continua. Ela sabe disso. Por isso a confiança ainda não voltou.
-
-200 homens já começaram a reconstrução. Homens que estavam exatamente onde você está.
-
-Curso Reconstrução Masculina. Mais de 200 alunos. 7 dias de garantia. Acesse no link do anúncio.
-
-#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #casamento #relacionamento #autoconsciencia</textarea>
-    <button class="btn-copy" onclick="copiar('leg-rm-trafego-v2', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- IMAGENS ESTÁTICAS (antigas) — META ADS             -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="imagens-estaticas">
-  <div class="carrossel-header">
-    <h2>Imagens Estáticas — Meta Ads (RM + VV)</h2>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <span class="num">RM·01</span>
-      <img src="imagens-estaticas/rm-ad-01.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas/rm-ad-01.png" download="rm-ad-01.png">Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">RM·02</span>
-      <img src="imagens-estaticas/rm-ad-02.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas/rm-ad-02.png" download="rm-ad-02.png">Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">VV·01</span>
-      <img src="imagens-estaticas/vv-ad-01.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas/vv-ad-01.png" download="vv-ad-01.png">Baixar</a>
-    </div>
-    <div class="card">
-      <span class="num">VV·02</span>
-      <img src="imagens-estaticas/vv-ad-02.png" loading="lazy">
-      <a class="btn-dl" href="imagens-estaticas/vv-ad-02.png" download="vv-ad-02.png">Baixar</a>
-    </div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Pronto para subir no Meta Ads Manager</div>
-    <textarea class="legenda-text" readonly style="min-height:80px;">1080×1080px · Imagem + texto + CTA renderizados. Baixe e suba direto no Gerenciador de Anúncios como criativo de imagem estática.</textarea>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CÉSAR — RM TRÁFEGO FRIO v2 · VERSÃO TRÁFEGO PAGO  -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-trafego-frio-v2-trafego">
-  <div class="carrossel-header">
-    <h2>@cesaraugustoo__ — RM Tráfego Frio v2 · ADS (clique no botão)</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-trafego-frio-v2-trafego', 11)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-trafego-frio-v2-trafego/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-trafego-frio-v2-trafego/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-trafego-frio-v2-trafego/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-trafego-frio-v2-trafego/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-trafego-frio-v2-trafego/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-trafego-frio-v2-trafego/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-trafego-frio-v2-trafego/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-trafego-frio-v2-trafego/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-trafego-frio-v2-trafego/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-trafego-frio-v2-trafego/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-10.png" download>Baixar</a></div>
-    <div class="card"><span class="num">11</span><img src="rm-trafego-frio-v2-trafego/slide-11.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2-trafego/slide-11.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Versão para Meta Ads — slide 11 com "Clique no botão abaixo"</div>
-    <textarea class="legenda-text" readonly style="min-height:60px;">Slides 01–10 idênticos ao feed. Slide 11 substituído: sem "Link na Bio", com "Clique no botão abaixo e comece agora" — adequado para anúncio com botão Saiba Mais.</textarea>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CÉSAR — RM TRÁFEGO FRIO v2 (imagens corrigidas)    -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-trafego-frio-v2">
-  <div class="carrossel-header">
-    <h2>@cesaraugustoo__ — Reconstrução Masculina · Tráfego Frio v2 ✓</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-trafego-frio-v2', 11)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-trafego-frio-v2/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-trafego-frio-v2/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-trafego-frio-v2/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-trafego-frio-v2/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-trafego-frio-v2/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-trafego-frio-v2/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-trafego-frio-v2/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-trafego-frio-v2/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-trafego-frio-v2/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-trafego-frio-v2/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-10.png" download>Baixar</a></div>
-    <div class="card"><span class="num">11</span><img src="rm-trafego-frio-v2/slide-11.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v2/slide-11.png" download>Baixar</a></div>
+    <div class="card"><span class="num">01</span><img src="morte-pedido-desculpa/slide-01.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-01.png" download>Baixar</a></div>
+    <div class="card"><span class="num">02</span><img src="morte-pedido-desculpa/slide-02.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-02.png" download>Baixar</a></div>
+    <div class="card"><span class="num">03</span><img src="morte-pedido-desculpa/slide-03.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-03.png" download>Baixar</a></div>
+    <div class="card"><span class="num">04</span><img src="morte-pedido-desculpa/slide-04.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-04.png" download>Baixar</a></div>
+    <div class="card"><span class="num">05</span><img src="morte-pedido-desculpa/slide-05.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-05.png" download>Baixar</a></div>
+    <div class="card"><span class="num">06</span><img src="morte-pedido-desculpa/slide-06.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-06.png" download>Baixar</a></div>
+    <div class="card"><span class="num">07</span><img src="morte-pedido-desculpa/slide-07.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-07.png" download>Baixar</a></div>
+    <div class="card"><span class="num">08</span><img src="morte-pedido-desculpa/slide-08.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-08.png" download>Baixar</a></div>
+    <div class="card"><span class="num">09</span><img src="morte-pedido-desculpa/slide-09.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-09.png" download>Baixar</a></div>
+    <div class="card"><span class="num">10</span><img src="morte-pedido-desculpa/slide-10.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-10.png" download>Baixar</a></div>
+    <div class="card"><span class="num">11</span><img src="morte-pedido-desculpa/slide-11.png" loading="lazy"><a class="btn-dl" href="morte-pedido-desculpa/slide-11.png" download>Baixar</a></div>
   </div>
   <div class="legenda-box">
     <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-rm-trafego-frio-v2" readonly>Você traiu. Ela descobriu. E agora você não sabe mais quem você é.
+    <textarea class="legenda-text" id="leg-morte" readonly>Você pediu desculpa. Ela continua fria.
 
-Esse não é um post de julgamento. É um espelho.
+E você não entende o que está faltando.
 
-O problema não é o que você fez. É o que te levou a fazer. A traição foi sintoma, não causa. E enquanto você não entender a raiz, o risco continua. Mesmo jurando que não vai repetir.
+"Me arrependo" diz que você se sente mal. Não diz que você mudou.
 
-Existe um caminho. Mas começa com a verdade.
+Ela não quer o homem culpado. Ela quer saber se o homem que traiu ainda existe dentro de você.
 
-Curso Reconstrução Masculina. Mais de 200 alunos. 7 dias de garantia. Acesse no link do anúncio.
+Qual slide te pegou? Conta nos comentários.
 
-#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #casamento #relacionamento #terapia #autoconsciencia</textarea>
-    <button class="btn-copy" onclick="copiar('leg-rm-trafego-frio-v2', this)">Copiar legenda</button>
-  </div>
-</div>
+Curso Reconstrução Masculina. Link na Bio.
 
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CÉSAR — RM TRÁFEGO FRIO v1                         -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="rm-trafego-frio-v1">
-  <div class="carrossel-header">
-    <h2>@cesaraugustoo__ — Reconstrução Masculina · Tráfego Frio v1</h2>
-    <button class="btn-todos" onclick="baixarTodos('rm-trafego-frio-v1', 11)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="rm-trafego-frio-v1/slide-01.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="rm-trafego-frio-v1/slide-02.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="rm-trafego-frio-v1/slide-03.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="rm-trafego-frio-v1/slide-04.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="rm-trafego-frio-v1/slide-05.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="rm-trafego-frio-v1/slide-06.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="rm-trafego-frio-v1/slide-07.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="rm-trafego-frio-v1/slide-08.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="rm-trafego-frio-v1/slide-09.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="rm-trafego-frio-v1/slide-10.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-10.png" download>Baixar</a></div>
-    <div class="card"><span class="num">11</span><img src="rm-trafego-frio-v1/slide-11.png" loading="lazy"><a class="btn-dl" href="rm-trafego-frio-v1/slide-11.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-rm-trafego-frio-v1" readonly>Você traiu. Ela descobriu. E agora você não sabe mais quem você é.
-
-Esse não é um post de julgamento. É um espelho.
-
-O problema não é o que você fez. É o que te levou a fazer. A traição foi sintoma, não causa. E enquanto você não entender a raiz, o risco continua. Mesmo jurando que não vai repetir.
-
-Existe um caminho. Mas começa com a verdade.
-
-Curso Reconstrução Masculina. Mais de 200 alunos. 7 dias de garantia. Acesse no link do anúncio.
-
-#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #casamento #relacionamento #terapia #autoconsciencia</textarea>
-    <button class="btn-copy" onclick="copiar('leg-rm-trafego-frio-v1', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CÉSAR — VV TRÁFEGO FRIO v1                         -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="vv-trafego-frio-v1">
-  <div class="carrossel-header">
-    <h2>@cesaraugustoo__ — Método Vença o Vício · Tráfego Frio v1</h2>
-    <button class="btn-todos" onclick="baixarTodos('vv-trafego-frio-v1', 11)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="vv-trafego-frio-v1/slide-01.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="vv-trafego-frio-v1/slide-02.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="vv-trafego-frio-v1/slide-03.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="vv-trafego-frio-v1/slide-04.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="vv-trafego-frio-v1/slide-05.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="vv-trafego-frio-v1/slide-06.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="vv-trafego-frio-v1/slide-07.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="vv-trafego-frio-v1/slide-08.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="vv-trafego-frio-v1/slide-09.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="vv-trafego-frio-v1/slide-10.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-10.png" download>Baixar</a></div>
-    <div class="card"><span class="num">11</span><img src="vv-trafego-frio-v1/slide-11.png" loading="lazy"><a class="btn-dl" href="vv-trafego-frio-v1/slide-11.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-vv-trafego-frio-v1" readonly>Você para. Fica dois dias. Recai. Se odeia. Repete.
-
-Isso não é falta de força de vontade. É um ciclo que tem nome, e tem saída.
-
-O vício em pornografia não começa na tela. Começa no desconforto que você nunca aprendeu a processar. E a pornografia virou o atalho mais rápido para sair desse estado. Toda recaída reforça o circuito. Não porque você é fraco. Porque é assim que o cérebro funciona.
-
-Mas o cérebro que aprende errado pode aprender certo. Se você entender o mecanismo.
-
-Método Vença o Vício. R$97. Acesso imediato. 7 dias de garantia. Acesse no link do anúncio.
-
-#vencaovicio #pornografia #vicio #masculinidade #saude #terapia #liberdade #homem #psicologia</textarea>
-    <button class="btn-copy" onclick="copiar('leg-vv-trafego-frio-v1', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- AYUMI — LUXO POSTAR                                -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel ayumi" id="ayumi-luxo-postar">
-  <div class="carrossel-header">
-    <h2>@thais_ayumi — Medo de Postar é Luxo v1</h2>
-    <button class="btn-todos" onclick="baixarTodos('ayumi-luxo-postar', 10, 'thaisayumi')">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="ayumi-luxo-postar/slide-01.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="ayumi-luxo-postar/slide-02.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="ayumi-luxo-postar/slide-03.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="ayumi-luxo-postar/slide-04.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="ayumi-luxo-postar/slide-05.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="ayumi-luxo-postar/slide-06.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="ayumi-luxo-postar/slide-07.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="ayumi-luxo-postar/slide-08.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="ayumi-luxo-postar/slide-09.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="ayumi-luxo-postar/slide-10.png" loading="lazy"><a class="btn-dl" href="ayumi-luxo-postar/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-ayumi-luxo-postar" readonly>Medo de postar é luxo de quem já tem agenda cheia.
-
-Você ainda não tem.
-
-Enquanto você espera o momento certo de aparecer, outra psicanalista postou, lotou a agenda e fechou lista de espera. Sem pagar um centavo.
-
-O Instagram orgânico é gratuito. Não pede verba. Pede coragem.
-
-Invisibilidade digital não é humildade. É escolha de continuar cobrando menos sendo boa no que faz, mas desconhecida por quem precisa de você.
-
-Se você quer aprender a usar o Instagram pra lotar seu consultório sem tráfego pago: entre no Grupo VIP da mentoria.
-
-Link na bio. Ou me manda um "QUERO" no direct.
-
-#psicologadigital #terapeutadigital #posicionamentodigital #psicanalista #presencadigital #agendacheia #marketingparasaude #psicologaempreendedora #mentoriaparaprofissionaisdesaude #visibilidadedigital</textarea>
-    <button class="btn-copy" onclick="copiar('leg-ayumi-luxo-postar', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- AYUMI — MEDO DE POSTAR                             -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel ayumi" id="ayumi-medo-postar">
-  <div class="carrossel-header">
-    <h2>@thais_ayumi — Medo de Postar v1</h2>
-    <button class="btn-todos" onclick="baixarTodos('ayumi-medo-postar', 10, 'thaisayumi')">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="ayumi-medo-postar/slide-01.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="ayumi-medo-postar/slide-02.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="ayumi-medo-postar/slide-03.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="ayumi-medo-postar/slide-04.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="ayumi-medo-postar/slide-05.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="ayumi-medo-postar/slide-06.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="ayumi-medo-postar/slide-07.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="ayumi-medo-postar/slide-08.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="ayumi-medo-postar/slide-09.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="ayumi-medo-postar/slide-10.png" loading="lazy"><a class="btn-dl" href="ayumi-medo-postar/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-ayumi-medo-postar" readonly>Você não tem medo de postar. Você tem medo de continuar assim.
-
-Mal remunerada para o nível de formação que você tem. Agenda que não reflete o quanto você é boa clínica. E um Instagram que você abre, fecha, e não consegue usar a seu favor.
-
-Esse carrossel é para a psicanalista, a psicoterapeuta, a médica que tem mais horas de supervisão do que a maioria dos perfis que o algoritmo entrega. Mas ainda está invisível para quem precisa de você.
-
-Salva esse post. E manda para uma colega que está travada para aparecer.
-
-O link na bio está aberto para o Grupo VIP da Mentoria. Por pouco tempo.
-
-#psicologadigital #terapeutadigital #posicionamentodigital #psicanalista #presencadigital #agendacheia #marketingparasaude #psicologaempreendedora #mentoriaparaprofissionaisdesaude #visibilidadedigital</textarea>
-    <button class="btn-copy" onclick="copiar('leg-ayumi-medo-postar', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- AYUMI — GRUPO VIP                                  -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel ayumi" id="ayumi-grupo-vip">
-  <div class="carrossel-header">
-    <h2>@thais_ayumi — Grupo VIP v2</h2>
-    <button class="btn-todos" onclick="baixarTodos('ayumi-grupo-vip-v2', 10, 'thaisayumi')">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="ayumi-grupo-vip-v2/slide-01.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="ayumi-grupo-vip-v2/slide-02.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="ayumi-grupo-vip-v2/slide-03.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="ayumi-grupo-vip-v2/slide-04.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="ayumi-grupo-vip-v2/slide-05.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="ayumi-grupo-vip-v2/slide-06.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="ayumi-grupo-vip-v2/slide-07.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="ayumi-grupo-vip-v2/slide-08.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="ayumi-grupo-vip-v2/slide-09.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="ayumi-grupo-vip-v2/slide-10.png" loading="lazy"><a class="btn-dl" href="ayumi-grupo-vip-v2/slide-10.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-ayumi-grupo-vip" readonly>Quinta-feira à noite. Você abre o Instagram para postar. E fecha sem ter postado nada.
-
-Não porque você não tem o que dizer. Você tem mais do que qualquer pessoa que você segue. É porque ninguém te ensinou como dizer de um jeito que faz alguém parar e pensar: "é exatamente isso que eu preciso."
-
-Existe uma paciente agora, neste momento, pesquisando no Instagram alguém exatamente como você. Ela está pronta para marcar uma consulta. A pergunta é: o seu perfil está no caminho dela?
-
-Se você já fechou o Instagram sem postar nada e foi dormir com aquela sensação de que ficou pra trás, esse carrossel é pra você. Marca uma colega que merecia ter uma agenda cheia e ainda não entendeu por que não tem.
-
-Grupo VIP aberto. Link na bio.
-
-#psicologadigital #posicionamentodigital #terapeutadigital #psicanalista #marketingparasaude #agendacheia #psicologaempreendedora #medicaempreendedora #mentoriaparaprofissionaisdesaude #posicionamentoonline</textarea>
-    <button class="btn-copy" onclick="copiar('leg-ayumi-grupo-vip', this)">Copiar legenda</button>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════ -->
-<!-- CÉSAR — EGO FRÁGIL                                 -->
-<!-- ══════════════════════════════════════════════════ -->
-<div class="carrossel" id="ego-fragil">
-  <div class="carrossel-header">
-    <h2>@cesaraugustoo__ — Ego Fraco v6</h2>
-    <button class="btn-todos" onclick="baixarTodos('ego-fragil-v6', 11)">Baixar todos</button>
-  </div>
-  <div class="grid">
-    <div class="card"><span class="num">01</span><img src="ego-fragil-v6/slide-01.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-01.png" download>Baixar</a></div>
-    <div class="card"><span class="num">02</span><img src="ego-fragil-v6/slide-02.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-02.png" download>Baixar</a></div>
-    <div class="card"><span class="num">03</span><img src="ego-fragil-v6/slide-03.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-03.png" download>Baixar</a></div>
-    <div class="card"><span class="num">04</span><img src="ego-fragil-v6/slide-04.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-04.png" download>Baixar</a></div>
-    <div class="card"><span class="num">05</span><img src="ego-fragil-v6/slide-05.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-05.png" download>Baixar</a></div>
-    <div class="card"><span class="num">06</span><img src="ego-fragil-v6/slide-06.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-06.png" download>Baixar</a></div>
-    <div class="card"><span class="num">07</span><img src="ego-fragil-v6/slide-07.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-07.png" download>Baixar</a></div>
-    <div class="card"><span class="num">08</span><img src="ego-fragil-v6/slide-08.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-08.png" download>Baixar</a></div>
-    <div class="card"><span class="num">09</span><img src="ego-fragil-v6/slide-09.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-09.png" download>Baixar</a></div>
-    <div class="card"><span class="num">10</span><img src="ego-fragil-v6/slide-10.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-10.png" download>Baixar</a></div>
-    <div class="card"><span class="num">11</span><img src="ego-fragil-v6/slide-11.png" loading="lazy"><a class="btn-dl" href="ego-fragil-v6/slide-11.png" download>Baixar</a></div>
-  </div>
-  <div class="legenda-box">
-    <div class="legenda-label">Legenda do post</div>
-    <textarea class="legenda-text" id="leg-ego-fragil" readonly>O homem que traiu não era forte. Era fraco.
-
-Não foi tesão. Não foi falta de amor. Foi o ego de um homem que não se suportava. Que usou outra pessoa para se sentir inteiro por um momento.
-
-Ego fraco não é fraqueza de caráter. É uma ferida que ninguém ensinou a tratar. O homem que explode por qualquer coisa, que precisa ganhar toda discussão, que sumiu emocionalmente bem antes de trair, não é um monstro. É alguém que nunca aprendeu a lidar com o que sente.
-
-E enquanto ele não entender isso, vai continuar destruindo o que mais ama sem saber por que.
-
-Se você se viu nesse carrossel, o próximo passo é seu. Curso Reconstrução Masculina. Link na bio.
-
-#reconstrucaomasculina #homemcasado #traicao #masculinidade #psicologia #terapia #casamento #relacionamento #autoconsciencia #desenvolvimentopessoal</textarea>
-    <button class="btn-copy" onclick="copiar('leg-ego-fragil', this)">Copiar legenda</button>
+#reconstrucaomasculina #homemcasado #traicao #masculinidade #casamento #relacionamento #terapia</textarea>
+    <button class="btn-copy" onclick="copiar('leg-morte', this)">Copiar legenda</button>
   </div>
 </div>
 
 <script>
-async function baixarTodos(pasta, total, prefixo) {
-  prefixo = prefixo || 'cesaraugustoo';
-  const btn = event.target;
-  btn.textContent = 'Baixando...';
-  btn.disabled = true;
-  for (let i = 1; i <= total; i++) {
-    const num = String(i).padStart(2,'0');
-    const url = `${pasta}/slide-${num}.png`;
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${prefixo}-slide-${num}.png`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    await new Promise(r => setTimeout(r, 800));
-  }
-  btn.textContent = 'Baixar todos';
-  btn.disabled = false;
-}
-
 function copiar(id, btn) {
-  const el = document.getElementById(id);
-  navigator.clipboard.writeText(el.value).then(() => {
-    const orig = btn.textContent;
+  const t = document.getElementById(id);
+  navigator.clipboard.writeText(t.value).then(() => {
     btn.textContent = 'Copiado!';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    setTimeout(() => { btn.textContent = 'Copiar legenda'; btn.classList.remove('copied'); }, 2000);
   });
 }
+function baixarTodos(pasta, total) {
+  for (let i = 1; i <= total; i++) {
+    const a = document.createElement('a');
+    a.href = pasta + '/slide-' + String(i).padStart(2,'0') + '.png';
+    a.download = pasta + '-slide-' + String(i).padStart(2,'0') + '.png';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  }
+}
 </script>
-
 </body>
 </html>
