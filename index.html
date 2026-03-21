@@ -344,6 +344,7 @@
     /* ── WHATSAPP ── */
     .whatsapp-btn {
       position: fixed; bottom: 24px; right: 20px; z-index: 999;
+      transition: bottom 0.2s ease;
       background: #25d366; border-radius: 50%; width: 56px; height: 56px;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 4px 16px rgba(0,0,0,0.28); text-decoration: none;
@@ -357,6 +358,7 @@
       box-shadow: 0 -2px 16px rgba(0,0,0,0.25);
     }
     .sticky-cta-bar.visible { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 80px 10px 20px; }
+    .sticky-cta-bar.visible ~ .whatsapp-btn { bottom: 80px; }
     .sticky-price-info { display: flex; flex-direction: column; line-height: 1.3; flex-shrink: 0; }
     .sticky-price-main { font-size: 1.1rem; font-weight: 800; color: var(--dourado); white-space: nowrap; }
     .sticky-price-parcelas { font-size: 0.68rem; color: rgba(255,255,255,0.7); white-space: nowrap; }
