@@ -358,3 +358,61 @@ img { max-width: 100%; display: block; }
   .whatsapp-float { padding: 14px; border-radius: 50%; }
   .viewers-badge { display: none; }
 }
+
+/* ── FONT OVERRIDE — Plus Jakarta Sans + Inter ───────────── */
+body { font-family: 'Inter', system-ui, sans-serif; }
+h1, h2, h3, .logo, .stat-num, .btn-cta, .btn-nav, .section-title { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+/* ── ONDE VOCÊ ESTÁ vs. ONDE VOCÊ PODE CHEGAR ───────────── */
+.onde-voce-esta { padding: 64px 0; }
+.onde-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+@media (max-width: 767px) { .onde-grid { grid-template-columns: 1fr; } }
+.onde-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
+.onde-card-antes { border-left: 4px solid #dc2626; }
+.onde-card-depois { border-left: 4px solid var(--verde); }
+.onde-card-label { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; display: block; }
+.onde-card-antes .onde-card-label { color: #dc2626; }
+.onde-card-depois .onde-card-label { color: var(--verde); }
+.onde-card h3 { font-size: 1.05rem; margin-bottom: 14px; }
+.onde-card-antes h3 { color: #7f1d1d; }
+.onde-card-depois h3 { color: var(--verde); }
+.onde-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.onde-card ul li { font-size: .93rem; color: var(--texto); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+.onde-card-antes ul li::before { content: '✗'; color: #dc2626; font-weight: 700; flex-shrink: 0; }
+.onde-card-depois ul li::before { content: '✓'; color: var(--verde); font-weight: 700; flex-shrink: 0; }
+
+/* ── PARA QUEM É ─────────────────────────────────────────── */
+.para-quem-section { background: var(--bege-claro); padding: 64px 0; }
+.para-quem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+@media (max-width: 767px) { .para-quem-grid { grid-template-columns: 1fr; } }
+.pq-card { background: #fff; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); }
+.pq-card--nao { background: #fff8f8; }
+.pq-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 18px; padding-bottom: 12px; }
+.pq-card--sim h3 { color: var(--verde); border-bottom: 2px solid var(--dourado); }
+.pq-card--nao h3 { color: #7f1d1d; border-bottom: 2px solid #dc2626; }
+.pq-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.pq-list li { display: flex; align-items: flex-start; gap: 8px; font-size: .93rem; color: var(--texto); line-height: 1.5; }
+.pq-sim { color: var(--verde); font-weight: 800; flex-shrink: 0; }
+.pq-nao { color: #dc2626; font-weight: 800; flex-shrink: 0; }
+
+/* ── STICKY CTA BAR ──────────────────────────────────────── */
+#sticky-cta {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(27,58,45,.95);
+  backdrop-filter: blur(12px);
+  border-top: 2px solid var(--dourado);
+  padding: 12px 20px; z-index: 998;
+  transform: translateY(100%);
+  transition: transform .3s ease;
+  display: flex; align-items: center; gap: 12px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+}
+#sticky-cta.visible { transform: translateY(0); }
+.sticky-text { flex: 1; color: rgba(255,255,255,.8); font-size: .8rem; line-height: 1.3; }
+.sticky-text strong { color: #fff; display: block; font-size: .88rem; }
+.sticky-price { font-size: .75rem; color: rgba(255,255,255,.6); }
+.sticky-cta-btn { white-space: nowrap; padding: 11px 20px; font-size: .85rem; }
+@media (min-width: 769px) {
+  #sticky-cta { max-width: 600px; left: 50%; transform: translateX(-50%) translateY(100%); border-radius: 12px 12px 0 0; }
+  #sticky-cta.visible { transform: translateX(-50%) translateY(0); }
+}
