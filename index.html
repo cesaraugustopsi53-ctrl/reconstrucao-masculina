@@ -55,7 +55,7 @@
   </div>
 
   <!-- Exit Intent Popup -->
-  <div class="exit-overlay" id="exitOverlay">
+  <div class="exit-overlay" id="exitOverlay" style="display:none">
     <div class="exit-popup">
       <button class="exit-close" id="exitClose">✕</button>
       <h2>Espere! Ainda tem dúvidas?</h2>
@@ -501,13 +501,31 @@
       if (!isOpen) item.classList.add('open');
     }
 
-    // Exit intent
+    // Exit intent — apenas desktop (touch devices não usam mouseleave)
+    const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
     let exitShown = false;
-    document.addEventListener('mouseleave', e => {
-      if (e.clientY <= 0 && !exitShown) { exitShown = true; document.getElementById('exitOverlay').classList.add('show'); }
+    if (!isTouchDevice()) {
+      document.addEventListener('mouseleave', e => {
+        if (e.clientY <= 0 && !exitShown) {
+          exitShown = true;
+          const overlay = document.getElementById('exitOverlay');
+          overlay.style.display = 'flex';
+          overlay.classList.add('show');
+        }
+      });
+    }
+    document.getElementById('exitClose').addEventListener('click', () => {
+      const overlay = document.getElementById('exitOverlay');
+      overlay.classList.remove('show');
+      overlay.style.display = 'none';
     });
-    document.getElementById('exitClose').addEventListener('click', () => document.getElementById('exitOverlay').classList.remove('show'));
-    document.getElementById('exitOverlay').addEventListener('click', e => { if (e.target === document.getElementById('exitOverlay')) document.getElementById('exitOverlay').classList.remove('show'); });
+    document.getElementById('exitOverlay').addEventListener('click', e => {
+      if (e.target === document.getElementById('exitOverlay')) {
+        const overlay = document.getElementById('exitOverlay');
+        overlay.classList.remove('show');
+        overlay.style.display = 'none';
+      }
+    });
 
     // Mobile menu
     document.getElementById('menuToggle').addEventListener('click', () => document.getElementById('nav').classList.toggle('open'));
