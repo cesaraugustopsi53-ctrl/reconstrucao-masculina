@@ -127,7 +127,7 @@ img { max-width: 100%; display: block; }
   padding: 80px 0 60px;
 }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.hero-h1 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--verde); margin-bottom: 20px; }
+.hero-h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); color: var(--verde); margin-bottom: 20px; line-height: 1.1; }
 .hero-sub { font-size: 1.1rem; color: var(--texto-claro); margin-bottom: 32px; line-height: 1.7; }
 .hero-proof { margin-top: 16px; font-size: 0.85rem; color: var(--texto-claro); }
 .hero-img-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
@@ -423,3 +423,22 @@ h1, h2, h3, .logo, .stat-num, .btn-cta, .btn-nav, .section-title { font-family: 
 /* WhatsApp sobe quando sticky bar aparece */
 .whatsapp-float { transition: bottom .3s ease; }
 .sticky-visible .whatsapp-float { bottom: 90px; }
+
+/* ── DEPOIMENTOS — fundo verde, cards de texto ───────────── */
+.deps-section { background: var(--verde); padding: 64px 0; }
+.deps-section .section-title { color: #fff; }
+.deps-section .section-quote { color: var(--dourado); font-style: italic; font-size: 1.1rem; text-align: center; margin-bottom: 8px; }
+.deps-section .section-sub { color: rgba(255,255,255,.6); font-size: .9rem; text-align: center; margin-bottom: 40px; }
+.deps-grid-text { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 600px) { .deps-grid-text { grid-template-columns: 1fr 1fr; } }
+.dep-card { background: rgba(255,255,255,.06); border: 1px solid rgba(201,168,76,.3); border-radius: var(--radius); padding: 24px; }
+.dep-card-label { display: flex; align-items: center; gap: 8px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--dourado); margin-bottom: 14px; }
+.dep-card p { color: rgba(255,255,255,.88); font-size: .95rem; line-height: 1.7; font-style: italic; margin-bottom: 12px; }
+.dep-card-autor { font-size: .78rem; color: rgba(255,255,255,.45); }
+.dep-card--esposa { border-color: rgba(201,168,76,.55); background: rgba(201,168,76,.07); }
+.dep-card-tag { display: inline-block; background: rgba(201,168,76,.18); color: var(--dourado); font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
+
+/* ── URGÊNCIA — callout rosa ─────────────────────────────── */
+.urgencia-callout { background: #fff1f1; border: 1px solid rgba(220,38,38,.25); border-radius: var(--radius); padding: 24px; margin-top: 32px; text-align: center; }
+.urgencia-callout p { color: var(--texto); font-size: 1rem; line-height: 1.7; margin-bottom: 0; }
+.urgencia-callout strong { color: #dc2626; }
