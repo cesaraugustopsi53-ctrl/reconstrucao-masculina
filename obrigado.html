@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compra Confirmada — Reconstrução Masculina</title>
+<meta name="robots" content="noindex,nofollow">
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','702407242839062');
+  fbq('track','PageView');
+  fbq('track','Purchase', {value: 297.00, currency: 'BRL'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=702407242839062&ev=Purchase&noscript=1"/></noscript>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS98RGD9JY"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-VS98RGD9JY');
+  gtag('event','purchase',{currency:'BRL',value:297.00});
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","vxds1uep01");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --verde: #1a3a2a;
+  --verde2: #0f2218;
+  --dourado: #c9a84c;
+  --dourado2: #e8c96a;
+  --branco: #ffffff;
+  --cinza: #9ca3af;
+  --fundo: #0d0d0d;
+  --fundo2: #111111;
+  --fundo3: #171717;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Open Sans", sans-serif;
+  background: var(--fundo);
+  color: var(--branco);
+  overflow-x: hidden;
+  font-size: 17px;
+  line-height: 1.8;
+}
+h1, h2, h3 { font-family: "Oswald", sans-serif; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+/* CONFIRMACAO */
+.confirmacao {
+  background: var(--fundo2);
+  padding: 52px 20px 48px;
+  text-align: center;
+  border-bottom: 2px solid #1e1e1e;
+}
+.check-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--verde);
+  border: 2px solid var(--dourado);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+.check-badge svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--dourado);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.label-conf {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  display: block;
+  margin-bottom: 12px;
+}
+.confirmacao h1 {
+  font-size: clamp(28px, 6vw, 46px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: none;
+}
+.confirmacao p {
+  font-size: clamp(16px, 2.5vw, 18px);
+  color: rgba(255,255,255,0.65);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.confirmacao p strong {
+  color: var(--branco);
+  font-weight: 600;
+}
+
+/* DIVISOR */
+.divisor-upsell {
+  background: var(--fundo3);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  padding: 36px 20px;
+  text-align: center;
+}
+.divisor-upsell p {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* UPSELL */
+.upsell {
+  background: var(--fundo);
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+.upsell .label-conf { margin-bottom: 16px; }
+.upsell h2 {
+  font-size: clamp(26px, 5.5vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: none;
+  margin-bottom: 20px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upsell h2 span { color: var(--dourado); }
+.upsell > .container > p {
+  font-size: clamp(16px, 2.5vw, 18px);
+  color: rgba(255,255,255,0.6);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}
+
+/* CARD PRODUTO */
+.card-produto {
+  background: var(--fundo2);
+  border: 1px solid #2a2a2a;
+  border-top: 3px solid var(--dourado);
+  padding: 36px 32px;
+  max-width: 560px;
+  margin: 0 auto 32px;
+  text-align: left;
+}
+.card-produto .produto-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--dourado);
+  margin-bottom: 8px;
+  display: block;
+}
+.card-produto h3 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.card-produto h3 span { color: var(--dourado); }
+.beneficios {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.beneficios li {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  padding: 8px 0;
+  border-bottom: 1px solid #1e1e1e;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.beneficios li:last-child { border-bottom: none; }
+.beneficios li::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  background: var(--verde);
+  border: 1px solid var(--dourado);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9a84c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 2px;
+}
+.preco-bloco {
+  background: var(--fundo3);
+  padding: 20px 24px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #1e1e1e;
+}
+.preco-de {
+  font-size: 13px;
+  color: var(--cinza);
+  text-decoration: line-through;
+}
+.preco-por {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dourado);
+  line-height: 1;
+}
+.preco-por span {
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 4px;
+}
+.preco-desc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+/* BOTOES */
+.btn-upsell {
+  display: block;
+  background: var(--dourado);
+  color: var(--verde2);
+  font-family: "Oswald", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 20px 32px;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  transition: background 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.btn-upsell:hover { background: var(--dourado2); }
+.btn-upsell small {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+  color: rgba(15,34,24,0.7);
+  text-transform: none;
+}
+
+.btn-nao {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  padding: 20px;
+  margin-top: 8px;
+  transition: color 0.15s;
+  cursor: pointer;
+}
+.btn-nao:hover { color: rgba(255,255,255,0.6); }
+
+/* ACESSO */
+.acesso {
+  background: var(--fundo2);
+  border-top: 1px solid #1e1e1e;
+  padding: 48px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+.acesso h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+.acesso p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  max-width: 480px;
+  margin: 0 auto 28px;
+  font-weight: 300;
+}
+.btn-acesso {
+  display: inline-block;
+  border: 1px solid var(--dourado);
+  color: var(--dourado);
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-acesso:hover {
+  background: var(--dourado);
+  color: var(--verde2);
+}
+
+/* RODAPE */
+.rodape {
+  padding: 32px 20px;
+  text-align: center;
+  border-top: 1px solid #1a1a1a;
+}
+.rodape p {
+  font-size: 12px;
+  color: rgba(255,255,255,0.2);
+  line-height: 1.8;
+}
+
+@media (max-width: 560px) {
+  .card-produto { padding: 28px 20px; }
+  .preco-bloco { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- CONFIRMACAO -->
+<section class="confirmacao">
+  <div class="container">
+    <div class="check-badge">
+      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <span class="label-conf">Compra confirmada</span>
+    <h1>Voce tomou a decisao certa.</h1>
+    <p>
+      Voce acaba de abrir uma porta que poucos homens tem coragem de abrir.<br>
+      <strong>Em breve voce recebera um email com seu acesso ao Reconstrucao Masculina.</strong><br>
+      Mas antes de acessar o curso, leia o que esta abaixo.
+    </p>
+  </div>
+</section>
+
+<!-- DIVISOR -->
+<div class="divisor-upsell">
+  <div class="container">
+    <p>Aguarde — nao feche esta pagina</p>
+  </div>
+</div>
+
+<!-- UPSELL -->
+<section class="upsell">
+  <div class="container">
+    <span class="label-conf">Oferta exclusiva — so aparece aqui</span>
+    <h2>O curso te da o mapa.<br><span>Cesar te mostra onde voce esta.</span></h2>
+    <p>
+      Cada traicao tem uma raiz diferente. O curso te ensina o metodo — mas trabalhar isso com quem ja guiou centenas de homens acelera tudo. Escolha como voce quer esse suporte.
+    </p>
+
+    <!-- CARD SESSAO UNICA -->
+    <div class="card-produto" style="margin-bottom:16px;">
+      <span class="produto-label">Sessao unica de direcionamento</span>
+      <h3>Sessao <span>Individual</span></h3>
+
+      <ul class="beneficios">
+        <li>60 minutos com Cesar, online, focado no seu caso especifico</li>
+        <li>Voce entende a raiz psicologica do que aconteceu — sem julgamento</li>
+        <li>Sai com um plano claro: o que fazer, o que evitar, como comecar</li>
+        <li>Agendamento por WhatsApp apos confirmacao do pagamento</li>
+      </ul>
+
+      <div class="preco-bloco">
+        <div>
+          <div class="preco-por"><span>R$</span>500</div>
+          <div class="preco-desc">Pagamento unico. Exclusivo pos-compra.</div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/31991550421?text=Ol%C3%A1%20C%C3%A9sar%2C%20acabei%20de%20comprar%20o%20Reconstru%C3%A7%C3%A3o%20Masculino%20e%20quero%20agendar%20a%20sess%C3%A3o%20individual%20de%20direcionamento%20(R%24500)." target="_blank" class="btn-upsell" style="background:#1a3a2a; color:#c9a84c; border:1px solid #c9a84c;">
+        Quero a sessao individual — R$500
+        <small style="color:rgba(201,168,76,0.6);">Voce sera redirecionado ao WhatsApp do Cesar.</small>
+      </a>
+    </div>
+
+    <!-- CARD PACOTE -->
+    <div class="card-produto" style="border-top-color:#e8c96a; position:relative;">
+      <div style="position:absolute; top:-13px; left:50%; transform:translateX(-50%); background:var(--dourado); color:var(--verde2); font-family:'Oswald',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; padding:4px 16px; white-space:nowrap;">Mais escolhido</div>
+      <span class="produto-label" style="margin-top:8px;">Acompanhamento de 1 mes — vagas limitadas</span>
+      <h3>Pacote <span>4 Sessoes</span></h3>
+
+      <ul class="beneficios">
+        <li>4 sessoes individuais com Cesar — uma por semana durante 30 dias</li>
+        <li>Aplicamos o metodo diretamente ao seu caso em tempo real</li>
+        <li>Trabalhamos juntos o que dizer para sua esposa, como agir, o que evitar</li>
+        <li>Voce processa a culpa, a vergonha e o medo de perder tudo</li>
+        <li>Os primeiros 30 dias sao os mais criticos — voce nao vai estar sozinho neles</li>
+      </ul>
+
+      <div class="preco-bloco">
+        <div>
+          <div class="preco-de">Sessoes avulsas: R$2.000</div>
+          <div class="preco-por"><span>R$</span>1.400</div>
+          <div class="preco-desc">Pacote exclusivo. 4x de R$350.</div>
+        </div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.4); max-width:160px; text-align:right; line-height:1.5;">
+          Cesar atende poucos pacientes. Vagas sao limitadas.
+        </div>
+      </div>
+
+      <a href="https://wa.me/31991550421?text=Ol%C3%A1%20C%C3%A9sar%2C%20acabei%20de%20comprar%20o%20Reconstru%C3%A7%C3%A3o%20Masculino%20e%20tenho%20interesse%20no%20pacote%20de%20acompanhamento%20com%204%20sess%C3%B5es%20(R%241.400)." target="_blank" class="btn-upsell">
+        Quero o acompanhamento de 1 mes — R$1.400
+        <small>Voce sera redirecionado ao WhatsApp do Cesar.</small>
+      </a>
+    </div>
+
+    <a href="#acesso" class="btn-nao">Nao, vou comecar so com o curso por enquanto</a>
+  </div>
+</section>
+
+<!-- ACESSO AO CURSO -->
+<section class="acesso" id="acesso">
+  <div class="container">
+    <h2>Como acessar o curso</h2>
+    <p>
+      A Kiwify vai te enviar um <strong style="color:#fff;">email com seu login e senha</strong> em ate 5 minutos.<br>
+      Verifique tambem a pasta de <strong style="color:#fff;">spam ou promocoes</strong> — as vezes vai parar la.
+    </p>
+    <!-- SUBSTITUIR PELO LINK DA AREA DE MEMBROS -->
+    <a href="https://kiwify.com.br" class="btn-acesso">Acessar area de membros</a>
+
+    <div style="margin-top:32px; padding-top:28px; border-top:1px solid #1e1e1e;">
+      <p style="font-size:14px; color:rgba(255,255,255,0.4); margin-bottom:14px;">
+        Nao recebeu o email depois de 10 minutos?
+      </p>
+      <a href="https://wa.me/31991550421?text=Ola%20Cesar%2C%20acabei%20de%20comprar%20o%20Reconstrucao%20Masculina%20e%20nao%20recebi%20meu%20acesso." style="display:inline-flex; align-items:center; gap:10px; background:#1a3a2a; border:1px solid #c9a84c; color:#c9a84c; font-family:'Oswald',sans-serif; font-size:15px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:14px 28px; text-decoration:none; transition:background 0.15s;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#c9a84c"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar com o suporte no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPE -->
+<footer class="rodape">
+  <div class="container">
+    <p>
+      Cesar Augusto Psicanálise &bull; cesaraugustopsi.com.br<br>
+      Duvidas? Entre em contato: contato@cesaraugustopsi.com.br
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
