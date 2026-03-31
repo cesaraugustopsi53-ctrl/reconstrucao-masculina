@@ -27,7 +27,7 @@ src="https://www.facebook.com/tr?id=702407242839062&ev=PageView&noscript=1"/></n
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -42,145 +42,144 @@ src="https://www.facebook.com/tr?id=702407242839062&ev=PageView&noscript=1"/></n
 }
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--bege);color:var(--texto);line-height:1.6}
+.container{max-width:560px;margin:0 auto;padding:0 20px}
 
 /* HEADER */
-header{background:var(--vinho);padding:14px 24px;display:flex;align-items:center;justify-content:center}
-.header-logo{color:#fff;font-size:1rem;font-weight:600;letter-spacing:.5px;opacity:.9}
+header{background:var(--vinho);padding:16px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.header-logo{color:#fff;font-size:1rem;font-weight:700;letter-spacing:.3px;display:block;text-align:center}
 
-/* HERO */
-.hero{background:var(--vinho);padding:64px 24px 56px;text-align:center}
-.hero h1{color:#fff;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 16px}
+/* BOTÕES */
+.btn-primary{display:block;width:100%;background:var(--dourado);color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:18px 24px;border-radius:12px;border:none;cursor:pointer;text-decoration:none;text-align:center;transition:opacity .2s}
+.btn-primary:hover{opacity:.9}
+
+/* HERO — bege, texto escuro */
+.hero{background:var(--bege);padding:52px 0 48px;text-align:center}
+.hero h1{font-size:clamp(2rem,6vw,2.6rem);font-weight:800;line-height:1.12;color:var(--vinho);margin-bottom:20px;letter-spacing:-.01em}
 .hero h1 span{color:var(--dourado)}
-.hero p{color:rgba(255,255,255,.8);font-size:1.05rem;max-width:580px;margin:0 auto 32px}
-.btn-cta{display:inline-block;background:var(--dourado);color:var(--vinho);font-size:1.05rem;font-weight:700;padding:16px 40px;border-radius:50px;text-decoration:none;transition:filter .2s}
-.btn-cta:hover{filter:brightness(1.08)}
-.hero-img{width:100%;max-width:640px;border-radius:var(--radius);margin-top:40px;display:block;margin-left:auto;margin-right:auto}
+.hero .sub{font-size:1.05rem;color:var(--cinza);line-height:1.65;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
+.hero-img{margin-top:36px}
+.hero-img img{width:100%;display:block;border-radius:var(--radius)}
+.hero-parcelas{text-align:center;font-size:.88rem;color:var(--cinza);margin-top:10px}
 
 /* STATS */
-.stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;padding:48px 24px}
-.stat-card{background:var(--branco);border-radius:var(--radius);padding:24px 32px;text-align:center;flex:1;min-width:160px;max-width:220px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.stat-card .num{font-size:2rem;font-weight:700;color:var(--vinho)}
-.stat-card .label{font-size:.85rem;color:var(--cinza);margin-top:4px}
+.stats-section{padding:8px 0 48px;background:var(--bege)}
+.stat-card{background:#fff;border-radius:var(--radius);padding:28px 24px;text-align:center;margin-bottom:16px;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.stat-num{font-size:2.4rem;font-weight:800;color:var(--dourado);line-height:1;margin-bottom:6px}
+.stat-label{font-size:.95rem;color:var(--cinza)}
 
-/* BADGES */
-.badges-section{padding:8px 24px 40px;text-align:center}
-.badges-section h2{font-size:1.4rem;font-weight:700;margin-bottom:20px;color:var(--vinho)}
-.badge-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:0 auto}
-.badge-pill{background:var(--branco);border:1.5px solid var(--vinho);color:var(--vinho);border-radius:50px;padding:8px 20px;font-size:.9rem;font-weight:500}
+/* PARA QUEM */
+.para-quem{padding:0 0 52px;background:var(--bege)}
+.para-quem h2{font-size:1.7rem;font-weight:800;color:var(--vinho);margin-bottom:20px;line-height:1.2}
+.badge-pill{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(201,168,76,.28);border-radius:50px;padding:14px 22px;margin-bottom:12px;font-size:.97rem;font-weight:500;color:var(--texto);box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--dourado);flex-shrink:0}
 
-/* SEÇÕES GENÉRICAS */
-section{padding:56px 24px}
-.section-inner{max-width:900px;margin:0 auto}
-h2.section-title{font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:var(--vinho);margin-bottom:16px;line-height:1.25}
-p.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:32px}
-
-/* DEPOIMENTOS */
-.dep-section{background:var(--vinho);padding:56px 24px}
-.dep-section h2{color:#fff;text-align:center;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;margin-bottom:32px}
-.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:0 auto}
-.dep-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:24px}
-.dep-card p{color:rgba(255,255,255,.9);font-size:.95rem;line-height:1.6;margin-bottom:16px}
-.dep-author{display:flex;align-items:center;gap:12px}
-.dep-img-wrapper{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid var(--dourado)}
-.dep-img-wrapper img{width:100%;height:100%;object-fit:cover}
-.dep-author span{color:rgba(255,255,255,.7);font-size:.85rem}
+/* DEPOIMENTOS — borgonha com prints reais */
+.dep-section{background:var(--vinho);padding:60px 0}
+.dep-quote{font-size:1.2rem;font-weight:600;font-style:italic;color:var(--dourado);line-height:1.5;margin-bottom:12px;text-align:center}
+.dep-sub{font-size:.95rem;color:rgba(255,255,255,.75);text-align:center;margin-bottom:36px;line-height:1.5}
+.dep-label-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(201,168,76,.35);border-radius:50px;padding:9px 18px;margin-bottom:10px;font-size:.87rem;font-weight:600;color:var(--dourado)}
+.dep-img-wrapper{border:1.5px solid rgba(201,168,76,.38);border-radius:14px;overflow:hidden;margin-bottom:24px}
+.dep-img-wrapper img{width:100%;display:block}
 
 /* DOR */
-.dor-section{background:var(--bege)}
+.dor-section{background:var(--bege);padding:56px 0}
+.section-title{font-size:1.7rem;font-weight:800;color:var(--vinho);line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:28px;line-height:1.6}
 .dor-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-.dor-list li{background:var(--branco);border-radius:12px;padding:16px 20px;font-size:.95rem;color:var(--texto);display:flex;align-items:flex-start;gap:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.dor-list li{background:#fff;border-radius:12px;padding:16px 20px;font-size:.95rem;color:var(--texto);display:flex;align-items:flex-start;gap:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .dor-list li::before{content:"•";color:var(--dourado);font-size:1.4rem;line-height:1;flex-shrink:0}
 
 /* SE NADA MUDAR */
-.se-nada{background:var(--bege)}
-.se-nada-card{background:#fff3f3;border:1.5px solid #d09090;border-radius:var(--radius);padding:32px;max-width:700px}
+.se-nada-section{background:var(--bege);padding:0 0 56px}
+.se-nada-card{background:#fff3f3;border:1.5px solid #d09090;border-radius:var(--radius);padding:32px}
 .se-nada-card p{color:#6b2020;font-size:.95rem;line-height:1.7}
 
 /* TRANSFORMAÇÃO */
-.trf-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px}
-.trf-card{background:var(--branco);border-radius:var(--radius);padding:28px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.trf-card h3{font-size:1rem;font-weight:700;margin-bottom:16px}
+.trf-section{background:var(--bege);padding:0 0 56px}
+.trf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.trf-card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.trf-card h3{font-size:.95rem;font-weight:700;margin-bottom:14px}
 .trf-card.crise h3{color:#c0392b}
 .trf-card.restaurado h3{color:var(--vinho)}
-.trf-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.trf-card ul li{font-size:.9rem;color:var(--cinza);display:flex;align-items:flex-start;gap:8px}
+.trf-card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.trf-card ul li{font-size:.87rem;color:var(--cinza);display:flex;align-items:flex-start;gap:8px}
 .trf-card ul li::before{content:"→";color:var(--dourado);flex-shrink:0}
 
-/* O QUE VAI APRENDER */
-.learn-section{background:var(--vinho)}
-.learn-section h2{color:#fff;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;margin-bottom:32px;text-align:center}
-.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.learn-card{background:rgba(255,255,255,.08);border-radius:var(--radius);padding:24px}
-.learn-card h3{color:var(--dourado);font-size:1rem;font-weight:700;margin-bottom:8px}
+/* O QUE VAI APRENDER — borgonha */
+.learn-section{background:var(--vinho);padding:60px 0}
+.learn-section h2{color:#fff;font-size:1.7rem;font-weight:800;margin-bottom:28px}
+.learn-card{background:rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;margin-bottom:14px}
+.learn-card h3{color:var(--dourado);font-size:1rem;font-weight:700;margin-bottom:6px}
 .learn-card p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.6}
 
 /* AUTORIDADE */
-.autoridade-section{background:var(--bege)}
-.instructors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;max-width:860px;margin:32px auto 0}
-.instructor{background:var(--branco);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.instructor-photo{width:100%;height:280px;object-fit:cover;object-position:center 20%}
-.instructor-body{padding:24px}
-.instructor-body h3{font-size:1.1rem;font-weight:700;color:var(--vinho);margin-bottom:4px}
-.instructor-body .role{font-size:.85rem;color:var(--dourado);font-weight:600;margin-bottom:12px}
+.autoridade-section{background:var(--bege);padding:56px 0}
+.instructor{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:24px}
+.instructor-photo{width:100%;height:260px;object-fit:cover;object-position:center 20%}
+.instructor-body{padding:22px}
+.instructor-body h3{font-size:1.1rem;font-weight:800;color:var(--vinho);margin-bottom:4px}
+.instructor-body .role{font-size:.83rem;color:var(--dourado);font-weight:600;margin-bottom:10px}
 .instructor-body p{font-size:.9rem;color:var(--cinza);line-height:1.6}
 
 /* ESTRUTURA */
-.estrutura-section{background:var(--bege)}
-.modulos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:32px auto 0}
-.modulo-card{background:var(--branco);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.modulo-num{font-size:.8rem;font-weight:700;color:var(--dourado);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.estrutura-section{background:var(--bege);padding:0 0 56px}
+.modulo-card{background:#fff;border-radius:var(--radius);padding:26px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.modulo-num{font-size:.78rem;font-weight:700;color:var(--dourado);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 .modulo-card h3{font-size:1.05rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
 .modulo-card p{font-size:.9rem;color:var(--cinza);line-height:1.6}
 
 /* FOTO CASAL */
-.foto-casal-section{background:var(--vinho);padding:0}
-.foto-casal-section img{width:100%;max-height:500px;object-fit:cover;object-position:center 30%;display:block}
+.foto-casal-section{padding:0}
+.foto-casal-section img{width:100%;max-height:420px;object-fit:cover;object-position:center 30%;display:block}
 
 /* OFERTA */
-.oferta-section{background:var(--bege)}
-.oferta-card{background:var(--branco);border-radius:var(--radius);padding:40px;max-width:600px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,.08);text-align:center}
-.oferta-card h2{font-size:1.5rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
-.oferta-card .curso-nome{font-size:.9rem;color:var(--cinza);margin-bottom:24px}
-.oferta-price-main{font-size:2.4rem;font-weight:700;color:var(--vinho);line-height:1}
+.oferta-section{background:var(--bege);padding:56px 0}
+.oferta-card{background:#fff;border-radius:var(--radius);padding:36px 28px;box-shadow:0 4px 24px rgba(0,0,0,.08);text-align:center;margin-bottom:20px}
+.oferta-card h2{font-size:1.4rem;font-weight:800;color:var(--vinho);margin-bottom:6px}
+.oferta-card .curso-nome{font-size:.9rem;color:var(--cinza);margin-bottom:20px}
+.oferta-price-main{font-size:2.6rem;font-weight:800;color:var(--vinho);line-height:1}
 .oferta-price-main small{font-size:1rem;font-weight:400}
-.oferta-price-parcela{font-size:1rem;color:var(--cinza);margin-top:8px;margin-bottom:24px}
-.oferta-items{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.oferta-price-parcela{font-size:1rem;color:var(--cinza);margin-top:8px;margin-bottom:22px}
+.oferta-items{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
 .oferta-items li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--texto)}
 .oferta-items li::before{content:"✓";color:var(--vinho);font-weight:700;flex-shrink:0}
-.garantia-box{background:#fdf5f6;border:1.5px solid var(--vinho);border-radius:var(--radius);padding:24px;text-align:center;max-width:600px;margin:32px auto 0}
-.garantia-box h3{font-size:1rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
-.garantia-box p{font-size:.9rem;color:var(--cinza)}
+.garantia-box{background:#fdf5f6;border:2px solid var(--dourado);border-radius:var(--radius);padding:28px 24px;text-align:center}
+.garantia-box h3{font-size:1.1rem;font-weight:800;color:var(--dourado);margin-bottom:10px}
+.garantia-box p{font-size:.9rem;color:var(--cinza);line-height:1.6}
 
 /* FAQ */
-.faq-section{background:var(--bege)}
-.faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
-details{background:var(--branco);border-radius:12px;padding:20px 24px;cursor:pointer;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-summary{font-weight:600;font-size:.95rem;color:var(--vinho);list-style:none;display:flex;justify-content:space-between;align-items:center}
-summary::after{content:"+";font-size:1.2rem;color:var(--dourado)}
-details[open] summary::after{content:"−"}
-details p{margin-top:12px;font-size:.9rem;color:var(--cinza);line-height:1.6}
+.faq-section{background:var(--bege);padding:56px 0}
+.faq-item{border-bottom:1px solid #d8d4cc}
+.faq-question{width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:'DM Sans',sans-serif;font-size:.97rem;font-weight:500;color:var(--texto);gap:12px}
+.faq-chevron{flex-shrink:0;transition:transform .25s;color:var(--cinza);font-size:1.2rem}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-answer{display:none;padding:0 0 18px;font-size:.93rem;color:var(--cinza);line-height:1.7}
+.faq-item.open .faq-answer{display:block}
 
-/* CTA FINAL */
-.cta-final{background:var(--vinho);text-align:center}
-.cta-final h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;margin-bottom:16px}
-.cta-final p{color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:32px}
+/* CTA FINAL — borgonha */
+.cta-final{background:var(--vinho);padding:60px 0;text-align:center}
+.cta-final h2{color:#fff;font-size:1.7rem;font-weight:800;margin-bottom:16px;line-height:1.2}
+.cta-final p{color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:32px;line-height:1.65}
 
 /* FOOTER */
-footer{background:var(--vinho);border-top:1px solid rgba(255,255,255,.1);padding:24px;text-align:center}
-footer p{color:rgba(255,255,255,.5);font-size:.8rem}
+footer{background:var(--vinho);border-top:1px solid rgba(255,255,255,.1);padding:28px 20px;text-align:center}
+footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
 
 /* STICKY BAR */
-.sticky-cta-bar{position:fixed;bottom:0;left:0;right:0;background:var(--vinho);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;z-index:999;box-shadow:0 -2px 16px rgba(0,0,0,.2)}
-.sticky-cta-bar span{color:#fff;font-size:.9rem;font-weight:500}
-.sticky-cta-bar a{background:var(--dourado);color:var(--vinho);font-weight:700;padding:10px 24px;border-radius:50px;text-decoration:none;font-size:.9rem}
+.sticky-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--vinho);padding:10px 80px 10px 20px;z-index:98;box-shadow:0 -2px 16px rgba(0,0,0,.2)}
+.sticky-cta-bar.visible{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sticky-cta-bar.visible~.whatsapp-btn{bottom:80px}
+.sticky-price-info{display:flex;flex-direction:column;line-height:1.3;flex-shrink:0}
+.sticky-price-main{font-size:1.1rem;font-weight:800;color:var(--dourado);white-space:nowrap}
+.sticky-price-parcelas{font-size:.68rem;color:rgba(255,255,255,.7);white-space:nowrap}
+.sticky-cta-bar .btn-primary{white-space:nowrap;font-size:.88rem;padding:13px 18px;flex-shrink:0;min-width:0;width:auto}
 
 /* WHATSAPP */
-.whatsapp-btn{position:fixed;bottom:80px;right:20px;background:#25D366;color:#fff;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;z-index:1000;box-shadow:0 4px 16px rgba(0,0,0,.25);text-decoration:none}
-.whatsapp-btn svg{width:28px;height:28px}
+.whatsapp-btn{position:fixed;bottom:24px;right:20px;z-index:999;background:#25D366;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.28);text-decoration:none}
+.whatsapp-btn svg{width:30px;height:30px;fill:#fff}
 
-@media(max-width:600px){
+@media(max-width:480px){
   .trf-grid{grid-template-columns:1fr}
-  .sticky-cta-bar span{display:none}
 }
 </style>
 </head>
@@ -191,72 +190,73 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
   <span class="header-logo">César Augusto &amp; Thais Ayumi</span>
 </header>
 
-<!-- HERO -->
+<!-- HERO — bege, começa claro -->
 <section class="hero">
-  <h1>O plano completo de <span>restauração do seu casamento</span> em 3 etapas</h1>
-  <p>Desenvolvido por um casal de psicanalistas que acompanha casamentos em crise. Para casais que querem mais do que sobreviver — querem se reconstruir de verdade.</p>
-  <a href="#oferta" class="btn-cta" onclick="fbq('track','ViewContent')">Quero restaurar meu casamento</a>
-  <img src="img/casamento.jpeg" alt="César e Thais" class="hero-img" fetchpriority="high">
+  <div class="container">
+    <h1>O plano completo de <span>restauração do seu casamento</span> em 3 etapas</h1>
+    <p class="sub">Desenvolvido por um casal de psicanalistas que acompanha casamentos em crise. Para casais que querem mais do que sobreviver — querem se reconstruir de verdade.</p>
+    <a href="#oferta" class="btn-primary" onclick="fbq('track','ViewContent')">Quero restaurar meu casamento</a>
+    <p class="hero-parcelas">ou 12x de R$103,13</p>
+    <div class="hero-img">
+      <img src="img/casamento.jpeg" alt="César e Thais" fetchpriority="high">
+    </div>
+  </div>
 </section>
 
 <!-- STATS -->
-<div class="stats">
-  <div class="stat-card"><div class="num">+200</div><div class="label">casais acompanhados</div></div>
-  <div class="stat-card"><div class="num">3</div><div class="label">módulos complementares</div></div>
-  <div class="stat-card"><div class="num">2</div><div class="label">psicanalistas especialistas</div></div>
+<div class="stats-section">
+  <div class="container">
+    <div class="stat-card"><div class="stat-num">+200</div><div class="stat-label">casais acompanhados</div></div>
+    <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">módulos complementares</div></div>
+    <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">psicanalistas especialistas</div></div>
+  </div>
 </div>
 
 <!-- PARA QUEM -->
-<div class="badges-section">
-  <h2>Este curso é para você que</h2>
-  <div class="badge-pills">
-    <span class="badge-pill">Vive uma crise no casamento</span>
-    <span class="badge-pill">Quer reconstruir a confiança</span>
-    <span class="badge-pill">Sente que o casamento está frio</span>
-    <span class="badge-pill">Quer uma segunda chance real</span>
-    <span class="badge-pill">Busca cura, não só perdão</span>
-    <span class="badge-pill">Quer trabalhar junto como casal</span>
+<div class="para-quem">
+  <div class="container">
+    <h2 class="section-title">Este curso é para você que</h2>
+    <div class="badge-pill"><div class="badge-dot"></div>Vive uma crise no casamento</div>
+    <div class="badge-pill"><div class="badge-dot"></div>Quer reconstruir a confiança</div>
+    <div class="badge-pill"><div class="badge-dot"></div>Sente que o casamento está frio e distante</div>
+    <div class="badge-pill"><div class="badge-dot"></div>Quer uma segunda chance real</div>
+    <div class="badge-pill"><div class="badge-dot"></div>Busca cura, não só perdão</div>
+    <div class="badge-pill"><div class="badge-dot"></div>Quer trabalhar junto como casal</div>
   </div>
 </div>
 
-<!-- DEPOIMENTOS -->
-<div class="dep-section">
-  <h2>O que dizem quem já passou por aqui</h2>
-  <div class="dep-grid">
-    <div class="dep-card">
-      <p>"Eu não acreditava que tinha saída. Hoje o nosso casamento é mais forte do que era antes. Esse processo mudou tudo."</p>
-      <div class="dep-author">
-        <div class="dep-img-wrapper"><img src="img/dep-1.jpg" alt=""></div>
-        <span>Rodrigo M., 38 anos</span>
-      </div>
-    </div>
-    <div class="dep-card">
-      <p>"O César me ajudou a entender minhas falhas. A Thais ajudou minha esposa a se reconstruir. Foi um processo em casal mesmo."</p>
-      <div class="dep-author">
-        <div class="dep-img-wrapper"><img src="img/dep-2.jpg" alt=""></div>
-        <span>André L., 44 anos</span>
-      </div>
-    </div>
-    <div class="dep-card">
-      <p>"Minha esposa estava prestes a ir embora. Fizemos o curso juntos. Hoje ela fala que foi a melhor decisão que tomamos depois da crise."</p>
-      <div class="dep-author">
-        <div class="dep-img-wrapper"><img src="img/dep-3.jpg" alt=""></div>
-        <span>Fábio R., 41 anos</span>
-      </div>
-    </div>
-    <div class="dep-card">
-      <p>"Achei que terapia era para gente fraca. Hoje sei que foi a coisa mais corajosa que fiz pela minha família. Vale cada centavo."</p>
-      <div class="dep-author">
-        <div class="dep-img-wrapper"><img src="img/dep-4.jpg" alt=""></div>
-        <span>Marcos T., 36 anos</span>
-      </div>
-    </div>
+<!-- DEPOIMENTOS — borgonha, prints reais -->
+<section class="dep-section">
+  <div class="container">
+    <p class="dep-quote">"O que 3 anos de terapia não fez, o curso fez em 3 aulas"</p>
+    <p class="dep-sub">Prints reais de mensagens recebidas de quem passou pelo processo</p>
+
+    <div class="dep-label-pill">⭐ Aluno após 3 aulas</div>
+    <div class="dep-img-wrapper"><img src="img/dep-1.jpeg" alt="Depoimento — aluno após 3 aulas"></div>
+
+    <div class="dep-label-pill">⭐ Esposa sobre o processo</div>
+    <div class="dep-img-wrapper"><img src="img/dep-2.jpeg" alt="Depoimento — esposa sobre o processo"></div>
+
+    <div class="dep-label-pill">⭐ Recuperando o casamento</div>
+    <div class="dep-img-wrapper"><img src="img/dep-3.jpeg" alt="Depoimento — recuperando o casamento"></div>
+
+    <div class="dep-label-pill">💬 Prático e direto</div>
+    <div class="dep-img-wrapper"><img src="img/dep-5.jpeg" alt="Depoimento — prático e direto"></div>
+
+    <div class="dep-label-pill">💬 Esposa de aluno</div>
+    <div class="dep-img-wrapper"><img src="img/dep-6.jpeg" alt="Depoimento — esposa de aluno"></div>
+
+    <div class="dep-label-pill">⭐ Me pegou de jeito</div>
+    <div class="dep-img-wrapper"><img src="img/IMG_1839.JPEG" alt="Depoimento"></div>
+
+    <div class="dep-label-pill">⭐ Melhorei em muitos aspectos</div>
+    <div class="dep-img-wrapper"><img src="img/IMG_1998.JPEG" alt="Depoimento"></div>
   </div>
-</div>
+</section>
 
 <!-- DOR -->
 <section class="dor-section">
-  <div class="section-inner">
+  <div class="container">
     <h2 class="section-title">A dor que ninguém fala em voz alta</h2>
     <p class="section-sub">Quando a crise chega, muitos casais tentam seguir em frente sem processar o que aconteceu. O resultado é previsível.</p>
     <ul class="dor-list">
@@ -271,8 +271,8 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 </section>
 
 <!-- SE NADA MUDAR -->
-<section class="se-nada">
-  <div class="section-inner">
+<section class="se-nada-section">
+  <div class="container">
     <h2 class="section-title">Se nada mudar...</h2>
     <div class="se-nada-card">
       <p>Casais que tentam superar uma crise sem um processo estruturado geralmente chegam ao mesmo lugar: um divórcio tardio, filhos que cresceram vendo um casamento sem amor, ou uma vida a dois onde cada um sobrevive no seu canto. A crise não destruiu o casamento — a falta de um caminho real de restauração é o que destrói.</p>
@@ -281,27 +281,27 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 </section>
 
 <!-- TRANSFORMAÇÃO -->
-<section style="background:var(--bege)">
-  <div class="section-inner">
+<section class="trf-section">
+  <div class="container">
     <h2 class="section-title">De onde você está para onde pode chegar</h2>
     <div class="trf-grid">
       <div class="trf-card crise">
         <h3>Antes</h3>
         <ul>
-          <li>Discussões que não resolvem nada</li>
+          <li>Discussões sem resolução</li>
           <li>Desconfiança constante</li>
           <li>Intimidade destruída</li>
-          <li>Culpa e vergonha paralisantes</li>
+          <li>Culpa e vergonha</li>
           <li>Medo de perder a família</li>
         </ul>
       </div>
       <div class="trf-card restaurado">
         <h3>Depois</h3>
         <ul>
-          <li>Conversas honestas e seguras</li>
-          <li>Confiança sendo reconstruída</li>
-          <li>Conexão e intimidade renovadas</li>
-          <li>Responsabilidade sem autopunição</li>
+          <li>Conversas honestas</li>
+          <li>Confiança reconstruída</li>
+          <li>Intimidade renovada</li>
+          <li>Responsabilidade saudável</li>
           <li>Casamento com base nova</li>
         </ul>
       </div>
@@ -309,59 +309,55 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
   </div>
 </section>
 
-<!-- O QUE VAI APRENDER -->
+<!-- O QUE VAI APRENDER — borgonha -->
 <section class="learn-section">
-  <div class="section-inner">
+  <div class="container">
     <h2>O que vocês vão aprender juntos</h2>
-    <div class="learn-grid">
-      <div class="learn-card">
-        <h3>Reconstrução interna</h3>
-        <p>Entender as raízes dos seus padrões relacionais e trabalhar de dentro para fora — sem julgamento, com responsabilidade.</p>
-      </div>
-      <div class="learn-card">
-        <h3>Cura da ferida dela</h3>
-        <p>Processar a dor, a autoestima abalada, a desconfiança. Um caminho real para a mulher sair do lugar de vítima.</p>
-      </div>
-      <div class="learn-card">
-        <h3>Comunicação de casal</h3>
-        <p>Como ter conversas difíceis sem explosão, sem silêncio e sem repetir os mesmos ciclos de briga.</p>
-      </div>
-      <div class="learn-card">
-        <h3>Intimidade e conexão</h3>
-        <p>Reconstruir o vínculo emocional e físico que a crise destruiu. Passo a passo, sem pressa e sem pressão.</p>
-      </div>
-      <div class="learn-card">
-        <h3>Nova base do casamento</h3>
-        <p>Construir juntos um casamento que não precisa fingir que nada aconteceu — mas que cresce a partir do que foi vivido.</p>
-      </div>
-      <div class="learn-card">
-        <h3>Plano de ação concreto</h3>
-        <p>Exercícios práticos para o casal aplicar junto. Não é só teoria — é processo com ferramentas reais.</p>
-      </div>
+    <div class="learn-card">
+      <h3>Reconstrução interna</h3>
+      <p>Entender as raízes dos seus padrões relacionais e trabalhar de dentro para fora — sem julgamento, com responsabilidade.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Cura da ferida dela</h3>
+      <p>Processar a dor, a autoestima abalada, a desconfiança. Um caminho real para a mulher sair do lugar de vítima.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Comunicação de casal</h3>
+      <p>Como ter conversas difíceis sem explosão, sem silêncio e sem repetir os mesmos ciclos de briga.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Intimidade e conexão</h3>
+      <p>Reconstruir o vínculo emocional e físico que a crise destruiu. Passo a passo, sem pressa e sem pressão.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Nova base do casamento</h3>
+      <p>Construir juntos um casamento que cresce a partir do que foi vivido — não que finge que nada aconteceu.</p>
+    </div>
+    <div class="learn-card">
+      <h3>Plano de ação concreto</h3>
+      <p>Exercícios práticos para o casal aplicar junto. Não é só teoria — é processo com ferramentas reais.</p>
     </div>
   </div>
 </section>
 
 <!-- AUTORIDADE -->
 <section class="autoridade-section">
-  <div class="section-inner">
-    <h2 class="section-title" style="text-align:center">Quem vai guiar vocês nesse processo</h2>
-    <div class="instructors">
-      <div class="instructor">
-        <img src="img/hero-cesar.jpg" alt="César Augusto" class="instructor-photo">
-        <div class="instructor-body">
-          <h3>César Augusto</h3>
-          <div class="role">Psicanalista — especialista em crise conjugal masculina</div>
-          <p>Marido, cristão, pai. Acompanhou mais de 200 homens em processo de reconstrução pessoal e conjugal. Criador do método Reconstrução Masculina.</p>
-        </div>
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:24px">Quem vai guiar vocês nesse processo</h2>
+    <div class="instructor">
+      <img src="img/hero-cesar.jpg" alt="César Augusto" class="instructor-photo">
+      <div class="instructor-body">
+        <h3>César Augusto</h3>
+        <div class="role">Psicanalista — especialista em crise conjugal masculina</div>
+        <p>Marido, cristão, pai. Acompanhou mais de 200 homens em processo de reconstrução pessoal e conjugal. Criador do método Reconstrução Masculina.</p>
       </div>
-      <div class="instructor">
-        <img src="img/thais-retrato-1.jpg" alt="Thais Ayumi" class="instructor-photo">
-        <div class="instructor-body">
-          <h3>Thais Ayumi</h3>
-          <div class="role">Psicanalista — especialista em dependência emocional e autoestima feminina</div>
-          <p>Esposa do César, psicanalista com mais de 200 mulheres em lista de espera. Especializada em ajudar mulheres a se reconstruírem em meio a crises conjugais, sem perder a própria identidade.</p>
-        </div>
+    </div>
+    <div class="instructor">
+      <img src="img/thais-retrato-1.jpg" alt="Thais Ayumi" class="instructor-photo">
+      <div class="instructor-body">
+        <h3>Thais Ayumi</h3>
+        <div class="role">Psicanalista — especialista em dependência emocional e autoestima feminina</div>
+        <p>Esposa do César, psicanalista com mais de 200 mulheres em lista de espera. Especializada em ajudar mulheres a se reconstruírem em meio a crises conjugais, sem perder a própria identidade.</p>
       </div>
     </div>
   </div>
@@ -369,25 +365,23 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 
 <!-- ESTRUTURA DO CURSO -->
 <section class="estrutura-section">
-  <div class="section-inner">
-    <h2 class="section-title" style="text-align:center">Estrutura do curso</h2>
-    <p class="section-sub" style="text-align:center">Três módulos, três frentes de trabalho, um único destino: um casamento restaurado.</p>
-    <div class="modulos-grid">
-      <div class="modulo-card">
-        <div class="modulo-num">Módulo 01</div>
-        <h3>Reconstrução Masculina</h3>
-        <p>Com César Augusto. Para o homem que quer se reconstruir. Entenda seus padrões, assuma responsabilidade sem se destruir e se torne o homem que seu casamento precisa.</p>
-      </div>
-      <div class="modulo-card">
-        <div class="modulo-num">Módulo 02</div>
-        <h3>Reconstrução Feminina</h3>
-        <p>Com Thais Ayumi. Para a mulher que quer se reconstruir. Processe a dor, reconquiste a autoestima e decida de um lugar de força — não de medo ou dependência.</p>
-      </div>
-      <div class="modulo-card">
-        <div class="modulo-num">Módulo 03</div>
-        <h3>Cura do Casamento</h3>
-        <p>Com César e Thais juntos. Para o casal. Comunicação, perdão real, intimidade renovada e a construção de uma nova base para o casamento.</p>
-      </div>
+  <div class="container">
+    <h2 class="section-title">Estrutura do curso</h2>
+    <p class="section-sub">Três módulos, três frentes de trabalho, um único destino: um casamento restaurado.</p>
+    <div class="modulo-card">
+      <div class="modulo-num">Módulo 01</div>
+      <h3>Reconstrução Masculina</h3>
+      <p>Com César Augusto. Para o homem que quer se reconstruir. Entenda seus padrões, assuma responsabilidade sem se destruir e se torne o homem que seu casamento precisa.</p>
+    </div>
+    <div class="modulo-card">
+      <div class="modulo-num">Módulo 02</div>
+      <h3>Reconstrução Feminina</h3>
+      <p>Com Thais Ayumi. Para a mulher que quer se reconstruir. Processe a dor, reconquiste a autoestima e decida de um lugar de força — não de medo ou dependência.</p>
+    </div>
+    <div class="modulo-card">
+      <div class="modulo-num">Módulo 03</div>
+      <h3>Cura do Casamento</h3>
+      <p>Com César e Thais juntos. Para o casal. Comunicação, perdão real, intimidade renovada e a construção de uma nova base para o casamento.</p>
     </div>
   </div>
 </section>
@@ -399,12 +393,12 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 
 <!-- OFERTA -->
 <section class="oferta-section" id="oferta">
-  <div class="section-inner" style="text-align:center">
-    <h2 class="section-title" style="text-align:center">Comece hoje o processo de restauração</h2>
+  <div class="container">
+    <h2 class="section-title" style="text-align:center;margin-bottom:8px">Comece hoje</h2>
     <p class="section-sub" style="text-align:center">Acesso imediato para os dois. Trabalhem no seu tempo, do seu jeito.</p>
     <div class="oferta-card">
       <h2>Restauração do Casamento</h2>
-      <p class="curso-nome">3 módulos + acesso para o casal completo</p>
+      <p class="curso-nome">3 módulos + acesso para o casal</p>
       <div class="oferta-price-main"><small>R$</small>997</div>
       <p class="oferta-price-parcela">ou 12x de R$103,13</p>
       <ul class="oferta-items">
@@ -415,7 +409,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
         <li>Exercícios práticos para o casal</li>
         <li>Garantia de 7 dias incondicional</li>
       </ul>
-      <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-cta" style="width:100%;display:block;text-align:center" onclick="fbq('track','InitiateCheckout')">Quero restaurar meu casamento →</a>
+      <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero restaurar meu casamento →</a>
     </div>
     <div class="garantia-box">
       <h3>Garantia de 7 dias</h3>
@@ -426,64 +420,82 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 
 <!-- FAQ -->
 <section class="faq-section">
-  <div class="section-inner">
-    <h2 class="section-title" style="text-align:center;margin-bottom:32px">Perguntas frequentes</h2>
-    <div class="faq-list">
-      <details open>
-        <summary>Os dois precisam fazer o curso juntos?</summary>
-        <p>O ideal é que sim, mas cada um pode começar pelo seu módulo individualmente. O Módulo 03 é pensado para o casal assistir e aplicar junto.</p>
-      </details>
-      <details>
-        <summary>E se minha esposa não quiser participar?</summary>
-        <p>Você pode começar pelo Módulo 01 sozinho. A mudança que acontece em você naturalmente afeta a dinâmica do casal — muitos homens relatam que a esposa foi se interessando ao ver as mudanças reais.</p>
-      </details>
-      <details>
-        <summary>Esse curso substitui a terapia?</summary>
-        <p>Não substitui, mas complementa. É um processo estruturado de autoconhecimento e ação prática. Para casos mais graves, recomendamos acompanhamento individual em paralelo.</p>
-      </details>
-      <details>
-        <summary>Por quanto tempo tenho acesso?</summary>
-        <p>1 ano completo a partir da compra. Com acesso no celular, tablet e computador, a qualquer hora.</p>
-      </details>
-      <details>
-        <summary>Como funciona a garantia?</summary>
-        <p>7 dias a partir da compra. Se por qualquer motivo você não ficar satisfeito, basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas.</p>
-      </details>
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:28px">Perguntas frequentes</h2>
+    <div class="faq-item open">
+      <button class="faq-question">Os dois precisam fazer o curso juntos?<span class="faq-chevron">▾</span></button>
+      <div class="faq-answer">O ideal é que sim, mas cada um pode começar pelo seu módulo individualmente. O Módulo 03 é pensado para o casal assistir e aplicar junto.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">E se minha esposa não quiser participar?<span class="faq-chevron">▾</span></button>
+      <div class="faq-answer">Você pode começar pelo Módulo 01 sozinho. A mudança que acontece em você naturalmente afeta a dinâmica do casal — muitos homens relatam que a esposa foi se interessando ao ver as mudanças reais.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Esse curso substitui a terapia?<span class="faq-chevron">▾</span></button>
+      <div class="faq-answer">Não substitui, mas complementa. É um processo estruturado de autoconhecimento e ação prática. Para casos mais graves, recomendamos acompanhamento individual em paralelo.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Por quanto tempo tenho acesso?<span class="faq-chevron">▾</span></button>
+      <div class="faq-answer">1 ano completo a partir da compra. Com acesso no celular, tablet e computador, a qualquer hora.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Como funciona a garantia?<span class="faq-chevron">▾</span></button>
+      <div class="faq-answer">7 dias a partir da compra. Se por qualquer motivo você não ficar satisfeito, basta enviar um e-mail e devolvemos 100% do valor. Sem perguntas.</div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CTA FINAL — borgonha -->
 <section class="cta-final">
-  <div class="section-inner">
+  <div class="container">
     <h2>O casamento que vocês querem ainda é possível</h2>
     <p>Centenas de casais passaram pelo mesmo que vocês estão passando. Muitos acharam que era o fim. Hoje têm um casamento mais profundo e verdadeiro do que tinham antes.</p>
-    <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-cta" onclick="fbq('track','InitiateCheckout')">Quero restaurar meu casamento →</a>
+    <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero restaurar meu casamento →</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 César Augusto Psicanalista · cesaraugustopsi.com.br · Todos os direitos reservados</p>
+  <p>© 2026 César Augusto Psicanalista · cesaraugustopsi.com.br</p>
+  <p>Todos os direitos reservados</p>
 </footer>
 
 <!-- STICKY BAR -->
 <div class="sticky-cta-bar" id="stickyCta">
-  <span>Restauração do Casamento — R$997</span>
-  <a href="https://pay.kiwify.com.br/XQtnCsL" onclick="fbq('track','InitiateCheckout')">Garantir acesso →</a>
+  <div class="sticky-price-info">
+    <span class="sticky-price-main">R$997</span>
+    <span class="sticky-price-parcelas">ou 12x de R$103,13</span>
+  </div>
+  <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Garantir acesso →</a>
 </div>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/31991550421" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-// Sticky bar: show after hero, hide when oferta visible
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Sticky bar: aparece após rolar, some quando oferta visível
 const oferta = document.getElementById('oferta');
 const bar = document.getElementById('stickyCta');
-const obs = new IntersectionObserver(([e]) => { bar.style.display = e.isIntersecting ? 'none' : 'flex'; }, { threshold: 0.1 });
-obs.observe(oferta);
+let scrolled = false;
+window.addEventListener('scroll', () => {
+  scrolled = window.scrollY > 400;
+  const ofertaRect = oferta.getBoundingClientRect();
+  const ofertaVisible = ofertaRect.top < window.innerHeight && ofertaRect.bottom > 0;
+  if (scrolled && !ofertaVisible) bar.classList.add('visible');
+  else bar.classList.remove('visible');
+});
 </script>
 </body>
 </html>
