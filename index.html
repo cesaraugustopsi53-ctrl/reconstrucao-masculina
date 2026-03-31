@@ -33,7 +33,7 @@ src="https://www.facebook.com/tr?id=702407242839062&ev=PageView&noscript=1"/></n
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bege:#EFEBE3;
-  --verde:#1B3A2D;
+  --vinho:#5C2030;
   --dourado:#C9A84C;
   --branco:#FFFFFF;
   --texto:#1a1a1a;
@@ -44,38 +44,38 @@ html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--bege);color:var(--texto);line-height:1.6}
 
 /* HEADER */
-header{background:var(--verde);padding:14px 24px;display:flex;align-items:center;justify-content:center}
+header{background:var(--vinho);padding:14px 24px;display:flex;align-items:center;justify-content:center}
 .header-logo{color:#fff;font-size:1rem;font-weight:600;letter-spacing:.5px;opacity:.9}
 
 /* HERO */
-.hero{background:var(--verde);padding:64px 24px 56px;text-align:center}
+.hero{background:var(--vinho);padding:64px 24px 56px;text-align:center}
 .hero h1{color:#fff;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 16px}
 .hero h1 span{color:var(--dourado)}
 .hero p{color:rgba(255,255,255,.8);font-size:1.05rem;max-width:580px;margin:0 auto 32px}
-.btn-cta{display:inline-block;background:var(--dourado);color:var(--verde);font-size:1.05rem;font-weight:700;padding:16px 40px;border-radius:50px;text-decoration:none;transition:filter .2s}
+.btn-cta{display:inline-block;background:var(--dourado);color:var(--vinho);font-size:1.05rem;font-weight:700;padding:16px 40px;border-radius:50px;text-decoration:none;transition:filter .2s}
 .btn-cta:hover{filter:brightness(1.08)}
 .hero-img{width:100%;max-width:640px;border-radius:var(--radius);margin-top:40px;display:block;margin-left:auto;margin-right:auto}
 
 /* STATS */
 .stats{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;padding:48px 24px}
 .stat-card{background:var(--branco);border-radius:var(--radius);padding:24px 32px;text-align:center;flex:1;min-width:160px;max-width:220px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.stat-card .num{font-size:2rem;font-weight:700;color:var(--verde)}
+.stat-card .num{font-size:2rem;font-weight:700;color:var(--vinho)}
 .stat-card .label{font-size:.85rem;color:var(--cinza);margin-top:4px}
 
 /* BADGES */
 .badges-section{padding:8px 24px 40px;text-align:center}
-.badges-section h2{font-size:1.4rem;font-weight:700;margin-bottom:20px;color:var(--verde)}
+.badges-section h2{font-size:1.4rem;font-weight:700;margin-bottom:20px;color:var(--vinho)}
 .badge-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:0 auto}
-.badge-pill{background:var(--branco);border:1.5px solid var(--verde);color:var(--verde);border-radius:50px;padding:8px 20px;font-size:.9rem;font-weight:500}
+.badge-pill{background:var(--branco);border:1.5px solid var(--vinho);color:var(--vinho);border-radius:50px;padding:8px 20px;font-size:.9rem;font-weight:500}
 
 /* SEÇÕES GENÉRICAS */
 section{padding:56px 24px}
 .section-inner{max-width:900px;margin:0 auto}
-h2.section-title{font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:var(--verde);margin-bottom:16px;line-height:1.25}
+h2.section-title{font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:var(--vinho);margin-bottom:16px;line-height:1.25}
 p.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:32px}
 
 /* DEPOIMENTOS */
-.dep-section{background:var(--verde);padding:56px 24px}
+.dep-section{background:var(--vinho);padding:56px 24px}
 .dep-section h2{color:#fff;text-align:center;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;margin-bottom:32px}
 .dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:0 auto}
 .dep-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:24px}
@@ -93,21 +93,21 @@ p.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:32px}
 
 /* SE NADA MUDAR */
 .se-nada{background:var(--bege)}
-.se-nada-card{background:#fff3f3;border:1.5px solid #e0a0a0;border-radius:var(--radius);padding:32px;max-width:700px}
-.se-nada-card p{color:#7a1a1a;font-size:.95rem;line-height:1.7}
+.se-nada-card{background:#fff3f3;border:1.5px solid #d09090;border-radius:var(--radius);padding:32px;max-width:700px}
+.se-nada-card p{color:#6b2020;font-size:.95rem;line-height:1.7}
 
 /* TRANSFORMAÇÃO */
 .trf-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px}
 .trf-card{background:var(--branco);border-radius:var(--radius);padding:28px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
 .trf-card h3{font-size:1rem;font-weight:700;margin-bottom:16px}
 .trf-card.crise h3{color:#c0392b}
-.trf-card.restaurado h3{color:var(--verde)}
+.trf-card.restaurado h3{color:var(--vinho)}
 .trf-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .trf-card ul li{font-size:.9rem;color:var(--cinza);display:flex;align-items:flex-start;gap:8px}
 .trf-card ul li::before{content:"→";color:var(--dourado);flex-shrink:0}
 
 /* O QUE VAI APRENDER */
-.learn-section{background:var(--verde)}
+.learn-section{background:var(--vinho)}
 .learn-section h2{color:#fff;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;margin-bottom:32px;text-align:center}
 .learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:900px;margin:0 auto}
 .learn-card{background:rgba(255,255,255,.08);border-radius:var(--radius);padding:24px}
@@ -120,7 +120,7 @@ p.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:32px}
 .instructor{background:var(--branco);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .instructor-photo{width:100%;height:280px;object-fit:cover;object-position:center 20%}
 .instructor-body{padding:24px}
-.instructor-body h3{font-size:1.1rem;font-weight:700;color:var(--verde);margin-bottom:4px}
+.instructor-body h3{font-size:1.1rem;font-weight:700;color:var(--vinho);margin-bottom:4px}
 .instructor-body .role{font-size:.85rem;color:var(--dourado);font-weight:600;margin-bottom:12px}
 .instructor-body p{font-size:.9rem;color:var(--cinza);line-height:1.6}
 
@@ -129,50 +129,50 @@ p.section-sub{color:var(--cinza);font-size:1rem;margin-bottom:32px}
 .modulos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:900px;margin:32px auto 0}
 .modulo-card{background:var(--branco);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .modulo-num{font-size:.8rem;font-weight:700;color:var(--dourado);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-.modulo-card h3{font-size:1.05rem;font-weight:700;color:var(--verde);margin-bottom:8px}
+.modulo-card h3{font-size:1.05rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
 .modulo-card p{font-size:.9rem;color:var(--cinza);line-height:1.6}
 
 /* FOTO CASAL */
-.foto-casal-section{background:var(--verde);padding:0}
+.foto-casal-section{background:var(--vinho);padding:0}
 .foto-casal-section img{width:100%;max-height:500px;object-fit:cover;object-position:center 30%;display:block}
 
 /* OFERTA */
 .oferta-section{background:var(--bege)}
 .oferta-card{background:var(--branco);border-radius:var(--radius);padding:40px;max-width:600px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,.08);text-align:center}
-.oferta-card h2{font-size:1.5rem;font-weight:700;color:var(--verde);margin-bottom:8px}
+.oferta-card h2{font-size:1.5rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
 .oferta-card .curso-nome{font-size:.9rem;color:var(--cinza);margin-bottom:24px}
-.oferta-price-main{font-size:2.4rem;font-weight:700;color:var(--verde);line-height:1}
+.oferta-price-main{font-size:2.4rem;font-weight:700;color:var(--vinho);line-height:1}
 .oferta-price-main small{font-size:1rem;font-weight:400}
 .oferta-price-parcela{font-size:1rem;color:var(--cinza);margin-top:8px;margin-bottom:24px}
 .oferta-items{list-style:none;text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .oferta-items li{display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:var(--texto)}
-.oferta-items li::before{content:"✓";color:var(--verde);font-weight:700;flex-shrink:0}
-.garantia-box{background:#f0f7f4;border:1.5px solid var(--verde);border-radius:var(--radius);padding:24px;text-align:center;max-width:600px;margin:32px auto 0}
-.garantia-box h3{font-size:1rem;font-weight:700;color:var(--verde);margin-bottom:8px}
+.oferta-items li::before{content:"✓";color:var(--vinho);font-weight:700;flex-shrink:0}
+.garantia-box{background:#fdf5f6;border:1.5px solid var(--vinho);border-radius:var(--radius);padding:24px;text-align:center;max-width:600px;margin:32px auto 0}
+.garantia-box h3{font-size:1rem;font-weight:700;color:var(--vinho);margin-bottom:8px}
 .garantia-box p{font-size:.9rem;color:var(--cinza)}
 
 /* FAQ */
 .faq-section{background:var(--bege)}
 .faq-list{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
 details{background:var(--branco);border-radius:12px;padding:20px 24px;cursor:pointer;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-summary{font-weight:600;font-size:.95rem;color:var(--verde);list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary{font-weight:600;font-size:.95rem;color:var(--vinho);list-style:none;display:flex;justify-content:space-between;align-items:center}
 summary::after{content:"+";font-size:1.2rem;color:var(--dourado)}
 details[open] summary::after{content:"−"}
 details p{margin-top:12px;font-size:.9rem;color:var(--cinza);line-height:1.6}
 
 /* CTA FINAL */
-.cta-final{background:var(--verde);text-align:center}
+.cta-final{background:var(--vinho);text-align:center}
 .cta-final h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;margin-bottom:16px}
 .cta-final p{color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:32px}
 
 /* FOOTER */
-footer{background:var(--verde);border-top:1px solid rgba(255,255,255,.1);padding:24px;text-align:center}
+footer{background:var(--vinho);border-top:1px solid rgba(255,255,255,.1);padding:24px;text-align:center}
 footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 
 /* STICKY BAR */
-.sticky-cta-bar{position:fixed;bottom:0;left:0;right:0;background:var(--verde);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;z-index:999;box-shadow:0 -2px 16px rgba(0,0,0,.2)}
+.sticky-cta-bar{position:fixed;bottom:0;left:0;right:0;background:var(--vinho);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;z-index:999;box-shadow:0 -2px 16px rgba(0,0,0,.2)}
 .sticky-cta-bar span{color:#fff;font-size:.9rem;font-weight:500}
-.sticky-cta-bar a{background:var(--dourado);color:var(--verde);font-weight:700;padding:10px 24px;border-radius:50px;text-decoration:none;font-size:.9rem}
+.sticky-cta-bar a{background:var(--dourado);color:var(--vinho);font-weight:700;padding:10px 24px;border-radius:50px;text-decoration:none;font-size:.9rem}
 
 /* WHATSAPP */
 .whatsapp-btn{position:fixed;bottom:80px;right:20px;background:#25D366;color:#fff;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;z-index:1000;box-shadow:0 4px 16px rgba(0,0,0,.25);text-decoration:none}
@@ -210,7 +210,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 <div class="badges-section">
   <h2>Este curso é para você que</h2>
   <div class="badge-pills">
-    <span class="badge-pill">Passou por uma traição</span>
+    <span class="badge-pill">Vive uma crise no casamento</span>
     <span class="badge-pill">Quer reconstruir a confiança</span>
     <span class="badge-pill">Sente que o casamento está frio</span>
     <span class="badge-pill">Quer uma segunda chance real</span>
@@ -224,14 +224,14 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
   <h2>O que dizem quem já passou por aqui</h2>
   <div class="dep-grid">
     <div class="dep-card">
-      <p>"Eu não acreditava que tinha saída. Hoje o nosso casamento é mais forte do que antes da traição. Esse processo mudou tudo."</p>
+      <p>"Eu não acreditava que tinha saída. Hoje o nosso casamento é mais forte do que era antes. Esse processo mudou tudo."</p>
       <div class="dep-author">
         <div class="dep-img-wrapper"><img src="img/dep-1.jpg" alt=""></div>
         <span>Rodrigo M., 38 anos</span>
       </div>
     </div>
     <div class="dep-card">
-      <p>"O César me ajudou a entender o que me levou a trair. A Thais ajudou minha esposa a se reconstruir. Foi um processo em casal mesmo."</p>
+      <p>"O César me ajudou a entender minhas falhas. A Thais ajudou minha esposa a se reconstruir. Foi um processo em casal mesmo."</p>
       <div class="dep-author">
         <div class="dep-img-wrapper"><img src="img/dep-2.jpg" alt=""></div>
         <span>André L., 44 anos</span>
@@ -258,9 +258,9 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
 <section class="dor-section">
   <div class="section-inner">
     <h2 class="section-title">A dor que ninguém fala em voz alta</h2>
-    <p class="section-sub">Depois da traição, muitos casais tentam seguir em frente sem processar o que aconteceu. O resultado é previsível.</p>
+    <p class="section-sub">Quando a crise chega, muitos casais tentam seguir em frente sem processar o que aconteceu. O resultado é previsível.</p>
     <ul class="dor-list">
-      <li>Você pediu perdão, mas ela ainda traz o assunto em cada briga</li>
+      <li>Vocês tentam conversar, mas as mesmas brigas se repetem sem resolução</li>
       <li>Ele se esforça, mas ela não consegue confiar de novo</li>
       <li>O casal vive em paz na superfície, mas distante por dentro</li>
       <li>A intimidade sumiu e ninguém sabe como retomar</li>
@@ -275,7 +275,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
   <div class="section-inner">
     <h2 class="section-title">Se nada mudar...</h2>
     <div class="se-nada-card">
-      <p>Casais que tentam superar uma traição sem um processo estruturado geralmente chegam ao mesmo lugar: um divórcio tardio, filhos que cresceram vendo um casamento sem amor, ou uma vida a dois onde cada um sobrevive no seu canto. A traição não destruiu o casamento — a falta de um caminho real de restauração é o que destrói.</p>
+      <p>Casais que tentam superar uma crise sem um processo estruturado geralmente chegam ao mesmo lugar: um divórcio tardio, filhos que cresceram vendo um casamento sem amor, ou uma vida a dois onde cada um sobrevive no seu canto. A crise não destruiu o casamento — a falta de um caminho real de restauração é o que destrói.</p>
     </div>
   </div>
 </section>
@@ -316,11 +316,11 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
     <div class="learn-grid">
       <div class="learn-card">
         <h3>Reconstrução interna</h3>
-        <p>Entender as raízes do que levou à traição e trabalhar o homem por dentro — sem julgamento, com responsabilidade.</p>
+        <p>Entender as raízes dos seus padrões relacionais e trabalhar de dentro para fora — sem julgamento, com responsabilidade.</p>
       </div>
       <div class="learn-card">
         <h3>Cura da ferida dela</h3>
-        <p>Processar a traição, a autoestima destruída, a desconfiança. Um caminho real para a mulher sair do papel de vítima.</p>
+        <p>Processar a dor, a autoestima abalada, a desconfiança. Um caminho real para a mulher sair do lugar de vítima.</p>
       </div>
       <div class="learn-card">
         <h3>Comunicação de casal</h3>
@@ -351,8 +351,8 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
         <img src="img/hero-cesar.jpg" alt="César Augusto" class="instructor-photo">
         <div class="instructor-body">
           <h3>César Augusto</h3>
-          <div class="role">Psicanalista — especialista em homens que traíram</div>
-          <p>Marido, cristão, pai. Acompanhou mais de 200 homens que traíram suas esposas no processo de reconstrução pessoal e conjugal. Criador do método Reconstrução Masculina.</p>
+          <div class="role">Psicanalista — especialista em crise conjugal masculina</div>
+          <p>Marido, cristão, pai. Acompanhou mais de 200 homens em processo de reconstrução pessoal e conjugal. Criador do método Reconstrução Masculina.</p>
         </div>
       </div>
       <div class="instructor">
@@ -360,7 +360,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
         <div class="instructor-body">
           <h3>Thais Ayumi</h3>
           <div class="role">Psicanalista — especialista em dependência emocional e autoestima feminina</div>
-          <p>Esposa do César, psicanalista com mais de 200 mulheres em lista de espera. Especializada em ajudar mulheres a se reconstruírem após traições, sem perder a própria identidade.</p>
+          <p>Esposa do César, psicanalista com mais de 200 mulheres em lista de espera. Especializada em ajudar mulheres a se reconstruírem em meio a crises conjugais, sem perder a própria identidade.</p>
         </div>
       </div>
     </div>
@@ -376,12 +376,12 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
       <div class="modulo-card">
         <div class="modulo-num">Módulo 01</div>
         <h3>Reconstrução Masculina</h3>
-        <p>Com César Augusto. Para o homem que traiu. Entenda o que te levou até ali, assuma responsabilidade sem se destruir e se torne o homem que seu casamento precisa.</p>
+        <p>Com César Augusto. Para o homem que quer se reconstruir. Entenda seus padrões, assuma responsabilidade sem se destruir e se torne o homem que seu casamento precisa.</p>
       </div>
       <div class="modulo-card">
         <div class="modulo-num">Módulo 02</div>
         <h3>Reconstrução Feminina</h3>
-        <p>Com Thais Ayumi. Para a mulher que foi traída. Processe a dor, reconstrua a autoestima e decida de um lugar de força — não de medo ou dependência.</p>
+        <p>Com Thais Ayumi. Para a mulher que quer se reconstruir. Processe a dor, reconquiste a autoestima e decida de um lugar de força — não de medo ou dependência.</p>
       </div>
       <div class="modulo-card">
         <div class="modulo-num">Módulo 03</div>
@@ -439,7 +439,7 @@ footer p{color:rgba(255,255,255,.5);font-size:.8rem}
       </details>
       <details>
         <summary>Esse curso substitui a terapia?</summary>
-        <p>Não substitui, mas complementa. É um processo estruturado de auto-conhecimento e ação prática. Para casos mais graves, recomendamos acompanhamento individual em paralelo.</p>
+        <p>Não substitui, mas complementa. É um processo estruturado de autoconhecimento e ação prática. Para casos mais graves, recomendamos acompanhamento individual em paralelo.</p>
       </details>
       <details>
         <summary>Por quanto tempo tenho acesso?</summary>
