@@ -61,8 +61,8 @@ header{background:var(--vinho);padding:16px 20px}
 .hero h1 span{color:var(--dourado)}
 .hero .sub{font-size:1.05rem;color:var(--cinza);line-height:1.65;margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
 .hero-img{margin-top:36px}
-.hero-img img{width:100%;display:block;border-radius:var(--radius)}
-.hero-parcelas{text-align:center;font-size:.88rem;color:var(--cinza);margin-top:10px}
+.hero-img img{width:100%;height:auto;display:block;border-radius:var(--radius)}
+.hero-parcelas{text-align:center;font-size:1.05rem;font-weight:700;color:var(--dourado);margin-top:10px}
 
 /* STATS */
 .stats-section{padding:8px 0 48px;background:var(--bege)}
@@ -197,14 +197,14 @@ footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
 <section class="hero">
   <div class="container">
     <h1>O plano completo de <span>restauração do seu casamento</span> em 3 etapas</h1>
-    <p class="sub">Desenvolvido por um casal de psicanalistas que acompanha casamentos em crise. Para casais que querem mais do que sobreviver — querem se reconstruir de verdade.</p>
+    <p class="sub">Desenvolvido por um casal de psicanalistas que acompanha casamentos em crise. Para casais que querem mais do que sobreviver. Querem se reconstruir de verdade.</p>
     <div class="vsl-wrapper" style="margin-bottom:28px;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15);position:relative;padding-bottom:56.25%;height:0">
       <iframe src="https://www.youtube.com/embed/2pt0dCghW3Y?rel=0&modestbranding=1" title="Restauração do Casamento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
     </div>
     <a href="https://pay.kiwify.com.br/XQtnCsL" class="btn-primary" onclick="fbq('track','InitiateCheckout')">Quero restaurar meu casamento</a>
-    <p class="hero-parcelas">ou 12x de R$103,13</p>
+    <p class="hero-parcelas">12x de R$103,13</p>
     <div class="hero-img">
-      <img src="img/pedido-casamento.jpg" alt="César pedindo Thais em casamento" fetchpriority="high" width="900" height="900">
+      <img src="img/pedido-casamento.jpg" alt="César pedindo Thais em casamento" fetchpriority="high" width="900">
     </div>
   </div>
 </section>
@@ -281,7 +281,7 @@ footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
   <div class="container">
     <h2 class="section-title">Se nada mudar...</h2>
     <div class="se-nada-card">
-      <p>Casais que tentam superar uma crise sem um processo estruturado geralmente chegam ao mesmo lugar: um divórcio tardio, filhos que cresceram vendo um casamento sem amor, ou uma vida a dois onde cada um sobrevive no seu canto. A crise não destruiu o casamento — a falta de um caminho real de restauração é o que destrói.</p>
+      <p>Casais que tentam superar uma crise sem um processo estruturado geralmente chegam ao mesmo lugar: um divórcio tardio, filhos que cresceram vendo um casamento sem amor, ou uma vida a dois onde cada um sobrevive no seu canto. A crise não destruiu o casamento. A falta de um caminho real de restauração é o que destrói.</p>
     </div>
   </div>
 </section>
@@ -321,7 +321,7 @@ footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
     <h2>O que vocês vão aprender juntos</h2>
     <div class="learn-card">
       <h3>Reconstrução interna</h3>
-      <p>Entender as raízes dos seus padrões relacionais e trabalhar de dentro para fora — sem julgamento, com responsabilidade.</p>
+      <p>Entender as raízes dos seus padrões relacionais e trabalhar de dentro para fora, sem julgamento, com responsabilidade.</p>
     </div>
     <div class="learn-card">
       <h3>Cura da ferida dela</h3>
@@ -354,15 +354,15 @@ footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
       <img src="img/hero-cesar.jpg" alt="César Augusto" class="instructor-photo">
       <div class="instructor-body">
         <h3>César Augusto</h3>
-        <div class="role">Psicanalista — crise conjugal masculina</div>
-        <p>Marido, cristão, pai. Trabalho com homens que estão no momento mais difícil do casamento — quando a culpa paralisa, a esposa se fecha e não há um caminho claro para seguir. Meu método não é sobre perder peso da consciência. É sobre se tornar um homem diferente de dentro para fora, capaz de sustentar um casamento novo.</p>
+        <div class="role">Psicanalista em crise conjugal masculina</div>
+        <p>Marido, cristão, pai. Trabalho com homens que estão no momento mais difícil do casamento, quando a culpa paralisa, a esposa se fecha e não há um caminho claro para seguir. Meu método não é sobre perder peso da consciência. É sobre se tornar um homem diferente de dentro para fora, capaz de sustentar um casamento novo.</p>
       </div>
     </div>
     <div class="instructor">
-      <img src="img/thais-retrato-1.jpg" alt="Thais Ayumi" class="instructor-photo">
+      <img src="img/thais-retrato-1.jpg" alt="Thais Ayumi" class="instructor-photo" style="object-position:center 40%">
       <div class="instructor-body">
         <h3>Thais Ayumi</h3>
-        <div class="role">Psicanalista — autoestima e dependência emocional feminina</div>
+        <div class="role">Psicanalista em autoestima e dependência emocional feminina</div>
         <p>Esposa do César, psicanalista. Trabalho com mulheres que perderam a si mesmas dentro do casamento — que ficaram, mas não sabem se querem ficar, que perdoaram, mas não sabem como confiar. Meu trabalho é devolver a essa mulher a clareza de quem ela é e o poder de decidir a partir de um lugar de força, não de medo.</p>
       </div>
     </div>
@@ -408,9 +408,9 @@ footer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
       <div class="oferta-price-main"><small>R$</small>997</div>
       <p class="oferta-price-parcela">ou 12x de R$103,13</p>
       <ul class="oferta-items">
-        <li>Módulo 01 — Reconstrução Masculina (com César)</li>
-        <li>Módulo 02 — Reconstrução Feminina (com Thais)</li>
-        <li>Módulo 03 — Cura do Casamento (com os dois)</li>
+        <li>Módulo 01: Reconstrução Masculina (com César)</li>
+        <li>Módulo 02: Reconstrução Feminina (com Thais)</li>
+        <li>Módulo 03: Cura do Casamento (com os dois)</li>
         <li>Acesso por 1 ano no celular, tablet e computador</li>
         <li>Exercícios práticos para o casal</li>
         <li>Garantia de 7 dias incondicional</li>
